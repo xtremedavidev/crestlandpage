@@ -1,0 +1,1083 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,400,900|Fasthand:400|Joti+One:400|DM+Sans:400,700|Cormorant+Upright:700|Ingrid+Darling:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,400,900|Fasthand:400|Joti+One:400|DM+Sans:400,700|Cormorant+Upright:700|Ingrid+Darling:400");
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Fasthand&family=Inter:wght@600&family=Roboto+Slab:wght@500&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Fasthand&family=Ingrid+Darling&family=Inter:wght@600&family=Roboto+Slab:wght@500&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Fasthand&family=Ingrid+Darling&family=Inter:wght@600&family=Roboto+Slab:wght@500&family=Roboto:wght@700;900&display=swap');
+
+
+
+
+:root {
+    --font-family-ingrid_darling: "Ingrid Darling";
+
+}
+
+/********************** general ********************/
+body {
+    line-height: 1.7;
+    background: #fff;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+
+/********************** nav bar ********************/
+
+nav {
+    background: rgba(241, 238, 255, 1);
+    width: 1194px;
+    height: 66px;
+    margin-left: calc((100% - 1194px) / 2);
+    position: fixed;
+    margin-top: 16px;
+    border-radius: 49.32px;
+    padding-right: 20px;
+    padding-left: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.colorful-bg {
+    background: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(15px);
+    /* Apply a blur effect */
+    border-radius: 10px;
+    /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(102, 145, 255, 0.37);
+    /* Add drop shadow */
+    transition: background-color 0.3s;
+    /* Add a smooth transition effect */
+    border-radius: 49.32px;
+}
+
+
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 49.32px;
+}
+
+.school-name {
+    font-family: 'Joti One', sans-serif;
+    font-size: 24px;
+    color: #000;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav__menu a:hover {
+    color: #ff9900;
+}
+
+
+.navbtn {
+    background-color: rgba(97, 167, 6, 1);
+    color: #fff;
+    padding: 13.26px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40.52px;
+    width: 169.74px;
+}
+
+.navbtn:hover {
+    background-color: #ff9900;
+}
+
+
+.img1 {
+    width: 71.132px;
+    height: 45.376px;
+    flex-shrink: 0;
+    margin-top: -420px;
+    margin-left: -750px;
+}
+
+.img2 {
+    width: 71.132px;
+    height: 45.376px;
+    transform: rotate(-30deg);
+    flex-shrink: 0;
+    margin-top: 200px;
+    margin-left: 510px;
+}
+
+.img3 {
+    width: 41.058px;
+    height: 41.058px;
+    transform: rotate(10deg);
+    flex-shrink: 0;
+    margin-top: -360px;
+    margin-left: 510px;
+}
+
+.img4 {
+    width: 195.413px;
+    height: 98.364px;
+    flex-shrink: 0;
+    margin-top: 250px;
+    margin-left: -470px;
+}
+
+/* .img5 {
+    width: 100px;
+height: 94px;
+flex-shrink: 0;
+margin-right: 1150px;
+margin-top: 180px;
+} */
+
+.hero {
+    /* background-color: #ff9900; */
+    background: none;
+    width: 1194px;
+    height: 850px;
+    flex-shrink: 0;
+    margin-left: calc((100% - 1194px) / 2);
+    position: relative;
+    border-radius: 105px;
+    padding-right: 20px;
+    padding-left: 20px;
+    top: 5.9rem;
+}
+
+
+
+.herocontainer {
+    background-image: url('/assets/Group\ 9\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Change 'center' to 'flex-start' */
+}
+
+
+.welcome {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-top: 140px;
+    /* Add margin-top to increase the space */
+}
+
+.box {
+    display: inline-block;
+    width: 290px;
+    height: 87px;
+    border-radius: 40px;
+    background-image: url('/assets/Rectangle\ 3.png');
+    background-size: cover;
+    background-position: center;
+    margin-top: 55px;
+    margin-top: -10px;
+    margin: 0 15px;
+    /* Adjust margin-right to increase the space */
+}
+
+.welcome-below {
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    margin: 5px 0 0 0;
+    /* Increase the margin-top value to move it closer */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.the {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: -30px;
+    /* Reduce the margin-top value to move it closer */
+}
+
+
+/* Style for "Citadel" with a different font */
+.citadel {
+    font-family: 'Fasthand', cursive;
+    font-size: 65px;
+    color: #000;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: -30px;
+    /* Reduce the margin-top value to move it closer */
+}
+
+
+.of {
+    background-color: #ff9900;
+    color: #fff;
+    width: 67px;
+    font-size: 40px;
+    height: 67px;
+    border-radius: 50%;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    line-height: 67px;
+    font-weight: bold;
+    margin: 0 auto;
+    /* Center-align horizontally */
+    margin-top: -30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.great {
+    font-size: 60px;
+    font-family: 'Cormorant Upright', serif;
+    color: #000;
+    font-style: italic;
+    margin-right: 5px;
+    margin-top: -30px;
+}
+
+.leaders {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 65px;
+    color: #000;
+    font-style: bold;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-top: -30px;
+}
+
+.herocontainer p {
+    height: 62px;
+    letter-spacing: 0;
+    line-height: 30.9px;
+    position: relative;
+    text-align: center;
+    width: 608px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+
+}
+
+.cta-button {
+    width: 186.33px;
+    height: 44.07px;
+    border-radius: 27px;
+    border: none;
+    background: rgba(255, 187, 0, 1);
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    border: 2px solid;
+    font-family: 'Roboto Slab', serif;
+    color: black;
+}
+
+.section2 {
+    /* background-color: #ff9900; */
+    background: none;
+    margin-left: calc((100% - 1194px) / 2 + 38px);
+    width: 1198px;
+    /* margin-left: 105px; */
+    margin-top: 36px;
+    position: relative;
+    /* top: 785px; */
+    border-radius: 61px;
+    height: 478px;
+}
+
+.img6 {
+    width: 112.641px;
+    height: 112.641px;
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    right: 218px;
+    transform: translate(50%, 50%) rotate(30deg);
+}
+
+.img5 {
+    width: 100px;
+    height: 94px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(50%, 50%) rotate(30deg);
+}
+
+/* .img5 {
+    width: 100px;
+height: 94px;
+flex-shrink: 0;
+margin-right: 1150px;
+margin-top: 180px;
+} */
+
+
+.img7 {
+    width: 137.819px;
+    height: 161.879px;
+    flex-shrink: 0;
+    position: absolute;
+    left: calc(100%/2);
+    top: -70px;
+}
+
+.img8 {
+    width: 33.249px;
+    height: 33.249px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    position: absolute;
+    top: calc(90%);
+    left: calc(100%/2);
+}
+
+.img9 {
+    width: 177.649px;
+    height: 20.427px;
+    transform: rotate(3deg);
+    flex-shrink: 0;
+    position: absolute;
+    top: 190px;
+    left: 450px;
+}
+
+.img10 {
+    width: 286.675px;
+    height: 207px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 75%;
+    top: -56px;
+    transform: rotate(5deg);
+}
+
+.img11 {
+    width: 137.082px;
+    height: 131.218px;
+    flex-shrink: 0;
+    position: absolute;
+    top: -60px;
+}
+
+.img12 {
+    width: 206px;
+    height: 94px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 52%;
+    margin-right: 278px;
+}
+
+.img13 {
+    width: 206px;
+    height: 94px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 1010px;
+}
+
+.img14 {
+    position: absolute;
+    width: 254.974px;
+    height: 272px;
+    flex-shrink: 0;
+    margin-top: -150px;
+    margin-left: -30px;
+}
+
+.img15 {
+    position: absolute;
+    width: 137.179px;
+    height: 131.522px;
+    right: 0;
+    margin-top: -50px;
+    flex-shrink: 0;
+}
+
+.img16 {
+    width: 195px;
+    height: 74px;
+    flex-shrink: 0;
+    left: 200px;
+    margin-left: 960px;
+    margin-top: -50px;
+}
+
+
+.custom-icon {
+    position: absolute;
+    top: -25px; 
+    left: 10%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 30px;
+    width: 110px;
+    height: 110px; /* Adjust to match the desired height */
+}
+
+
+
+.section2container {
+    background-image: url('/assets/Rectangle\ 4.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fuck1 {
+    color: #ea552b;
+    font-family: var(--font-family-ingrid_darling);
+    font-size: 175.7px;
+    font-weight: 400;
+    position: absolute;
+    left: 215px;
+    top: 30px;
+    /* Adjust the top value to move it closer to the paragraph */
+    margin: 0;
+}
+
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.at-crest-hive-interna {
+    height: 155px;
+    left: 327px;
+    letter-spacing: 0;
+    line-height: 30.9px;
+    position: absolute;
+    top: 932px;
+    width: 732px;
+    text-align: left;
+    font-size: 19.92px;
+    font-family: 'DM Sans', sans-serif;
+    top: 0;
+    margin: 0;
+}
+
+.section2container p {
+    font-size: 20px;
+}
+
+.section3 {
+    width: 100%;
+    height: 706px;
+    flex-shrink: 0;
+    margin-top: 90px;
+    background-color: rgba(255, 187, 0, 1);
+    /* top: 1345px; */
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.empowering-individualized-container {
+    position: absolute;
+    top: 133px;
+    left: 149px;
+    line-height: 75.15px;
+    text-transform: capitalize;
+    color: #000;
+    font-size: 39.78px;
+}
+
+.empowering-individualized {
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+}
+
+.learning {
+    font-size: 55px;
+    font-family: 'Fasthand', cursive;
+}
+
+.supporting-text,
+.supporting-text1 {
+    position: absolute;
+    top: 221px;
+    left: 149px;
+    letter-spacing: 0.28px;
+    line-height: 22.1px;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 524px;
+}
+
+.supporting-text1 {
+    top: 400px;
+    left: 795px;
+}
+
+.frame-inner,
+.rectangle-icon {
+    position: absolute;
+    top: 356px;
+    left: 149px;
+    width: 244.51px;
+    height: 133.66px;
+    object-fit: cover;
+}
+
+.rectangle-icon {
+    top: 504.34px;
+}
+
+.rch {
+    position: absolute;
+    top: 300px;
+    left: 750px;
+    font-size: 175.67px;
+    line-height: 272.8px;
+    text-transform: uppercase;
+    font-family: 'Ingrid Darling', cursive;
+    color: #61a706;
+    text-align: center;
+}
+
+.section4 {
+    background-color: #ff9900;
+    background: none;
+    width: 1194px;
+    height: 621px;
+    flex-shrink: 0;
+    margin-top: 70px;
+    margin-left: calc((100% - 1194px) / 2);
+    position: absolute;
+    border-radius: 180px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.section4container {
+    background-image: url('/assets/Rectangle\ 6\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.fostering-growth-together-container {
+    position: absolute;
+    top: 110px;
+    left: 129px;
+    line-height: 75.15px;
+    text-transform: capitalize;
+    color: var(--color-ghostwhite-100);
+    text-align: left;
+    font-size: 39.78px;
+}
+
+.fostering {
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+}
+
+.growth {
+    font-size: 50px;
+    font-family: 'Fasthand', cursive;
+}
+
+.btns4 {
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 340px;
+    left: 120px;
+    border-radius: 11.05px;
+    width: 154px;
+
+    padding: 17.682px 17.682px 17.682px 22.103px;
+    align-items: center;
+    border-radius: 11.051px;
+    background: var(--Dark, #080808);
+    gap: 13.262px;
+}
+
+.tsc {
+    width: 449px;
+    height: 273px;
+    border-radius: 52px;
+    margin-top: 300px;
+    margin-right: 60px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+.divo,
+.divo1 {
+    position: absolute;
+    left: 60px;
+    /* margin-top: 800px; */
+    top: 35px;
+    font-size: 75.67px;
+    text-transform: uppercase;
+    font-family: 'Ingrid Darling', cursive;
+    color: orange;
+}
+
+
+.divo1 {
+    top: 220px;
+    left: 380px;
+    transform: rotate(-180deg);
+    transform-origin: 0 0;
+}
+
+.supporting-textss {
+    position: absolute;
+    top: 210px;
+    left: 126px;
+    letter-spacing: 0.28px;
+    line-height: 22.1px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: left;
+    display: inline-block;
+    width: 423px;
+}
+
+.supporting-text2 {
+    position: absolute;
+    margin-top: 90px;
+    left: 90px;
+    /* top: 406px;
+    left: 798px; */
+    letter-spacing: 0.28px;
+    color: #080808;
+    text-align: left;
+    display: inline-block;
+    width: 305px;
+}
+
+.section5 {
+    /* background-color: rgba(245, 245, 255, 1); */
+    background-color: #080808;
+    border-top: 1px solid #000;
+    border-bottom-left-radius: 40px;
+    /* Increase the bottom left border radius to 40px */
+    border-bottom-right-radius: 40px;
+    height: 870px;
+    position: relative;
+    /* margin-top: 100px; */
+    top: 770px;
+}
+
+
+.section5-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    /* Background color for section5 */
+}
+
+.left-side {
+    width: 50%;
+    padding-right: 20px;
+    /* margin-top: 150px; */
+}
+
+.left-side h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 39px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left-side .class-ladder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 39px;
+    font-weight: bold;
+    color: #000;
+    margin-top: -20px
+        /* Adjust color as needed */
+}
+
+.our {
+    margin-top: -20px;
+}
+
+.eej {
+    margin-top: -20px;
+}
+
+.left-side p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.left-side .educational {
+    font-family: 'Fasthand', cursive;
+    font-weight: normal;
+}
+
+.left-side .paragraph {
+    font-size: 16px;
+    color: #333;
+    /* Adjust color as needed */
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.get-started-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #fff;
+    border: 2px solid black;
+    color: #000;
+    /* Adjust color as needed */
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Add space between cards */
+    max-height: 560px;
+    /* Set a maximum height to show 4 cards at a time */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 20px;
+}
+
+.card {
+    width: 369px;
+    min-height: 136px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Change to column layout */
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: auto;
+    padding: 20px;
+}
+
+
+.hidescroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+.card h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-right: 100px;
+    color: rgba(41, 26, 104, 1);
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 0;
+    text-align: left;
+    /* Center-align the paragraph text */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: rgba(145, 135, 190, 1);
+}
+
+
+
+
+
+
+
+
+.card i {
+    position: absolute;
+    top: -10px;
+    /* Adjust the negative top value to control the overlap */
+    left: 10%;
+    /* Center the icon horizontally */
+    transform: translateX(-50%);
+    /* Center the icon horizontally */
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* .fas {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px; 
+    color: #007bff; 
+} */
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Add space between cards */
+    max-height: 560px;
+    /* Limit the container height */
+    overflow-y: auto;
+    /* Add a vertical scrollbar when needed */
+    padding: 20px;
+    width: 50%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* Adjust the height as needed */
+}
+
+.footer {
+    width: 1376px;
+    height: 1069px;
+    /* background-color: #000; */
+    background: none;
+    margin-top: 850px;
+    background-image: url('/assets/Rectangle\ 41.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* .footer {
+    background-color: #080808;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+} */
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-header {
+    font-size: 48px;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.fasthand-font {
+    font-family: 'Fasthand', cursive;
+}
+
+.footer-header-fasthand {
+    font-family: 'Roboto Slab', serif;
+    font-size: 35px;
+    font-weight: 200;
+    margin-top: -18px;
+}
+
+.footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: -28px;
+    margin: 5px 0;
+}
+
+.footer-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.footer-button:hover {
+    background-color: #e58300;
+}
+
+.footer-content2 {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items to both ends */
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    /* Text color */
+    margin-top: 20px;
+    /* Add margin to the top */
+}
+
+.footer-content2 h2 {
+    margin-bottom: 10px;
+    /* Add margin to the bottom of the header */
+}
+
+
+.footer-content2 p {
+    margin-bottom: 10px;
+    /* Add margin to the bottom of paragraphs */
+}
+
+.footer-content2 button {
+    margin-top: 10px;
+    /* Add margin to the top of the button */
+}
+
+
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    /* Adjust text alignment */
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.line {
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.copyright {
+    flex: 1;
+    text-align: right;
+    margin-left: 800px;
+}
+
+.copyright p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.social-icons a {
+    color: #fff;
+    /* Icon color */
+    text-decoration: none;
+    margin-left: 10px;
+    /* Adjust spacing between icons */
+    font-size: 20px;
+}
+
+/* Style for the email icon */
+.contact-info p:nth-child(odd) i {
+    font-size: 20px;
+    /* Adjust the icon size as needed */
+    margin-right: 10px;
+    /* Add spacing between the icon and text */
+    color: #fff;
+    /* Change the icon color */
+}
+
+/* Style for the phone icon */
+.contact-info p:nth-child(even) i {
+    font-size: 20px;
+    /* Adjust the icon size as needed */
+    margin-right: 10px;
+    /* Add spacing between the icon and text */
+    color: #fff;
+    /* Change the icon color */
+}
+
+.your-button-class {
+    width: 300px;
+    height: 93px;
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 50px;
+    flex-shrink: 0;
+}
