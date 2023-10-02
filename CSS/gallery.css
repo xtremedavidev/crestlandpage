@@ -1,0 +1,35 @@
+/* styles.css */
+.gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.album-list {
+    list-style: none;
+    padding: 0;
+}
+
+.album {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.album h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.image-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.image-list img {
+    max-width: 100%;
+    height: auto;
+}
