@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1>My Photo Albums</h1>
+        <ul class="album-list" id="album-list">
+            <!-- Albums will be generated here using JavaScript -->
+        </ul>
+    </div>
+    <script>
+        // Sample data: List of albums with images
+        const albumsData = [
+            {
+                name: "Album 1",
+                images: [
+                "./assets/91.jpg",
+                    "./assets/92.jpg",
+                    "./assets/93.jpg",
+                    "./assets/94.jpg",
+                    "./assets/95.jpg",
+                    "./assets/91.jpg",
+                    // Add more image URLs here
+                ],
+            },
+            {
+                name: "Album 2",
+                images: [
+                    "./assets/91.jpg",
+                    "./assets/92.jpg",
+                    "./assets/93.jpg",
+                    "./assets/94.jpg",
+                    "./assets/95.jpg",
+                    "./assets/91.jpg",
+                    // Add more image URLs here
+                ],
+            },
+            {
+                name: "Album 3",
+                images: [
+                "./assets/91.jpg",
+                    "./assets/92.jpg",
+                    "./assets/91.jpg",
+                    "./assets/94.jpg",
+                    "./assets/92.jpg",
+                    "./assets/91.jpg",
+                ],
+            },
+            {
+                name: "Album 4",
+                images: [
+                "./assets/91.jpg",
+                    "./assets/92.jpg",
+                    "./assets/93.jpg",
+                    "./assets/94.jpg",
+                    "./assets/95.jpg",
+                    "./assets/91.jpg",
+                ],
+            },
+        ];
+
+        // Function to create an album element
+        function createAlbum(albumData) {
+            const albumElement = document.createElement("li");
+            albumElement.className = "album";
+
+            const albumTitle = document.createElement("h2");
+            albumTitle.textContent = albumData.name;
+
+            const imageList = document.createElement("ul");
+            imageList.className = "image-list";
+
+            albumData.images.forEach((imageUrl) => {
+                const imageItem = document.createElement("li");
+                const image = document.createElement("img");
+                image.src = imageUrl;
+                image.alt = "Image";
+                imageItem.appendChild(image);
+                imageList.appendChild(imageItem);
+            });
+
+            albumElement.appendChild(albumTitle);
+            albumElement.appendChild(imageList);
+
+            return albumElement;
+        }
+
+        // Function to initialize the gallery
+        function initializeGallery() {
+            const albumList = document.getElementById("album-list");
+
+            albumsData.forEach((albumData) => {
+                const albumElement = createAlbum(albumData);
+                albumList.appendChild(albumElement);
+            });
+        }
+
+        // Call the initializeGallery function to populate the gallery
+        initializeGallery();
+    </script>
+    <style>
+        /* Your CSS styles here (same as provided in previous response) */
+        .gallery {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .album-list {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .album {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    
+        .album h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+    
+        .image-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+    
+        .image-list img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    
+</body>
+</html>
+
+
+
+/* styles.css */
+.gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.album-list {
+    list-style: none;
+    padding: 0;
+}
+
+.album {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.album h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.image-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.image-list img {
+    max-width: 100%;
+    height: auto;
+}

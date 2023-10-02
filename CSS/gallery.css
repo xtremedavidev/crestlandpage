@@ -1,35 +1,67 @@
-/* styles.css */
-.gallery {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.album-list {
-    list-style: none;
-    padding: 0;
-}
-
-.album {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-.album h2 {
-    font-size: 20px;
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-}
-
-.image-list {
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
     list-style: none;
     padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+    margin-left: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .sub-categories {
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .sub-categories li {
+    margin-left: 10px;
+  }
+  
+  .gallery {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.image-list img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .image-grid img {
     max-width: 100%;
     height: auto;
-}
+    border: 1px solid #ccc;
+  }
+  
+  .view-more {
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  

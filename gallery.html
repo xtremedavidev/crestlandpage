@@ -1,145 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/gallery.css">
+  <title>Gallery</title>
 </head>
 <body>
-    <div class="gallery">
-        <h1>My Photo Albums</h1>
-        <ul class="album-list" id="album-list">
-            <!-- Albums will be generated here using JavaScript -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#" data-category="all">All</a></li>
+      <li><a href="#" data-category="activities">Activities</a>
+        <ul class="sub-categories">
+          <li><a href="#" data-category="weekend">Weekend</a></li>
+          <li><a href="#" data-category="boarding">Boarding</a></li>
+          <li><a href="#" data-category="programs">Programs</a></li>
         </ul>
-    </div>
-    <script>
-        // Sample data: List of albums with images
-        const albumsData = [
-            {
-                name: "Album 1",
-                images: [
-                "./assets/91.jpg",
-                    "./assets/92.jpg",
-                    "./assets/93.jpg",
-                    "./assets/94.jpg",
-                    "./assets/95.jpg",
-                    "./assets/91.jpg",
-                    // Add more image URLs here
-                ],
-            },
-            {
-                name: "Album 2",
-                images: [
-                    "./assets/91.jpg",
-                    "./assets/92.jpg",
-                    "./assets/93.jpg",
-                    "./assets/94.jpg",
-                    "./assets/95.jpg",
-                    "./assets/91.jpg",
-                    // Add more image URLs here
-                ],
-            },
-            {
-                name: "Album 3",
-                images: [
-                "./assets/91.jpg",
-                    "./assets/92.jpg",
-                    "./assets/91.jpg",
-                    "./assets/94.jpg",
-                    "./assets/92.jpg",
-                    "./assets/91.jpg",
-                ],
-            },
-            {
-                name: "Album 4",
-                images: [
-                "./assets/91.jpg",
-                    "./assets/92.jpg",
-                    "./assets/93.jpg",
-                    "./assets/94.jpg",
-                    "./assets/95.jpg",
-                    "./assets/91.jpg",
-                ],
-            },
-        ];
+      </li>
+      <li><a href="#" data-category="facilities">Facilities</a></li>
+      <li><a href="#" data-category="staffs">Staffs</a></li>
+    </ul>
+  </nav>
 
-        // Function to create an album element
-        function createAlbum(albumData) {
-            const albumElement = document.createElement("li");
-            albumElement.className = "album";
+  <section class="gallery">
+    <!-- Images will be dynamically loaded here -->
+    <div class="image-grid"></div>
+    <button class="view-more">View More</button>
+  </section>
 
-            const albumTitle = document.createElement("h2");
-            albumTitle.textContent = albumData.name;
-
-            const imageList = document.createElement("ul");
-            imageList.className = "image-list";
-
-            albumData.images.forEach((imageUrl) => {
-                const imageItem = document.createElement("li");
-                const image = document.createElement("img");
-                image.src = imageUrl;
-                image.alt = "Image";
-                imageItem.appendChild(image);
-                imageList.appendChild(imageItem);
-            });
-
-            albumElement.appendChild(albumTitle);
-            albumElement.appendChild(imageList);
-
-            return albumElement;
-        }
-
-        // Function to initialize the gallery
-        function initializeGallery() {
-            const albumList = document.getElementById("album-list");
-
-            albumsData.forEach((albumData) => {
-                const albumElement = createAlbum(albumData);
-                albumList.appendChild(albumElement);
-            });
-        }
-
-        // Call the initializeGallery function to populate the gallery
-        initializeGallery();
-    </script>
-    <style>
-        /* Your CSS styles here (same as provided in previous response) */
-        .gallery {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-    
-        .album-list {
-            list-style: none;
-            padding: 0;
-        }
-    
-        .album {
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-    
-        .album h2 {
-            font-size: 20px;
-            margin: 0;
-        }
-    
-        .image-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-        }
-    
-        .image-list img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-    
+  <script src="gallery.js"></script>
 </body>
 </html>
