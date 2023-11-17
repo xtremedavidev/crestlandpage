@@ -28,6 +28,7 @@ changeBackgroundImage();
 setInterval(changeBackgroundImage, 5000);
 
 
+
     document.addEventListener('DOMContentLoaded', function () {
         const container = document.querySelector('.staff-cards-container');
         const scrollAmount = 1; 

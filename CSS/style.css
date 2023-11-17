@@ -317,8 +317,9 @@ a {
 
 .section4 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     /* padding-left: 80px;
     padding-right: 80px;
     margin-top: 80px;
@@ -327,12 +328,12 @@ a {
 }
 
 .tsc {
-    width: 449px;
+    width: 749px;
     height: 273px;
     border-radius: 52px;
-    background-color: rgba(247, 246, 252, 1);
+    /* background-color: rgba(247, 246, 252, 1); */
     position: relative;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 .tsc2 {
@@ -349,13 +350,13 @@ a {
 
 .supporting-text2 {
     position: absolute;
-    margin-top: 90px;
+    margin-top: 60px;
     left: 90px;
     letter-spacing: 0.28px;
     color: #080808;
     text-align: left;
     display: inline-block;
-    width: 305px;
+    width: 605px;
 }
 
 .divo,
@@ -363,7 +364,7 @@ a {
     position: absolute;
     left: 60px;
     /* margin-top: 800px; */
-    top: 35px;
+    top: 21px;
     font-size: 75.67px;
     text-transform: uppercase;
     font-family: 'Ingrid Darling', cursive;
@@ -372,7 +373,7 @@ a {
 
 .divo1 {
     top: 220px;
-    left: 380px;
+    left: 570px;
     transform: rotate(-180deg);
     transform-origin: 0 0;
 }
@@ -895,7 +896,6 @@ a {
 }
 
 .bc-top img {
-    /* height: 100%; */
     width: 100%;
     border-top-right-radius: 9.266px;
     border-top-left-radius: 9.266px;
@@ -931,154 +931,47 @@ a {
     margin-left: -55px;
 }
 
-.footer {
-    width: 100vw;
-    height: 769px;
-    background: none;
-    background-image: url('/assets/Rectangle\ 41.png');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+
+/* Style the dropdown */
+.school-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown icon */
+.school-dropdown i {
+    margin-left: 5px;
+}
+
+/* Hide the submenu by default */
+.school-submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 20px;
+    width: 200px; /* Adjust the width as needed */
+
+}
+
+/* Style the submenu items */
+.school-submenu li {
+    padding: 10px;
     text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.school-submenu li:nth-child(2) {
+    border-bottom: none;
+}
+
+/* Show the submenu on hover */
+.school-dropdown:hover .school-submenu {
+    display: block;
 }
 
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-header {
-    font-size: 48px;
-    margin-top: 100px;
-    margin-bottom: 5px;
-    font-weight: normal;
-}
-
-.fasthand-font {
-    font-family: 'Fasthand', cursive;
-}
-
-.footer-header-fasthand {
-    font-family: 'Roboto Slab', serif;
-    font-size: 35px;
-    font-weight: 200;
-    margin-top: -18px;
-}
-
-.footer-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    margin-top: -28px;
-    margin: 5px 0;
-}
-
-.footer-button {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.footer-button:hover {
-    background-color: #e58300;
-}
-
-.footer-content2 {
-    display: flex;
-    justify-content: space-between;
-    /* Distribute items to both ends */
-    align-items: center;
-    padding: 20px;
-    color: #fff;
-    /* Text color */
-    margin-top: 20px;
-    /* Add margin to the top */
-}
-
-.footer-content2 h2 {
-    margin-bottom: 10px;
-    /* Add margin to the bottom of the header */
-}
-
-
-.footer-content2 p {
-    margin-bottom: 10px;
-    /* Add margin to the bottom of paragraphs */
-}
-
-.footer-content2 button {
-    margin-top: 10px;
-    /* Add margin to the top of the button */
-}
-
-
-.contact-info {
-    flex: 1;
-    padding-right: 20px;
-    text-align: left;
-    /* Adjust text alignment */
-}
-
-.contact-info h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.line {
-    border-top: 1px solid #fff;
-    margin: 10px 0;
-}
-
-.contact-info p {
-    margin: 10px 0;
-}
-
-.copyright {
-    flex: 1;
-    text-align: right;
-    margin-left: 1000px;
-}
-
-.copyright p {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.social-icons a {
-    color: #fff;
-    /* Icon color */
-    text-decoration: none;
-    margin-left: 10px;
-    /* Adjust spacing between icons */
-    font-size: 20px;
-}
-
-/* Style for the email icon */
-.contact-info p:nth-child(odd) i {
-    font-size: 20px;
-    /* Adjust the icon size as needed */
-    margin-right: 10px;
-    /* Add spacing between the icon and text */
-    color: #fff;
-    /* Change the icon color */
-}
-
-/* Style for the phone icon */
-.contact-info p:nth-child(even) i {
-    font-size: 20px;
-    /* Adjust the icon size as needed */
-    margin-right: 10px;
-    /* Add spacing between the icon and text */
-    color: #fff;
-    /* Change the icon color */
-}
 
 .your-button-class {
     width: 300px;
@@ -1089,3 +982,191 @@ a {
     margin-top: 50px;
     flex-shrink: 0;
 }
+
+/* Add this CSS at the end of your existing CSS file or in a separate CSS file */
+
+.floating-icon {
+    position: fixed;
+    top: 50%; /* Position at 50% height of the screen */
+    right: 0; /* Adjust the right offset as needed */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.floating-icon a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon-bg {
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for the icon */
+    padding: 10px 20px; /* Adjust the size as needed */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Style for the icon */
+.icon-bg i {
+    margin-right: 10px; /* Adjust the spacing between icon and text */
+}
+
+
+
+.footer {
+    width: 100vw;
+    height: 769px;
+    background: none;
+    background-image: url('/assets/Rectangle\ 41.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-header {
+    font-size: 48px;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    font-weight: normal;
+  }
+  
+  .fasthand-font {
+    font-family: 'Fasthand', cursive;
+  }
+  
+  .footer-header-fasthand {
+    font-family: 'Roboto Slab', serif;
+    font-size: 35px;
+    font-weight: 200;
+    margin-top: -18px;
+  }
+  
+  .footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: -28px;
+    margin: 5px 0;
+  }
+  
+  .footer-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .footer-button:hover {
+    background-color: #e58300;
+  }
+  
+  .footer-content2 {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items to both ends */
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    /* Text color */
+    margin-top: 20px;
+    /* Add margin to the top */
+  }
+  
+  .footer-content2 h2 {
+    margin-bottom: 10px;
+    /* Add margin to the bottom of the header */
+  }
+  
+  
+  .footer-content2 p {
+    margin-bottom: 10px;
+    /* Add margin to the bottom of paragraphs */
+  }
+  
+  .footer-content2 button {
+    margin-top: 10px;
+    /* Add margin to the top of the button */
+  }
+  
+  
+  .contact-info {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    /* Adjust text alignment */
+  }
+  
+  .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .line {
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .copyright {
+    flex: 1;
+    text-align: right;
+    margin-left: 1000px;
+  }
+  
+  .copyright p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    /* Icon color */
+    text-decoration: none;
+    margin-left: 10px;
+    /* Adjust spacing between icons */
+    font-size: 20px;
+  }
+  
+  /* Style for the email icon */
+  .contact-info p:nth-child(odd) i {
+    font-size: 20px;
+    /* Adjust the icon size as needed */
+    margin-right: 10px;
+    /* Add spacing between the icon and text */
+    color: #fff;
+    /* Change the icon color */
+  }
+  
+  /* Style for the phone icon */
+  .contact-info p:nth-child(even) i {
+    font-size: 20px;
+    /* Adjust the icon size as needed */
+    margin-right: 10px;
+    /* Add spacing between the icon and text */
+    color: #fff;
+    /* Change the icon color */
+  }
+  
+  .your-button-class {
+    width: 300px;
+    height: 93px;
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 50px;
+    flex-shrink: 0;
+  }
+  

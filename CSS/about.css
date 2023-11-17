@@ -113,6 +113,47 @@ a {
     background-color: #ff9900;
 }
 
+/* Style the dropdown */
+.school-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown icon */
+.school-dropdown i {
+    margin-left: 5px;
+}
+
+/* Hide the submenu by default */
+.school-submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 20px;
+    width: 200px; /* Adjust the width as needed */
+
+}
+
+/* Style the submenu items */
+.school-submenu li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.school-submenu li:nth-child(2) {
+    border-bottom: none;
+}
+
+/* Show the submenu on hover */
+.school-dropdown:hover .school-submenu {
+    display: block;
+}
+
+
+
 
 /*------------------------------------- hero -----------------------------*/
 
@@ -177,7 +218,7 @@ a {
 }
 
 .heroright img {
-    width: 608px;
+    width: 568px;
     height: 345px;
 }
 
@@ -270,6 +311,13 @@ a {
     min-height: 80vh; 
 }
 
+.s3container img {
+    width: 1091px;
+    height: 493px;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+
 
 .glass-card {
     width: 80%;
@@ -342,7 +390,7 @@ flex-shrink: 0;
     font-family: 'Poppins', sans-serif;
     margin-top: -55px;
     margin-bottom: 45px;
-    margin-left: -1300px;
+    /* margin-left: -1100px; */
 }
 
 .staff-cards-container {
@@ -410,7 +458,7 @@ flex-shrink: 0;
     font-family: 'Poppins', sans-serif;
     margin-top: -65px;
     margin-bottom: 45px;
-    margin-left: -1300px;
+    margin-left: -1100px;
 }
 
 .staff-cards-containers {

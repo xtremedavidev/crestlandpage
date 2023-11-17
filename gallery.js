@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const sidebarLinks = document.querySelectorAll('.sidebar a');
+    const categoryLinks = document.querySelectorAll('.category-navigation a');
     const imageGrid = document.querySelector('.image-grid');
     const viewMoreButton = document.querySelector('.view-more');
     const categories = {
@@ -26,9 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
             'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
             'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://example.com/image2.jpg',
-            'https://example.com/image3.jpg',
-            // Add more image URLs here
+           
         ],
         activities: [
             'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
@@ -41,9 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
             'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
             'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://example.com/activity2.jpg',
-            'https://example.com/activity3.jpg',
-            // Add more image URLs here
         ],
         facilities: [
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
@@ -51,12 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-            'https://example.com/weekend2.jpg',
-            'https://example.com/weekend3.jpg',
-            // Add more image URLs here
         ],
-
-
         staffs: [
             'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
             'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
@@ -64,11 +54,21 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
             'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
             'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
+            // Add more image URLs here
+        ],
 
-        ]
-
-
-        // Define online URLs for other categories in a similar manner
+        weekends: [
+            'https://www.achrnews.com/ext/resources/sm/issues/2016/March/Spa-Paw--Tail-Guest-Rooms.jpg?1675271496'
+            // Include your 'weekends' images here
+        ],
+        boarding: [
+            'https://www.achrnews.com/ext/resources/sm/issues/2016/March/Spa-Paw--Tail-Guest-Rooms.jpg?1675271496'
+            // Include your 'boarding' images here
+        ],
+        sports: [
+            'https://sportsfacilities.com/wp-content/uploads/2016/03/sports-facilities-complex.jpg'
+            // Include your 'sports' images here
+        ],
     };
 
     // Function to load images based on category
@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add click event listeners to sidebar links
-    sidebarLinks.forEach(link => {
+    // Add click event listeners to category links
+    categoryLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const category = event.target.getAttribute('data-category');
@@ -96,7 +96,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Click event listener for the "View More" button
+    loadImages('all');
     viewMoreButton.addEventListener('click', () => {
         // Add code here to view more images or open a modal
     });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryLinks = document.querySelectorAll('.category-navigation ul li a');
+    
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            // Remove the 'active' class from all category links
+            categoryLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add the 'active' class to the clicked category link
+            event.target.classList.add('active');
+            
+            // Get the selected category from the data attribute
+            const selectedCategory = event.target.getAttribute('data-category');
+            
+            // Use the selectedCategory to load images or perform other actions
+            loadImages(selectedCategory);
+        });
+    });
+
+    // Your existing code for loading images and categories
+
 });

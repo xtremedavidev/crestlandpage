@@ -1,33 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/gallery.css">
-  <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
+        crossorigin="anonymous" />
+    <title>CrestHive Gallery</title>
 </head>
+
 <body>
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#" data-category="all">All</a></li>
-      <li><a href="#" data-category="activities">Activities</a>
-        <ul class="sub-categories">
-          <li><a href="#" data-category="weekend">Weekend</a></li>
-          <li><a href="#" data-category="boarding">Boarding</a></li>
-          <li><a href="#" data-category="programs">Programs</a></li>
+
+    <nav class="navbar">
+        <div class="container nav__container">
+            <a href="index.html" class="school-name">
+                <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
+            </a>
+            <ul class="nav__menu">
+                <li class="school-dropdown">
+                    <a href="#school">School <i class="fas fa-caret-down"></i></a>
+                    <ul class="school-submenu">
+                        <li><a href="#">Basic School</a></li>
+                        <li><a href="#">Secondary School</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <button class="navbtn">Start Registration</button>
+        </div>
+    </nav>
+    
+
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Our Gallery</h1>
+            <p>We are devoted to societal evolution through <br> premium quality education, high-value development, <br>
+                and interpersonal skills.</p>
+        </div>
+        <div class="hero-right">
+            <div class="heroright">
+                <div class="glassmorphism-box">
+                    <video width="100%" autoplay loop>
+                        <source src="/assets/hanger video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="right-polygon"></div>
+        </div>
+    </section>
+
+    <nav class="category-navigation">
+        <ul>
+            <li><a href="#" data-category="all"><i class="fas fa-globe"></i> All</a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-category="activities">
+                    <i class="fas fa-running"></i> Activities
+                    <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" viewBox="0 0 29 29">
+                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.5 11.5-6 6-6-6"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="#" data-category="weekends">Weekends</a></li>
+                    <li><a href="#" data-category="boarding">Boarding</a></li>
+                    <li><a href="#" data-category="sports">Sports</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#" data-category="facilities"><i class="fas fa-building"></i> Facilities</a></li>
+            <li><a href="#" data-category="staffs"><i class="fas fa-users"></i> Staffs</a></li>
+            <li><a href="#" data-category="clubs">Clubs</a></li>
+            <li><a href="#" data-category="stakeholders">Stakeholders</a></li>
         </ul>
-      </li>
-      <li><a href="#" data-category="facilities">Facilities</a></li>
-      <li><a href="#" data-category="staffs">Staffs</a></li>
-    </ul>
-  </nav>
 
-  <section class="gallery">
-    <!-- Images will be dynamically loaded here -->
-    <div class="image-grid"></div>
-    <button class="view-more">View More</button>
-  </section>
+    </nav>
+    <section class="gallery">
+        <div class="image-grid"></div>
+        <button class="view-more">
+            <svg xmlns="http://www.w3.org/2000/svg" id="file" x="0" y="0" enable-background="new 0 0 16 16" version="1.1" viewBox="0 0 16 16" xml:space="preserve">
+                <path id="path7" fill="#231f20" stroke="none" d="M3.754.5C2.787.5 2 1.287 2 2.254v10.992C2 14.213 2.787 15 3.754 15h7.992c.967 0 1.754-.787 1.754-1.754V4.771c0-.007-.007-.012-.008-.019a.24.24 0 0 0-.064-.158l-4-4a.244.244.0 0 0-.15-.067C9.252.52 9.232.5 9.206.5H3.754zm0 .5H9v2.281c0 .96.78 1.74 1.738 1.74H13v8.225c0 .691-.563 1.254-1.254 1.254H3.754A1.256 1.256 0 0 1 2.5 13.246V2.254C2.5 1.563 3.063 1 3.754 1Zm5.744.393H9.5c.77.766 2.314 2.3 3.145 3.128h-1.907c-.683 0-1.24-.557-1.24-1.24V1.393zm.98 8.53-.343.364 1.107 1.047H8.547v.5h2.701l-1.115 1.084.35.36 1.56-1.516a.252.252 0 0 0-.002-.363l-1.562-1.475z">
+                </path>
+            </svg>
+            <span>View More</span>
+        </button>
+    </section>
 
-  <script src="gallery.js"></script>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-header">
+                <span class="fasthand-font">CrestHive</span> surpasses just a
+            </h2>
+            <h2 class="footer-header footer-header-fasthand">school, we are family.</h2>
+            <p class="footer-text">We imbibe knowledge without compromising</p>
+            <p class="footer-text">the Deen</p>
+            <button class="footer-button">Learn More</button>
+        </div>
+
+        <div class="footer-content2">
+            <div class="footer-content2">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <hr>
+                    <p><i class="fas fa-envelope"></i> Email: info@cresthive.com</p>
+                    <hr>
+                    <p><i class="fas fa-phone"></i> Phone number: 07030175401</p>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2023, All rights reserved</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+    
+    
+
+    <script src="gallery.js"></script>
 </body>
+
 </html>
