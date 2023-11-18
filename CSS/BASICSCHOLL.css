@@ -470,6 +470,12 @@ flex-shrink: 0;
     background-color: #FFA500;
 }
 
+
+footer p{
+    color: #E5F0FF;
+}
+
+
 .footer {
     width: 100vw;
     height: 769px;

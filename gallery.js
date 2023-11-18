@@ -15,30 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define online image URLs for each category
     const imageUrls = {
         all: [
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-            'https://images.unsplash.com/photo-1660798027105-5da8ad164e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
-           
+          
         ],
+
         activities: [
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
-            'https://images.picxy.com/cache/2019/5/22/17c5114499f0fd8c2b033bdeb3d124c2.jpg',
+            `assets/Activities/02.jpg`,
+            `assets/Activities/05.jpg`,
+            `assets/Activities/06.jpg`,
+            `assets/Activities/07.jpg`,
+            `assets/Activities/08.jpg`,
+            `assets/Activities/09.jpg`,
+            `assets/Activities/010.jpg`,
+            `assets/Activities/01.heic`,
+
         ],
         facilities: [
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
@@ -48,13 +37,32 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
         ],
         staffs: [
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            'https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=',
-            // Add more image URLs here
+            "assets/Our Educators//Azeez Kabiroh (Play Group Class Teacher).jpg",
+            "assets/Our Educators/Malam AbdulBasheer Balogun.jpg",
+            "assets/Our Educators/Malam AbdulHamid AbdulGoniy.jpg",
+            "assets/Our Educators/Malam Isa Rosheed Buwaeb.jpg",
+            "assets/Our Educators/Miss Rofiah Basic 5 class teacher.jpg",
+            "assets/Our Educators/Miss Shakirah Nursery Gold Class Teacher.jpg",
+            "assets/Our Educators/Mr Abdullah W.A.jpg",
+            "assets/Our Educators/Mr Ismail Basic 2  Diamond class teacher.jpg",
+            "assets/Our Educators/Mr. Ademola Habibullah Jss2 class teacher.jpg",
+            "assets/Our Educators/Mr. Adetoro Abdulwasiu Basic 4 Gold class teacher.jpg",
+            "assets/Our Educators/Mrs AbdulAzeez Basic 1 Gold Class Teacher.jpg",
+            "assets/Our Educators/Mrs Adeyemi.jpg",
+            "assets/Our Educators/Mrs Bamidele Latifa.jpg",
+            "assets/Our Educators/Mrs Ibidun (Playgroup Class Teacher).jpg",
+            "assets/Our Educators/Mrs Lawal.jpg",
+            "assets/Our Educators/Mrs Mohammad.jpg",
+            "assets/Our Educators/Mrs Moshood Mariam Basic 3 Class teacher.jpg",
+            "assets/Our Educators/Mrs Popoola SS1 Class teacher.jpg",
+            "assets/Our Educators/Mrs Rabiu Zainab.jpg",
+            "assets/Our Educators/Mrs Salaudeen Basic 4 Diamond class teacher.jpg",
+            "assets/Our Educators/Mrs Sodiq Aminat.jpg",
+            "assets/Our Educators/Mrs Uthman basic 1 diamond class teacher.jpg",
+            "assets/Our Educators/Mrs. AbdulAzeez S. JSS3 class teacher.jpg",
+            "assets/Our Educators/Sanusi Iqmat.jpg",
+            "assets/Our Educators/Uztaz Abubakr A. Umar (Head of Islamic Department).jpg",
+            "assets/Our Educators/Miss Adeola SS1 class teacher.jpg",
         ],
 
         weekends: [
@@ -69,6 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://sportsfacilities.com/wp-content/uploads/2016/03/sports-facilities-complex.jpg'
             // Include your 'sports' images here
         ],
+        stakeholders: [
+            'https://sportsfacilities.com/wp-content/uploads/2016/03/sports-facilities-complex.jpg'
+            // Include your 'sports' images here
+
+        ]
     };
 
     // Function to load images based on category

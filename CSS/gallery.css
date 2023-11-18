@@ -387,7 +387,7 @@ a {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   margin-top: 8px;
@@ -429,6 +429,35 @@ a {
   align-items: center;
   gap: 8px; /* Adjust the gap as needed */
 }
+/* Hide the submenu by default */
+.school-submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 20px;
+  width: 200px; /* Adjust the width as needed */
+
+}
+
+
+/* Style the submenu items */
+.school-submenu li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.school-submenu li:nth-child(2) {
+  border-bottom: none;
+}
+
+/* Show the submenu on hover */
+.school-dropdown:hover .school-submenu {
+  display: block;
+}
+
 
 
 .footer {

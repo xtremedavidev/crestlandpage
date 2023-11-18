@@ -19,8 +19,12 @@ const hero = document.querySelector('.hero');
 let currentImageIndex = 0;
 
 function changeBackgroundImage() {
+  hero.classList.add('slide-in');
+  setTimeout(() => {
     hero.style.backgroundImage = `url(${backgroundImages[currentImageIndex]})`;
+    hero.classList.remove('slide-in');
     currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+  }, 1500); // Adjust the timeout to match the transition duration
 }
 
 changeBackgroundImage();
@@ -28,11 +32,10 @@ changeBackgroundImage();
 setInterval(changeBackgroundImage, 5000);
 
 
-
     document.addEventListener('DOMContentLoaded', function () {
         const container = document.querySelector('.staff-cards-container');
         const scrollAmount = 1; 
-        const scrollSpeed = 2;   
+        const scrollSpeed = 1;   
 
         function autoScroll() {
             container.scrollLeft += scrollAmount * scrollSpeed;
@@ -51,7 +54,7 @@ setInterval(changeBackgroundImage, 5000);
     document.addEventListener('DOMContentLoaded', function () {
         const container = document.querySelector('.staff-cards-containers');
         const scrollAmount = 1; // Increase this value for faster scrolling
-        const scrollSpeed = 2; // Increase this value for faster scrolling
+        const scrollSpeed = 1; // Increase this value for faster scrolling
 
         function autoScroll() {
             container.scrollLeft += scrollAmount * scrollSpeed;
