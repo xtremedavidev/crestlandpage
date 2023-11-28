@@ -22,6 +22,71 @@ body {
     position: absolute;
 }
 
+
+
+
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+
+
+
+
+    @keyframes slody {
+        0% { left: 0%; }
+
+
+        20% {left:  50%;}
+       
+        
+        80% { left: -50%; }
+
+        100% { left: 0%; }
+        }
+
+
+
+    div#slider { overflow: hidden; }
+    div#slider figure img { width: 20%; float: left;
+    object-fit: cover; }
+    div#slider figure { 
+        object-fit: cover;
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 25s slidy infinite; 
+    }
+    
+
+
+    .slidor { overflow: hidden; }
+    .vm { width: 50%; float: left; }
+    .slidor figure { 
+      position: relative;
+      display: flex;
+      width: 200%;
+     
+      text-align: center;
+      animation: 15s slody infinite; 
+    }
+    
+
+
+
+
 body::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -100,13 +165,18 @@ a {
 .navbtn {
     background-color: rgba(97, 167, 6, 1);
     color: #fff;
-    padding: 13.26px;
+    padding: 13.26px 24px;
+    margin: 0px 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
     height: 44.52px;
-    width: 169.74px;
+
+}
+
+.navbtn a {
+    color: white;
 }
 
 .navbtn:hover {
@@ -114,17 +184,11 @@ a {
 }
 
 .hero {
-    background-position: center;
-    background-size: cover;
     /* background-color: #ff9900; */
-    width: 100vw;
-    height: 620px;
-    margin-top: 62px;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: contain;
     /* Use min-height to accommodate content and images */
-    transition: background-position 1.5s ease;
-    transition: transform 1.5s ease; /* Adjust the duration and timing function as needed */
 
     /* 
     -webkit-transform: translateY(-100%); */
@@ -133,15 +197,9 @@ a {
 }
 
 
-.slide-in {
-    background-position: 0 0;
-    transform: translateX(-100%);
-    /* animation: slide-in 1.5s forwards;
-    -webkit-animation: slide-in 0.5s forwards; */
-}
 
 .hero-contaianer {
-    height: 620px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -218,7 +276,7 @@ a {
     justify-content: center;
     padding: 40px;
     background-color: #fff;
-    margin-top: 50px;
+    margin-top: 200px;
     width: 100vw;
     gap: 70px;
 }
@@ -346,12 +404,10 @@ a {
 }
 
 .tsc {
-    width: 749px;
+    width: 50vw;
     height: 273px;
     border-radius: 52px;
-    /* background-color: rgba(247, 246, 252, 1); */
     position: relative;
-    /* margin-left: 150px; */
 }
 
 .tsc2 {
@@ -398,7 +454,7 @@ a {
 
 
 .section5 {
-    width: 100vw;
+    width: 100%;
     height: 1700px;
     background-color: #ff9900;
     display: flex;
@@ -776,7 +832,7 @@ a {
     padding: 20px;
     margin-top: 30px;
     height: 450px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1037,7 +1093,7 @@ a {
 
 
 .footer {
-    width: 100vw;
+    width: 100%;
     height: 769px;
     background: none;
     background-image: url('/assets/Rectangle\ 41.png');
@@ -1101,9 +1157,11 @@ a {
     /* Distribute items to both ends */
     align-items: center;
     padding: 20px;
+    padding-left: 0px;
     color: #fff;
+    width: 100vw;
     /* Text color */
-    margin-top: 20px;
+    margin-top: 60px;
     /* Add margin to the top */
   }
   
@@ -1126,8 +1184,8 @@ a {
   
   .contact-info {
     flex: 1;
-    padding-right: 20px;
     text-align: left;
+    padding-left: 40px;
     /* Adjust text alignment */
   }
   
@@ -1147,8 +1205,8 @@ a {
   
   .copyright {
     flex: 1;
+    align-content: end;
     text-align: right;
-    margin-left: 1000px;
   }
   
   .copyright p {

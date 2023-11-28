@@ -331,12 +331,40 @@ a {
 }
 
 .image-grid img {
-  max-width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border: 1px solid #ccc;
   border-radius: 10px;
 
 }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96.5%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
 
 /* Style the "View More" button */
 .view-more {

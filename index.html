@@ -1,454 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cresthive international school</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap">
-    <link rel="stylesheet" href="/CSS/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cresthive international school</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap">
+        <link rel="stylesheet" href="/CSS/style.css">
+    </head>
 
-</head>
+    <body>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav__container">
-            <a href="index.html" class="school-name">
-                <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
-            </a>
-            <ul class="nav__menu">
-                <li class="school-dropdown">
-                    <a href="#school">School <i class="fas fa-caret-down"></i></a>
-                    <ul class="school-submenu">
-                        <li><a href="basicschool.html">Basic School</a></li>
-                        <li><a href="secondaryschool.html">Secondary School</a></li>
-                    </ul>
-                </li>
-                <li><a href="admission.html">Admissions</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-            <button class="navbtn">
-                <a href="https://cresthive-student.vercel.app/RegistrationPage">Start Registration
-                    </a>
-
-                </button>
-        </div>
-    </nav>
-
-    <section class="hero">
-
-        <div class="hero-contaianer">
-            <h1>Welcome to the <br> citadel of great <br> leaders.</h1>
-            <p>We are devoted to societal evolution through premium quality <br> education, high value development and
-                interpersonal skills.</p>
-            <button>Start registration</button>
-        </div>
-
-    </section>
-
-    <section class="section2">
-        <div class="s2-left">
-            <img src="/assets/Group 21335.png" class="s2-img">
-        </div>
-
-        <div class="s2-right">
-            <h2>What we are</h2>
-            <p>At CrestHive International School, the intellectual, physical, mental, <br> social and spiritual
-                development of the child is our main focus. <br> Here children are groomed and guided to positively
-                affect their <br> world. The children are surrounded by a caring, hardworking, <br> supportive and
-                attentive instructional team.</p>
-            <button class="s2btn">Learn more</button>
-        </div>
-    </section>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+      
+        <!-- Your main script file with type="module" -->
+        <script type="module" src="script.js"></script>
+      
+        <!-- Firebase configuration and initialization -->
+        <script type="module">
+          import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+          import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+      
+// Your Firebase configuration and initialization code can go here
+          
+     </script>
 
 
-    <section class="section3">
+        <nav class="navbar">
+            <div class="container nav__container">
+                <a href="index.html" class="school-name">
+                    <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
+                </a>
+                <ul class="nav__menu">
+                    <li class="school-dropdown">
+                        <a href="#school">School <i class="fas fa-caret-down"></i></a>
+                        <ul class="school-submenu">
+                            <li><a href="basicschool.html">Basic School</a></li>
+                            <li><a href="secondaryschool.html">Secondary School</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
 
-        <div class="s3-right">
-            <h2>Empowering Individualized Learning</h2>
-            <p>We emphasize the process of learning rather than the product. We <br> know as a fact that children learn
-                differently and through various <br> means, so we let them learn at their own pace.</p>
+                <div>
+                    <button class="navbtn">
+                        <a
+                            href="https://cresthive-student.vercel.app/SignIn">
+                            Log In
+                        </a>
+    
+                    </button>
 
-            <p>We create a secure, warm, happy citadel for children to grow, <br> learn and mature into becoming notable
-                leaders. The teachers are <br> educated, skillful, and motivated to familiarize themselves with <br>
-                best
-                practices in early child, primary and secondary education.</p>
-            <button class="s2btn">Learn more</button>
-        </div>
-
-        <div class="s3-left">
-            <img src="/assets/Group 21335.png" class="s2-img">
-        </div>
-
-    </section>
-
-    <section class="section4">
-
-        <h2>Our mission</h2>
-        <div class="tsc">
-            <div class="divo">“</div>
-            <div class="supporting-text2">
-                At CrestHive International School, the intellectual, physical, mental, <br> social and spiritual development
-                of the child is our main focus. <br> Here children are groomed and guided to positively affect their <br> world.
-                The children are surrounded by a caring, hardworking, <br> supportive and attentive instructional team.
+    
+                    <button class="navbtn">
+                        <a
+                            href="https://cresthive-student.vercel.app/RegistrationPage">Start
+                            Registration
+                        </a>
+    
+                    </button>
+                </div>
+                
             </div>
-            <div class="divo1">“</div>
-        </div>
+        </nav>
 
-        <!-- <div class="tsc2">
+        <section class="hero">
+
+            <div class="hero-contaianer"
+                style="position: absolute; z-index: 99; width: 100%;">
+                <h1 id="herotitle"></h1>
+                <p id="herosub"></p>
+                <button>Start registration</button>
+            </div>
+
+            <div id="slider" style="z-index: 9; position: absolute;">
+                <figure>
+                    <img src=" assets/Rectangle%20477.png" alt>
+                    <img src="assets/Rectangle%205.png" alt>
+                    <img src="assets/Property%201=Variant3.png" alt>
+                    <img src="assets/Property%201=Variant3.png" alt>
+                </figure>
+            </div>
+
+        </section>
+
+        <section class="section2">
+            <div class="s2-left">
+                <img src="/assets/Group 21335.png" class="s2-img">
+            </div>
+
+            <div class="s2-right">
+                <h2 id="sec1title"></h2>
+                <p id="sec1text"></p>
+                <button class="s2btn">Learn more</button>
+            </div>
+        </section>
+
+        <section class="section3">
+
+            <div class="s3-right">
+                <h2 id="sec2title"></h2>
+                <p id="sec2text"></p>
+
+                
+                <button class="s2btn">Learn more</button>
+            </div>
+
+            <div class="s3-left">
+                <img src="/assets/Group 21335.png" class="s2-img">
+            </div>
+
+        </section>
+
+        <section class="section4">
+
+            <div id="slidor" class="slidor"
+                style="z-index: 9; position: absolute;">
+                <figure>
+                    <div class="vm">
+                        <h2
+                            style="justify-self: center; align-self: center; margin-right: 600px;">Our
+                            Mission</h2>
+                        <div class="tsc">
+                            <div class="divo">“</div>
+                            <div class="supporting-text2">
+                                At CrestHive International School, the
+                                intellectual, physical, mental, <br> social and
+                                spiritual development
+                                of the child is our main focus. <br> Here
+                                children are groomed and guided to positively
+                                affect their <br> world.
+                                The children are surrounded by a caring,
+                                hardworking, <br> supportive and attentive
+                                instructional team.
+                            </div>
+                            <div class="divo1">“</div>
+                        </div>
+
+                    </div>
+
+                    <div class="vm">
+                        <h2 style="margin-right: 600px;">Our Vission</h2>
+                        <div class="tsc">
+                            <div class="divo">“</div>
+                            <div class="supporting-text2">
+                                At CrestHive International School, the
+                                intellectual, physical, mental, <br> social and
+                                spiritual development
+                                of the child is our main focus. <br> Here
+                                children are groomed and guided to positively
+                                affect their <br> world.
+                                The children are surrounded by a caring,
+                                hardworking, <br> supportive and attentive
+                                instructional team.
+                            </div>
+                            <div class="divo1">“</div>
+                        </div>
+
+                    </div>
+                </figure>
+            </div>
+
+            <!-- <div class="tsc2">
             <h2>Fostering Growth Together</h2>
             <p>We work closely with each family to gently guide each child, <br> building confidence and very good
                 social and <br>
                 entrepreneurial skills with sound religious and moral values.</p>
         </div> -->
-    </section>
+        </section>
 
+        <section class="section5">
 
-    <section class="section5">
+            <div class="s5-cta">
+                <h2 id="sec3title">Our class ladder</h2>
+                <h4 id="sec3subtitle">Embark on our educational journey</h4>
+                <p id="sec3text">guiding students from early life through SS3. We emphasize
+                    holistic growth, <br> values, and future
+                    readiness, fostering confident, capable, and principled <br>
+                    individuals.
+                </p>
+                <button class="s5btn">Learn More</button>
+            </div>
 
-        <div class="s5-cta">
-            <h2>Our class ladder</h2>
-            <h4>Embark on our educational journey</h4>
-            <p>guiding students from early life through SS3. We emphasize holistic growth, <br> values, and future
-                readiness, fostering confident, capable, and principled <br> individuals.
-            </p>
-            <button class="s5btn">Learn More</button>
-        </div>
-
-        <div class="s5polygon">
-            <div class="firstline">
-                <div class="image-container">
-                    <img src="/assets/Polygon 19 (1).png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>Early Life (Age 2)</h2>
-                            <p>Nurturing curiosity and foundational social skills.</p>
+            <div class="s5polygon">
+                <div class="firstline">
+                    <div class="image-container">
+                        <img src="/assets/Polygon 19 (1).png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>Early Life (Age 2)</h2>
+                                <p>Nurturing curiosity and foundational social
+                                    skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="/assets/Polygon 20.png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>Play Group (Age 2-3)</h2>
+                                <p>Fostering earl learning through play and
+                                    interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="/assets/Polygon 21.png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>Pre-Nursery</h2>
+                                <p>Preparing for structured learning and social
+                                    development.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="image-container">
-                    <img src="/assets/Polygon 20.png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>Play Group (Age 2-3)</h2>
-                            <p>Fostering earl learning through play and interaction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="/assets/Polygon 21.png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>Pre-Nursery</h2>
-                            <p>Preparing for structured learning and social development.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="secondline">
-                <div class="image-container">
-                    <img src="/assets/Polygon 22.png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>Nursery</h2>
-                            <p>Building a strong educational foundation with fun activities</p>
+                <div class="secondline">
+                    <div class="image-container">
+                        <img src="/assets/Polygon 22.png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>Nursery</h2>
+                                <p>Building a strong educational foundation with
+                                    fun activities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="/assets/Polygon 18 (4).png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>Basic 1-5</h2>
+                                <p>progressive learning from basic one to basic
+                                    five.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="image-container">
-                    <img src="/assets/Polygon 18 (4).png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>Basic 1-5</h2>
-                            <p>progressive learning from basic one to basic five.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-
-            <div class="thirdline">
-                <div class="image-container">
-                    <img src="/assets/Polygon 18 (8).png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>JSS 1-3</h2>
-                            <p>Exploring Diverse subject and skills</p>
+                <div class="thirdline">
+                    <div class="image-container">
+                        <img src="/assets/Polygon 18 (8).png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>JSS 1-3</h2>
+                                <p>Exploring Diverse subject and skills</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="image-container">
-                    <img src="/assets/Polygon 18 (6).png">
-                    <div class="overlay">
-                        <div class="overlay-contents">
-                            <h2>SSS 1-3</h2>
-                            <p>Preparing for higher education and the future.</p>
+                    <div class="image-container">
+                        <img src="/assets/Polygon 18 (6).png">
+                        <div class="overlay">
+                            <div class="overlay-contents">
+                                <h2>SSS 1-3</h2>
+                                <p>Preparing for higher education and the
+                                    future.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section6">
+        <section class="section6">
 
-        <div class="s6left">
-            <div class="s6left-container">
-                <h2>What our <br> <span class="highlight">PARENT</span> say <br> about us</h2>
-                <div class="bicon">
-                    <div class="next-icon" id="nextButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36.64" height="67.636" fill-rule="evenodd"
-                            clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision" viewBox="0 0 958.62 1769.59" id="forward">
-                            <path fill-rule="nonzero"
-                                d="M21.62 126.04c-28.83,-28.83 -28.83,-75.58 0,-104.4 28.83,-28.83 75.58,-28.83 104.4,0l810.98 810.97c28.83,28.83 28.83,75.57 0,104.39l-810.98 810.96c-28.83,28.83 -75.57,28.83 -104.4,0 -28.83,-28.83 -28.83,-75.57 0,-104.39l758.78 -758.77 -758.78 -758.76z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="next-icon1" id="prevButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36.64" height="67.636" fill-rule="evenodd"
-                            clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision" viewBox="0 0 958.62 1769.59" id="forward">
-                            <path fill-rule="nonzero"
-                                d="M21.62 126.04c-28.83,-28.83 -28.83,-75.58 0,-104.4 28.83,-28.83 75.58,-28.83 104.4,0l810.98 810.97c28.83,28.83 28.83,75.57 0,104.39l-810.98 810.96c-28.83,28.83 -75.57,28.83 -104.4,0 -28.83,-28.83 -28.83,-75.57 0,-104.39l758.78 -758.77 -758.78 -758.76z">
-                            </path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="s6right">
-
-            <div class="card-container">
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
+            <div class="s6left">
+                <div class="s6left-container">
+                    <h2>What our <br> <span class="highlight">PARENT</span> say
+                        <br> about us</h2>
+                    <div class="bicon">
+                        <div class="next-icon" id="nextButton">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="36.64" height="67.636"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                image-rendering="optimizeQuality"
+                                shape-rendering="geometricPrecision"
+                                text-rendering="geometricPrecision"
+                                viewBox="0 0 958.62 1769.59" id="forward">
+                                <path fill-rule="nonzero"
+                                    d="M21.62 126.04c-28.83,-28.83 -28.83,-75.58 0,-104.4 28.83,-28.83 75.58,-28.83 104.4,0l810.98 810.97c28.83,28.83 28.83,75.57 0,104.39l-810.98 810.96c-28.83,28.83 -75.57,28.83 -104.4,0 -28.83,-28.83 -28.83,-75.57 0,-104.39l758.78 -758.77 -758.78 -758.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="next-icon1" id="prevButton">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="36.64" height="67.636"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                image-rendering="optimizeQuality"
+                                shape-rendering="geometricPrecision"
+                                text-rendering="geometricPrecision"
+                                viewBox="0 0 958.62 1769.59" id="forward">
+                                <path fill-rule="nonzero"
+                                    d="M21.62 126.04c-28.83,-28.83 -28.83,-75.58 0,-104.4 28.83,-28.83 75.58,-28.83 104.4,0l810.98 810.97c28.83,28.83 28.83,75.57 0,104.39l-810.98 810.96c-28.83,28.83 -75.57,28.83 -104.4,0 -28.83,-28.83 -28.83,-75.57 0,-104.39l758.78 -758.77 -758.78 -758.76z">
+                                </path>
+                            </svg>
                         </div>
                     </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
+                </div>
+            </div>
+
+            <div class="s6right">
+
+                <div class="card-container">
+                    
+                </div>
+            </section>
+
+            <section class="section7">
+                <h2>Meet Our Staff</h2>
+                <div class="staff-cards-container">
+
+                </div>
+            </section>
+
+            <!----------------- footer ----------------->
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <h2 class="footer-header">
+                        <span class="fasthand-font">CrestHive</span> surpasses
+                        just a
+                    </h2>
+                    <h2 class="footer-header footer-header-fasthand">school, we
+                        are family.</h2>
+                    <p class="footer-text">We imbibe knowledge without
+                        compromising</p>
+                    <p class="footer-text">the Deen</p>
+                    <button class="footer-button">Learn More</button>
                 </div>
 
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
+                <div class="footer-content2">
+                    <div class="footer-content2">
+                        <div class="contact-info">
+                            <h2>Contact Us</h2>
+                            <hr >
+                            <p><i class="fas fa-envelope"></i> Email:
+                                info@cresthive.com</p>
+                            <hr>
+                            <p><i class="fas fa-phone"></i> Phone number:
+                                07030175401</p>
+                        </div>
+                        <div class="copyright">
+                            <p>&#169; 2023, All rights reserved</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
+
                 </div>
+            </footer>
 
-
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
-                        </div>
+            <div class="floating-icon">
+                <a href="gallery.html">
+                    <div class="icon-bg">
+                        <i class="fas fa-image"></i> Gallery
                     </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
-                        </div>
-                    </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
-                        </div>
-                    </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="p-details">
-                        <img src="/assets/Frame 6526.png">
-                        <div class="detail">
-                            <h1>Mohh Jummah</h1>
-                            <h3>Doctor</h3>
-                        </div>
-                    </div>
-                    <div class="p-paragraph">
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Consectetur ac blandit nam <br>
-                            massa
-                            massa elementum mollis lectus. Sit <br> ultricies nisl amet non, quis enim velit <br>
-                            tempus. Interdum
-                            duis imperdiet venenatis </p>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="section7">
-        <h2>Meet Our Staff</h2>
-        <div class="staff-cards-container">
-            <div class="staff-card">
-                <img src= "assets/Our Educators//Azeez Kabiroh (Play Group Class Teacher).jpg"
-                alt="Staff 1">
-                <h3>AAzeez Kabiroh</h3>
-                <p>Role:  (Play Group Class Teacher)</p>
+                </a>
             </div>
 
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mrs Bamidele Latifa.jpg" alt="Staff 1">
-                <h3>Mrs Bamidele Latifa</h3>
-                <p>Role: Teacher</p>
-            </div>
+        </body>
 
-            
-            <div class="staff-card">
-                <img src="assets/Our Educators/Malam AbdulHamid AbdulGoniy.jpg" alt="Staff 1">
-                <h3>Malam AbdulHamid AbdulGoniy</h3>
-                <p>Role: Teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mrs Ibidun (Playgroup Class Teacher).jpg" alt="Staff 1">
-                <h3>Mrs Ibidun </h3>
-                <p>Role: (Playgroup Class Teacher)</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Miss Rofiah Basic 5 class teacher.jpg" alt="Staff 1">
-                <h3>Miss Rofiah</h3>
-                <p>Role: Basic 5 class teacher.jpg</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mr Abdullah W.A.jpg" alt="Staff 1">
-                <h3>Mrs Lawal</h3>
-                <p>Role: Teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Miss Shakirah Nursery Gold Class Teacher.jpg" alt="Staff 1">
-                <h3>Miss Shakirah </h3>
-                <p>Role: Nursery Gold Class Teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mr. Ademola Habibullah Jss2 class teacher.jpg" alt="Staff 1">
-                <h3>Mr. Ademola Habibullah </h3>
-                <p>Role: Jss2 class teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mr. Adetoro Abdulwasiu Basic 4 Gold class teacher.jpg" alt="Staff 1">
-                <h3>Mr. Adetoro Abdulwasiu </h3>
-                <p>Role: Basic 4 Gold class teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mrs AbdulAzeez Basic 1 Gold Class Teacher.jpg" alt="Staff 1">
-                <h3>Mrs AbdulAzeez </h3>
-                <p>Role: Basic 1 Gold Class Teacher</p>
-            </div>
-            <div class="staff-card">
-                <img src="assets/Our Educators/Mrs Adeyemi.jpg" alt="Staff 1">
-                <h3>Mrs Adeyemi</h3>
-                <p>Role: Teacher</p>
-            </div>
-
-        </div>
-    </section>
-
-
-  
-
-
-
-    <!----------------- footer ----------------->
-
-    <footer class="footer">
-        <div class="footer-content">
-            <h2 class="footer-header">
-                <span class="fasthand-font">CrestHive</span> surpasses just a
-            </h2>
-            <h2 class="footer-header footer-header-fasthand">school, we are family.</h2>
-            <p class="footer-text">We imbibe knowledge without compromising</p>
-            <p class="footer-text">the Deen</p>
-            <button class="footer-button">Learn More</button>
-        </div>
-
-        <div class="footer-content2">
-            <div class="footer-content2">
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <hr>
-                    <p><i class="fas fa-envelope"></i> Email: info@cresthive.com</p>
-                    <hr>
-                    <p><i class="fas fa-phone"></i> Phone number: 07030175401</p>
-                </div>
-                <div class="copyright">
-                    <p>&#169; 2023, All rights reserved</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-    <div class="floating-icon">
-        <a href="gallery.html">
-            <div class="icon-bg">
-                <i class="fas fa-image"></i> Gallery
-            </div>
-        </a>
-    </div>
-
-
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    </html>

@@ -1,100 +1,125 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+
+// Import necessary Firebase modules
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+
+
+
+document.addEventListener('DOMContentLoaded', async function () {
     const categoryLinks = document.querySelectorAll('.category-navigation a');
     const imageGrid = document.querySelector('.image-grid');
     const viewMoreButton = document.querySelector('.view-more');
-    const categories = {
-        all: 'All',
-        activities: 'Activities',
-        weekend: 'Weekend',
-        boarding: 'Boarding',
-        programs: 'Programs',
-        facilities: 'Facilities',
-        staffs: 'Staffs',
-    };
+  
+
+
+
+
+
+var pagedata = null;
+
+const firebaseConfig = {
+    // Your Firebase configuration
+
+    apiKey: "AIzaSyBYcl_xWRjmqvexrohOMkNPpgnVDvmyZQc",
+    authDomain: "cresthive-88396.firebaseapp.com",
+    projectId: "cresthive-88396",
+    storageBucket: "cresthive-88396.appspot.com",
+    messagingSenderId: "1094759056974",
+    appId: "1:1094759056974:web:5296327482ffe0b459651f",
+    measurementId: "G-FXDQ0S20EW",
+
+
+  };
+          const app = initializeApp(firebaseConfig);
+          const db = getFirestore(app);
+
+          console.log(db, "db")
+// Use Firestore functionality
+const fetchData = async () => {
+  try {
+    const dataRef = doc(db, 'cms', "galleryPage");
+    const querySnapshot = await getDoc(dataRef);
+    console.log(querySnapshot, "qs")
+
+    const data = querySnapshot.data();
+
+    pagedata = data;
+    console.log("page data is now", pagedata);
+
+    return data;
+
+
+
+
+    
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+};
+
+// Call the function to fetch data
+
+
+    var fetch = await fetchData();
+
+
+
+
+
+
 
     // Define online image URLs for each category
-    const imageUrls = {
-        all: [
-          
-        ],
+    const imageUrls = fetch.gallery;
 
-        activities: [
-            `assets/Activities/02.jpg`,
-            `assets/Activities/05.jpg`,
-            `assets/Activities/06.jpg`,
-            `assets/Activities/07.jpg`,
-            `assets/Activities/08.jpg`,
-            `assets/Activities/09.jpg`,
-            `assets/Activities/010.jpg`,
-            `assets/Activities/01.heic`,
+    console.log("all images", imageUrls);
 
-        ],
-        facilities: [
-            'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-            'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-            'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-            'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-            'https://images.picxy.com/cache/2019/7/10/34614617ad921f26733a99413ab1b1b1.jpg',
-        ],
-        staffs: [
-            "assets/Our Educators//Azeez Kabiroh (Play Group Class Teacher).jpg",
-            "assets/Our Educators/Malam AbdulBasheer Balogun.jpg",
-            "assets/Our Educators/Malam AbdulHamid AbdulGoniy.jpg",
-            "assets/Our Educators/Malam Isa Rosheed Buwaeb.jpg",
-            "assets/Our Educators/Miss Rofiah Basic 5 class teacher.jpg",
-            "assets/Our Educators/Miss Shakirah Nursery Gold Class Teacher.jpg",
-            "assets/Our Educators/Mr Abdullah W.A.jpg",
-            "assets/Our Educators/Mr Ismail Basic 2  Diamond class teacher.jpg",
-            "assets/Our Educators/Mr. Ademola Habibullah Jss2 class teacher.jpg",
-            "assets/Our Educators/Mr. Adetoro Abdulwasiu Basic 4 Gold class teacher.jpg",
-            "assets/Our Educators/Mrs AbdulAzeez Basic 1 Gold Class Teacher.jpg",
-            "assets/Our Educators/Mrs Adeyemi.jpg",
-            "assets/Our Educators/Mrs Bamidele Latifa.jpg",
-            "assets/Our Educators/Mrs Ibidun (Playgroup Class Teacher).jpg",
-            "assets/Our Educators/Mrs Lawal.jpg",
-            "assets/Our Educators/Mrs Mohammad.jpg",
-            "assets/Our Educators/Mrs Moshood Mariam Basic 3 Class teacher.jpg",
-            "assets/Our Educators/Mrs Popoola SS1 Class teacher.jpg",
-            "assets/Our Educators/Mrs Rabiu Zainab.jpg",
-            "assets/Our Educators/Mrs Salaudeen Basic 4 Diamond class teacher.jpg",
-            "assets/Our Educators/Mrs Sodiq Aminat.jpg",
-            "assets/Our Educators/Mrs Uthman basic 1 diamond class teacher.jpg",
-            "assets/Our Educators/Mrs. AbdulAzeez S. JSS3 class teacher.jpg",
-            "assets/Our Educators/Sanusi Iqmat.jpg",
-            "assets/Our Educators/Uztaz Abubakr A. Umar (Head of Islamic Department).jpg",
-            "assets/Our Educators/Miss Adeola SS1 class teacher.jpg",
-        ],
-
-        weekends: [
-            'https://www.achrnews.com/ext/resources/sm/issues/2016/March/Spa-Paw--Tail-Guest-Rooms.jpg?1675271496'
-            // Include your 'weekends' images here
-        ],
-        boarding: [
-            'https://www.achrnews.com/ext/resources/sm/issues/2016/March/Spa-Paw--Tail-Guest-Rooms.jpg?1675271496'
-            // Include your 'boarding' images here
-        ],
-        sports: [
-            'https://sportsfacilities.com/wp-content/uploads/2016/03/sports-facilities-complex.jpg'
-            // Include your 'sports' images here
-        ],
-        stakeholders: [
-            'https://sportsfacilities.com/wp-content/uploads/2016/03/sports-facilities-complex.jpg'
-            // Include your 'sports' images here
-
-        ]
-    };
 
     // Function to load images based on category
-    function loadImages(category) {
-        imageGrid.innerHTML = '';
-        const images = imageUrls[category] || [];
-        images.forEach(imageUrl => {
-            const imgElement = document.createElement('img');
-            imgElement.src = imageUrl;
-            imgElement.alt = 'Image'; // Set alt text for accessibility
-            imageGrid.appendChild(imgElement);
-        });
-    }
+ // Function to load images based on category
+// Function to load images based on category
+function loadImages(category) {
+    imageGrid.innerHTML = '';
+  
+    const images = [];
+  
+    imageUrls.forEach((item) => {
+      if (item[category]) {
+        images.push(item[category]);
+      }
+    });
+  
+    console.log('images', images);
+    images.forEach((imageUrl) => {
+      imageUrl.forEach((img) => {
+        // Create a container for each image
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'image-container';
+  
+        // Create an image element
+        const imgElement = document.createElement('img');
+        imgElement.src = img.link;
+        imgElement.alt = 'Image'; // Set alt text for accessibility
+  
+        // Set the title attribute to display the name on hover
+        imgElement.title = img.name;
+  
+        // Create an overlay element to display the name
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        overlay.textContent = img.name;
+  
+        // Append image and overlay to the container
+        imgContainer.appendChild(imgElement);
+        imgContainer.appendChild(overlay);
+  
+        // Append the container to the image grid
+        imageGrid.appendChild(imgContainer);
+      });
+    });
+  }
+  
 
     // Add click event listeners to category links
     categoryLinks.forEach(link => {
@@ -117,27 +142,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const categoryLinks = document.querySelectorAll('.category-navigation ul li a');
-    
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            // Remove the 'active' class from all category links
-            categoryLinks.forEach(link => link.classList.remove('active'));
-            
-            // Add the 'active' class to the clicked category link
-            event.target.classList.add('active');
-            
-            // Get the selected category from the data attribute
-            const selectedCategory = event.target.getAttribute('data-category');
-            
-            // Use the selectedCategory to load images or perform other actions
-            loadImages(selectedCategory);
-        });
-    });
 
-    // Your existing code for loading images and categories
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const imageUrls = fetch.gallery;
+console.log("all images", imageUrls);
+
+

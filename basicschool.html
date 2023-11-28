@@ -9,6 +9,30 @@
 </head>
 
 <body>
+
+    <script type="module"
+    src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+<script type="module"
+    src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+
+<!-- Your main script file with type="module" -->
+<script type="module" src="basicschool.js"></script>
+
+<!-- Firebase configuration and initialization -->
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+
+// Your Firebase configuration and initialization code can go here
+
+</script>
+
+
+
+
+
+
+
     <nav class="navbar">
         <div class="container nav__container">
             <a href="index.html" class="school-name">
@@ -78,16 +102,10 @@
                     students to explore their talents and discover their full potential.
                 </p>
                 <h2>Notable Activities</h2>
-                <div class="activitylist">
+                <div id="activities-container"
+                class="activitylist">
                     <ul class="activity-list">
-                        <li><span class="bullet">+</span> Storytelling and Reading Sessions</li>
-                        <li><span class="bullet">+</span> Art and Craft Workshops</li>
-                        <li><span class="bullet">+</span> Outdoor Play</li>
-                        <li><span class="bullet">+</span> Music and Dance Classes</li>
-                        <li><span class="bullet">+</span> Field Trips</li>
-                        <li><span class="bullet">+</span> Character-Building Programs</li>
-                        <li><span class="bullet">+</span> Sports and Physical Education</li>
-                        <li><span class="bullet">+</span> Dramatic Performances</li>
+                        
                     </ul>
                 </div>
             </div>

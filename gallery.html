@@ -1,132 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/gallery.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
-        crossorigin="anonymous" />
-        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/CSS/gallery.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
+            crossorigin="anonymous" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-Jb8N5I5s9h03B0qS5Hn09Oxn7HiJFjJ/5d5lknRPv5FOq5kwf4a+UqU5Q4U2G0N3d6YK2NRhFXT8n4DDU6Z5z2w=="
+            crossorigin="anonymous" />
+        <script
+            src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 
-    <title>CrestHive Gallery</title>
-</head>
+        <title>CrestHive Gallery</title>
+    </head>
 
-<body>
+    <body>
 
-    <nav class="navbar">
-        <div class="container nav__container">
-            <a href="index.html" class="school-name">
-                <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
-            </a>
-            <ul class="nav__menu">
-                <li class="school-dropdown">
-                    <a href="#school">School <i class="fas fa-caret-down"></i></a>
-                    <ul class="school-submenu">
-                        <li><a href="#">Basic School</a></li>
-                        <li><a href="#">Secondary School</a></li>
-                    </ul>
-                </li>
-                <li><a href="#admissions">Admissions</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-            <button class="navbtn">Start Registration</button>
-        </div>
-    </nav>
-    
+        <script type="module"
+            src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+        <script type="module"
+            src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
 
+        <!-- Your main script file with type="module" -->
+        <script type="module" src="gallery.js"></script>
 
-    <section class="hero">
-        <div class="hero-left">
-            <h1>Our Gallery</h1>
-            <p>We are devoted to societal evolution through <br> premium quality education, high-value development, <br>
-                and interpersonal skills.</p>
-        </div>
-        <div class="hero-right">
-            <div class="heroright">
-                <div class="glassmorphism-box">
-                    <video width="100%" autoplay loop>
-                        <source src="/assets/hanger video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <div class="right-polygon"></div>
-        </div>
-    </section>
+        <!-- Firebase configuration and initialization -->
+        <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+      import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+  
+// Your Firebase configuration and initialization code can go here
+      
+ </script>
 
-    <nav class="category-navigation">
-        <ul>
-            <li><a href="#" data-category="all"><i class="fas fa-globe"></i> All</a></li>
-            
-            <li class="dropdown">
-                <a href="#" data-category="activities">
-                    <i class="fas fa-running"></i> Activities
-                    <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" viewBox="0 0 29 29">
-                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.5 11.5-6 6-6-6"></path>
-                    </svg>
+        <nav class="navbar">
+            <div class="container nav__container">
+                <a href="index.html" class="school-name">
+                    <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
                 </a>
-                <ul class="dropdown-content">
-                    <li><a href="#" data-category="weekends">Weekend Islamiyah</a></li>
-                    <li><a href="#" data-category="boarding">Boarding</a></li>
-                    <li><a href="#" data-category="sports">Sports</a></li>
+                <ul class="nav__menu">
+                    <li class="school-dropdown">
+                        <a href="school.html">School <i class="fas fa-caret-down"></i></a>
+                        <ul class="school-submenu">
+                            <li><a href="basicschool.html">Basic School</a></li>
+                            <li><a href="secondaryschool.html">Secondary School</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
-            </li>
-            <li><a href="#" data-category="staffs"><i class="fas fa-users"></i> Staffs</a></li>
-            <li><a href="#" data-category="clubs">Clubs</a></li>
-            <li><a href="#" data-category="stakeholders">Stakeholders</a></li>
-        </ul>
+                <button class="navbtn">Start Registration</button>
+            </div>
+        </nav>
 
-    </nav>
-    <section class="gallery">
-        <div class="image-grid"></div>
-       
-    </section>
-
-
-
-    <footer class="footer">
-        <div class="footer-content">
-            <h2 class="footer-header">
-                <span class="fasthand-font">CrestHive</span> surpasses just a
-            </h2>
-            <h2 class="footer-header footer-header-fasthand">school, we are family.</h2>
-            <p class="footer-text">We imbibe knowledge without compromising</p>
-            <p class="footer-text">the Deen</p>
-            <button class="footer-button">Learn More</button>
-        </div>
-
-        <div class="footer-content2">
-            <div class="footer-content2">
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <hr>
-                    <p><i class="fas fa-envelope"></i> Email: info@cresthive.com</p>
-                    <hr>
-                    <p><i class="fas fa-phone"></i> Phone number: 07030175401</p>
-                </div>
-                <div class="copyright">
-                    <p>&#169; 2023, All rights reserved</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+        <section class="hero">
+            <div class="hero-left">
+                <h1>Our Gallery</h1>
+                <p>We are devoted to societal evolution through <br> premium
+                    quality education, high-value development, <br>
+                    and interpersonal skills.</p>
+            </div>
+            <div class="hero-right">
+                <div class="heroright">
+                    <div class="glassmorphism-box">
+                        <video width="100%" autoplay loop>
+                            <source src="/assets/hanger video.mp4"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
+                <div class="right-polygon"></div>
+            </div>
+        </section>
+
+        <nav class="category-navigation">
+            <ul>
+                <li><a href="#" data-category="all"><i class="fas fa-globe"></i>
+                        All</a></li>
+
+                <li>
+                    <a href="#" data-category="activities">
+                        <i class="fas fa-running"></i> Activities
+                    </a>
+
+                </li>
+                <li><a href="#" data-category="staffs"><i class="fas fa-users"></i>
+                        Staffs</a></li>
+                <li><a href="#" data-category="clubs">Clubs</a></li>
+                <li><a href="#" data-category="stakeholders">Stakeholders</a></li>
+            </ul>
+
+        </nav>
+        <section class="gallery">
+            <div class="image-grid"></div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="footer-header">
+                    <span class="fasthand-font">CrestHive</span> surpasses just
+                    a
+                </h2>
+                <h2 class="footer-header footer-header-fasthand">school, we are
+                    family.</h2>
+                <p class="footer-text">We imbibe knowledge without compromising</p>
+                <p class="footer-text">the Deen</p>
+                <button class="footer-button">Learn More</button>
             </div>
 
-        </div>
-    </footer>
-    
-    
-    
+            <div class="footer-content2">
+                <div class="footer-content2">
+                    <div class="contact-info">
+                        <h2>Contact Us</h2>
+                        <hr>
+                        <p><i class="fas fa-envelope"></i> Email:
+                            info@cresthive.com</p>
+                        <hr>
+                        <p><i class="fas fa-phone"></i> Phone number:
+                            07030175401</p>
+                    </div>
+                    <div class="copyright">
+                        <p>&#169; 2023, All rights reserved</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="gallery.js"></script>
-</body>
+            </div>
+        </footer>
+
+    </body>
 
 </html>

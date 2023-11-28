@@ -287,7 +287,7 @@ p {
 .tablet {
     width: calc(100vw - 120px);
     /* Adjust the total width as needed */
-    height: 700px;
+    padding-bottom: 110px;
     flex-shrink: 0;
     border-radius: 38px;
     background: #E5F0FF;
@@ -335,12 +335,15 @@ p {
 
 .activity-list {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr); /* Create two columns */
-    column-gap: 200px; /* Adjust the gap between columns as needed */
+    column-gap: 180px; /* Adjust the gap between columns as needed */
     row-gap: 20px; /* Increase the vertical spacing */
     list-style: none;
-    padding: 0;
+    padding: 10px 25px;
     margin: 0;
+    justify-content: space-between; /* Align columns at opposite poles horizontally */
+
 }
 
 .activity-list li {
@@ -352,6 +355,8 @@ p {
     font-weight: 550;
     line-height: 30.59px; /* 127.46% */
     text-transform: capitalize;
+      display: flex;
+  align-items: center; /* Align items in each row vertically */
 }
 
 .bullet {
@@ -361,11 +366,8 @@ p {
 }
 
 .activitylist {
-    gap: 180px;
-    padding-left: 70px;
-    padding-right: 40px;
+    gap: 200px;
     line-height: 30px;
-    display: flex;
 }
 
 
