@@ -5,6 +5,16 @@ import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gsta
 
 
 var pagedata = null;
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  var navMenu = document.querySelector('.nav-menu');
+  var navToggle = document.querySelector('.nav-toggle');
+
+  navMenu.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});
+
+
+
 
 const firebaseConfig = {
     // Your Firebase configuration

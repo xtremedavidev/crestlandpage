@@ -50,6 +50,15 @@ document.addEventListener("scroll", function () {
     });
 
 
+    
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        var navMenu = document.querySelector('.nav-menu');
+        var navToggle = document.querySelector('.nav-toggle');
+      
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+
 
     // JavaScript to handle card scrolling
 document.addEventListener("DOMContentLoaded", function () {
