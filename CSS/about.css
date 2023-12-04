@@ -112,6 +112,12 @@ a {
 .navbtn:hover {
     background-color: #ff9900;
 }
+.nav-toggle{
+    visibility: hidden;
+}
+.nav-menu {
+visibility: hidden;
+}
 
 /* Style the dropdown */
 .school-dropdown {
@@ -720,6 +726,13 @@ flex-shrink: 0;
         visibility: hidden;
     }
 
+    .nav-toggle{
+        visibility: visible;
+    }
+    .nav-menu {
+    visibility: visible;
+    }
+    
 
     .nav-toggle {
         cursor: pointer;

@@ -73,6 +73,14 @@ a {
   gap: 4rem;
 }
 
+
+.nav-toggle{
+  visibility: hidden;
+}
+.nav-menu {
+visibility: hidden;
+}
+
 .nav__menu a {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -680,6 +688,12 @@ a {
 @media only screen and (max-width: 600px ){
 
 
+  .nav-toggle{
+    visibility: visible;
+}
+.nav-menu {
+visibility: visible;
+}
 
   
 .hero {

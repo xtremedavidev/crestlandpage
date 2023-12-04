@@ -166,6 +166,13 @@ a {
     display: block;
 }
 
+.nav-toggle{
+  visibility: hidden;
+}
+.nav-menu {
+visibility: hidden;
+}
+
 
 .hero {
     width: 100vw;
@@ -669,7 +676,13 @@ footer p{
 
 @media only screen and (max-width: 600px ){
 
- 
+  .nav-toggle{
+    visibility: visible;
+}
+.nav-menu {
+visibility: visible;
+}
+
 .hero-content {
     width: 90%;
     display: flex;

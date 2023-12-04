@@ -147,6 +147,12 @@ a {
     display: block;
 }
 
+.nav-toggle{
+  visibility: hidden;
+}
+.nav-menu {
+visibility: hidden;
+}
 
 
 .hero {
@@ -680,6 +686,12 @@ th {
 
 @media only screen and (max-width: 600px ){
 
+  .nav-toggle{
+    visibility: visible;
+}
+.nav-menu {
+visibility: visible;
+}
 
 
     .navbar{
