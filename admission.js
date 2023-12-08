@@ -14,18 +14,18 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
 var pagedata = null;
 
 const firebaseConfig = {
-    // Your Firebase configuration
+  // Your Firebase configuration
 
-    apiKey: "AIzaSyBYcl_xWRjmqvexrohOMkNPpgnVDvmyZQc",
-    authDomain: "cresthive-88396.firebaseapp.com",
-    projectId: "cresthive-88396",
-    storageBucket: "cresthive-88396.appspot.com",
-    messagingSenderId: "1094759056974",
-    appId: "1:1094759056974:web:5296327482ffe0b459651f",
-    measurementId: "G-FXDQ0S20EW",
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  projectId: process.env.FIREBASE_PROJECTID,
+  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.FIREBASE_APPID,
+  measurementId: process.env.FIREBASE_MEASUREMENTID,
 
 
-  };
+};
           const app = initializeApp(firebaseConfig);
           const db = getFirestore(app);
 
