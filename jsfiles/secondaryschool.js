@@ -61,6 +61,26 @@ const fetchData = async () => {
 
 
 
+    
+// Example: Populate HTML elements
+const titleElement = document.getElementById("herotitle");
+titleElement.innerHTML = `${fetch.heroTitle.replace(/\n/g, '<br/>')}`;
+titleElement.style.whiteSpace = 'pre-line';
+
+const textElement = document.getElementById("herosub");
+textElement.innerHTML = `${fetch.heroSubtitle.replace(/\n/g, '<br/>')}`;
+textElement.style.whiteSpace = 'pre-line';
+
+
+//sec 1
+
+
+const sec1titleElement = document.getElementById("detailsText");
+sec1titleElement.innerHTML = `${fetch.detailsText.replace(/\n/g, '<br/>')}`;
+sec1titleElement.style.whiteSpace = 'pre-line';
+
+
+
 
 
 

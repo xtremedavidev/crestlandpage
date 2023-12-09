@@ -76,17 +76,21 @@ console.log("fetch",  fetch)
 
 // Example: Populate HTML elements
 const titleElement = document.getElementById("aboutTitle");
-titleElement.innerHTML = `${fetch.heroTitle.replace(/\n/g, '<br/>')}`;
+titleElement.innerHTML = `${fetch.aboutTitle.replace(/\n/g, '<br/>')}`;
 titleElement.style.whiteSpace = 'pre-line';
 
 const subtextElement = document.getElementById("aboutSubtitle");
-subtextElement.innerHTML = `${fetch.heroSubtitle.replace(/\n/g, '<br/>')}`;
+subtextElement.innerHTML = `${fetch.aboutSubtitle.replace(/\n/g, '<br/>')}`;
 subtextElement.style.whiteSpace = 'pre-line';
 
 
-const sec1subtextElement = document.getElementById("sction1");
-sec1subtextElement.innerHTML = `${fetch.heroSubtitletext.replace(/\n/g, '<br/>')}`;
-sec1subtextElement.style.whiteSpace = 'pre-line';
+const sec1textElement = document.getElementById("section1Text");
+sec1textElement.innerHTML = `${fetch.section1Text.replace(/\n/g, '<br/>')}`;
+sec1textElement.style.whiteSpace = 'pre-line';
+
+const sec1TitleElement = document.getElementById("section1Title");
+sec1TitleElement.innerHTML = `${fetch.section1Title.replace(/\n/g, '<br/>')}`;
+sec1TitleElement.style.whiteSpace = 'pre-line';
 
 
 })
