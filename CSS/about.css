@@ -19,7 +19,6 @@ body {
     background: #fff;
     text-decoration: none;
     overflow-x: hidden;
-    position: absolute;
 }
 
 body::-webkit-scrollbar {
@@ -167,10 +166,8 @@ visibility: hidden;
     margin-top: 200px;
     display: flex;
     width: 100vw;
-    height: 450px;
+    height: auto;
     /* padding: 70px; */
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 .heroleft h1 {
@@ -201,26 +198,28 @@ visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;
-    width: 1050px;
+    width: 100vw;
     height: 650px;
     background-image: url('/assets/Polygon\ 8.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     z-index: -1;
     margin-top: -70px;
-    margin-right: -110px;
+    margin-right: 0px;
 
 }
 
 
 .heroleft {
-    width: 50%;
+    width: 40%;
+    margin-left: auto;
 }
 
 .heroright {
-    width: 50%;
-    height: 450px;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
 }
 
 .heroright img {
