@@ -132,22 +132,22 @@ tsubtextElement.style.whiteSpace = 'pre-line';
 
 
 const setion1textElement = document.getElementById("section1Text");
-tsubtextElement.innerHTML = `${fetch.section1Text.replace(/\n/g, '<br/>')}`;
-tsubtextElement.style.whiteSpace = 'pre-line';
+setion1textElement.innerHTML = `${fetch.section1Text.replace(/\n/g, '<br/>')}`;
+setion1textElement.style.whiteSpace = 'pre-line';
 
 // Example: Populate HTML elements
 const setion2titleElement = document.getElementById("section2Title");
-titleElement.innerHTML = `${fetch.section2Title.replace(/\n/g, '<br/>')}`;
-titleElement.style.whiteSpace = 'pre-line';
+setion2titleElement.innerHTML = `${fetch.section2Title.replace(/\n/g, '<br/>')}`;
+setion2titleElement.style.whiteSpace = 'pre-line';
 
 const setion2subtextElement = document.getElementById("section2subtitle");
-subtextElement.innerHTML = `${fetch.section2subtitle.replace(/\n/g, '<br/>')}`;
-subtextElement.style.whiteSpace = 'pre-line';
+setion2subtextElement.innerHTML = `${fetch.section2subtitle.replace(/\n/g, '<br/>')}`;
+setion2subtextElement.style.whiteSpace = 'pre-line';
 
 
 const setion2tsubtextElement = document.getElementById("section2Text");
-tsubtextElement.innerHTML = `${fetch.section2Text.replace(/\n/g, '<br/>')}`;
-tsubtextElement.style.whiteSpace = 'pre-line';
+setion2tsubtextElement.innerHTML = `${fetch.section2Text.replace(/\n/g, '<br/>')}`;
+setion2tsubtextElement.style.whiteSpace = 'pre-line';
 
 })
 .catch(error => console.error('Error fetching Firebase config:', error));
