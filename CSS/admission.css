@@ -314,13 +314,19 @@ visibility: hidden;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 14px;
+    width: auto;
+    height: auto;
     padding-bottom: 14px;
     border: none;
     background-color: #ff9900;
     color: white;
     border-radius: 10px;
-    margin-left: -870px;
     margin-top: 30px;
+}
+
+.s3div button :hover{
+  background-color: #80470b;
+
 }
 
 
