@@ -97,7 +97,7 @@ import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gsta
 
 var pagedata = null;
 
-fetch('/config')
+fetch('./../api/configfile.js')
   .then(response => response.json())
   .then (async data => {
     const firebaseConfig = data.firebaseConfig;
