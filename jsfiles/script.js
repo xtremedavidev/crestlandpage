@@ -97,19 +97,12 @@ import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gsta
 
 var pagedata = null;
 
-const firebaseConfig = {
-  // Your Firebase configuration
+fetch('/config')
+  .then(response => response.json())
+  .then (async data => {
+    const firebaseConfig = data.firebaseConfig;
+    // Now you can use firebaseConfig in your Firebase initialization
 
-  apiKey: process.env.FIREBASE_APIKEY,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  projectId: process.env.FIREBASE_PROJECTID,
-  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.FIREBASE_APPID,
-  measurementId: process.env.FIREBASE_MEASUREMENTID,
-
-
-};
           const app = initializeApp(firebaseConfig);
           const db = getFirestore(app);
 
@@ -330,3 +323,6 @@ const teachers = fetch.teachers;
     staffCardsContainer.appendChild(staffCard);
   });
   
+
+})
+.catch(error => console.error('Error fetching Firebase config:', error));
