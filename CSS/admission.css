@@ -362,8 +362,8 @@ visibility: hidden;
 }
 
 .admission_container {
-    width: 1091px;
-    height: 1246px;
+    width: calc(100vw - 60px);
+    height: auto;
     flex-shrink: 0;
     border-radius: 34.081px;
     border: 1.482px solid #F3F3F3;
