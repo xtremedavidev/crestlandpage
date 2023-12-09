@@ -16,19 +16,13 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
 
 
 
-const firebaseConfig = {
-  // Your Firebase configuration
 
-  apiKey: process.env.FIREBASE_APIKEY,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  projectId: process.env.FIREBASE_PROJECTID,
-  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.FIREBASE_APPID,
-  measurementId: process.env.FIREBASE_MEASUREMENTID,
+fetch('./../api/configfile.js')
+  .then(response => response.json())
+  .then (async data => {
+    const firebaseConfig = data.firebaseConfig;
+    // Now you can use firebaseConfig in your Firebase initialization
 
-
-};
           const app = initializeApp(firebaseConfig);
           const db = getFirestore(app);
 
@@ -99,3 +93,5 @@ activitiesListContainer.appendChild(ulElement);
 activitiesContainer.appendChild(activitiesListContainer);
 
 
+})
+.catch(error => console.error('Error fetching Firebase config:', error));

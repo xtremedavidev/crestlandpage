@@ -41,19 +41,13 @@ const generateJoseToken = async (payload, secretKey) => {
 
 
 // Replace 'your-firebase-config' with your actual Firebase config
-const firebaseConfig = {
-  // Your Firebase configuration
 
-  apiKey: process.env.FIREBASE_APIKEY,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  projectId: process.env.FIREBASE_PROJECTID,
-  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.FIREBASE_APPID,
-  measurementId: process.env.FIREBASE_MEASUREMENTID,
+fetch('./../api/configfile.js')
+  .then(response => response.json())
+  .then (async data => {
+    const firebaseConfig = data.firebaseConfig;
+    // Now you can use firebaseConfig in your Firebase initialization
 
-
-};
 // Initialize Firebase
 
 // Initialize Firebase Admin SDK
@@ -162,3 +156,8 @@ async function hashPassword(password) {
 // Add your Firebase authentication logic here
 // For example, you can use the following to listen for form submission
 document.getElementById("signin").addEventListener("submit", handleSubmit);
+
+
+})
+.catch(error => console.error('Error fetching Firebase config:', error));
+
