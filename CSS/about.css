@@ -852,7 +852,7 @@ flex-shrink: 0;
 
 
     .hero {
-        margin-top: 80px;
+        margin-top: 0px;
         height: auto;
         display: flex;
         padding: 20px auto;
@@ -868,12 +868,12 @@ flex-shrink: 0;
     
     .heroleft h1 {
         color: #1F1E66;
+        padding-top: 60px;
         font-family: 'Lexend', sans-serif;
         font-size: 3.5rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-
         text-align: center;
         padding-right: auto;
         padding-left: auto;
