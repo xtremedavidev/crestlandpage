@@ -210,6 +210,20 @@ sec3subtitleElement.style.whiteSpace = 'pre-line';
 
 
 
+// vs an ms
+
+
+const 
+vissionElement = document.getElementById("visionText");
+vissionElement.innerHTML = `${fetch.visionText.replace(/\n/g, '<br/>')}`;
+vissionElement.style.whiteSpace = 'pre-line';
+
+const 
+missionElement = document.getElementById("missionText");
+missionElement.innerHTML = `${fetch.missionText.replace(/\n/g, '<br/>')}`;
+missionElement.style.whiteSpace = 'pre-line';
+
+
 
 
 
