@@ -52,6 +52,43 @@ const fetchData = async () => {
   }
 };
 
+
+
+
+const fetchData2 = async () => {
+  try {
+    const dataRef = doc(db, 'cms', "indexPage");
+    const querySnapshot = await getDoc(dataRef);
+    console.log(querySnapshot, "qs")
+
+    const data = querySnapshot.data();
+
+    pagedata = data;
+    console.log("page data is now", pagedata);
+
+    return data;
+
+
+
+
+    
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+};
+
+// Call the function to fetch data
+
+
+    const fetch2 = await fetchData2();
+
+
+
+
+
+
+
 // Call the function to fetch data
 
 
@@ -65,6 +102,44 @@ const fetchData = async () => {
 
 console.log("fetch",  fetch)
 
+
+
+
+  // Assuming teachers is an object where each key represents a teacher
+  const teachers = fetch2.teachers;
+  
+  // Get the container element to append staff cards
+  const staffCardsContainer = document.querySelector(".staff-cards-container");
+  
+  // Loop through teachers and create staff cards
+  Object.keys(teachers).forEach((teacherKey) => {
+    const teacher = teachers[teacherKey];
+  
+    // Create staff card element
+    const staffCard = document.createElement("div");
+    staffCard.className = "staff-card";
+  
+    // Create image element
+    const img = document.createElement("img");
+    img.src = teacher.teacherPicture;
+    img.alt = teacher.teacherName;
+  
+    // Create heading element
+    const h3 = document.createElement("h3");
+    h3.textContent = teacher.teacherName;
+  
+    // Create paragraph elements
+    const pRole = document.createElement("p");
+    pRole.textContent = `Role: ${teacher.teacherRole}`;
+  
+    // Append elements to staff card
+    staffCard.appendChild(img);
+    staffCard.appendChild(h3);
+    staffCard.appendChild(pRole);
+  
+    // Append staff card to staff cards container
+    staffCardsContainer.appendChild(staffCard);
+  });
 
 
 

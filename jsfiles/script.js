@@ -13,23 +13,7 @@ document.addEventListener("scroll", function () {
 
 
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const container = document.querySelector('.staff-cards-container');
-        const scrollAmount = 1; 
-        const scrollSpeed = 1;   
-
-        function autoScroll() {
-            container.scrollLeft += scrollAmount * scrollSpeed;
-            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-                container.scrollLeft = 0;
-            }
-            requestAnimationFrame(autoScroll);
-        }
-
-        // Start auto-scrolling when the page loads
-        autoScroll();
-    });
-
+   
 
 
     document.addEventListener('DOMContentLoaded', function () {

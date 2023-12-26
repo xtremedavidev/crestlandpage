@@ -19,13 +19,49 @@ body {
     background: #fff;
     text-decoration: none;
     overflow-x: hidden;
-    position: absolute;
+  /* Existing styles for the body */
+  position: relative;
 }
 
-body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none;
+  z-index: 2000;
 }
+
+.snowflake {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: 5s snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+      transform: translateY(0) rotate(0deg);
+  }
+  100% {
+      transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 li {
     list-style: none;
