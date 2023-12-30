@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrestHive Admission</title>
-    <link rel="stylesheet" href="/CSS/admission.css">
+    <title>CrestHive Basic School</title>
+    <link rel="stylesheet" href="/CSS/BASICSCHOLL.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
 
     <!-- Your main script file with type="module" -->
-    <script type="module" src="./jsfiles/admission.js"></script>
+    <script type="module" src="./jsfiles/college-extra.js"></script>
 
     <!-- Firebase configuration and initialization -->
     <script type="module">
@@ -24,6 +24,9 @@
         // Your Firebase configuration and initialization code can go here
 
     </script>
+
+
+
 
 
 
@@ -44,9 +47,8 @@
                     <li class="school-dropdown">
                         <a href="#school">School <i class="fas fa-caret-down"></i></a>
                         <ul class="school-submenu">
-                            <li><a href="pre-basic.html">Basic School</a></li>
-                            <li><a href="basic-extra.html">Basic School</a></li>
-                            <li><a href="college-extra.html">College</a></li>
+    <li><a href="pre-basic.html"> Pre Basic School</a></li>
+                        <li><a href="basic-extra.html">Basic School</a></li>                            <li><a href="college-extra.html">College</a></li>
                         </ul>
                     </li>
                     <li class="school-dropdown">
@@ -82,6 +84,8 @@
 
 
 
+
+
     <nav class="navbar">
         <div class="container nav__container">
             <a href="index.html" class="school-name">
@@ -91,9 +95,8 @@
                 <li class="school-dropdown">
                     <a href="#school">School <i class="fas fa-caret-down"></i></a>
                     <ul class="school-submenu">
-                        <li><a href="pre-basic.html"> Pre Basic School</a></li>
-                        <li><a href="basic-extra.html">Basic School</a></li>
-                        <li><a href="college-extra.html">College</a></li>
+<li><a href="pre-basic.html"> Pre Basic School</a></li>
+                        <li><a href="basic-extra.html">Basic School</a></li>                        <li><a href="college-extra.html">College</a></li>
                     </ul>
                 </li>
                 <li class="school-dropdown">
@@ -114,65 +117,67 @@
     </nav>
 
     <section class="hero">
-        <div class="heroleft">
+        <div class="hero-content">
+            <video autoplay loop muted>
+                <source src="/assets/hanger video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="section1">
+        <div class="container">
             <h1 id="herotitle">
 
             </h1>
-            <h2 id="herosub">
-            </h2>
-            <p id="herosubtext">
-            </p>
-        </div>
 
-        <div class="heroright">
-            <img src="/assets/Group 22295.png">
-        </div>
-        <!-- <div class="right-polygon"></div> -->
-    </section>
-
-    <section class="section3">
-        <div class="s3div">
-            <p id="section1Text">
+            <p id="herosub">
 
             </p>
 
-            <a href="/about.html">
-                <button class="s3div">learn more</button>
-            </a>
         </div>
     </section>
 
-    <section class="section4">
-        <h1 id="section2Title"></h1>
+    <section class="tablet">
+        <nav class="category-navigation">
+            <ul>
+                <li><a href="#" data-category="activities"><i class="fas fa-globe"></i> More Details</a></li>
 
-        <p class="s4p" id="section2subtitle">
+            </ul>
+        </nav>
 
-        </p>
-        <h3 id="section2Text">
+        <div class="tablet1">
+            <div class="category-content" data-category="activities">
+                <p id="detailsText">
 
-        </h3>
+                </p>
 
-        <div id="fees-container" class="admission_container">
+                <h2>Notable Activities</h2>
+                <div id="activities-container" class="activitylist">
+                    <ul class="activity-list">
 
-
-
-
-
-        </div>
-
-
-
+                    </ul>
+                </div>
+            </div>
 
     </section>
 
+    <section class="cta-section">
+        <h2 class="cta-sentence">Join us for an exciting educational
+            journey!</h2>
+        <a href="https://student.crestscholars.com/RegistrationPage" class="cta-button">Get Started</a>
+    </section>
 
     <footer class="footer">
         <div class="footer-content">
             <h2 class="footer-header">
-                <span class="fasthand-font">CrestHive</span> surpasses just a
+                <span class="fasthand-font">CrestHive</span> surpasses
+                just a
             </h2>
-            <h2 class="footer-header footer-header-fasthand">school, we are family.</h2>
-            <p class="footer-text">We imbibe knowledge without compromising</p>
+            <h2 class="footer-header footer-header-fasthand">school, we
+                are family.</h2>
+            <p class="footer-text">We imbibe knowledge without
+                compromising</p>
             <p class="footer-text"></p>
             <a href="/about.html">
                 <button class="footer-button">Learn More</button>
@@ -184,9 +189,11 @@
                 <div class="contact-info">
                     <h2>Contact Us</h2>
                     <hr>
-                    <p><i class="fas fa-envelope"></i> Email: info@cresthive.com</p>
+                    <p><i class="fas fa-envelope"></i> Email:
+                        info@cresthive.com</p>
                     <hr>
-                    <p><i class="fas fa-phone"></i> Phone number: 07030175401</p>
+                    <p><i class="fas fa-phone"></i> Phone number:
+                        07030175401</p>
                 </div>
                 <div class="copyright">
                     <p>&#169; 2023, All rights reserved</p>
@@ -201,7 +208,7 @@
         </div>
     </footer>
 
-
+    <script src="school.js"></script>
 </body>
 
 </html>

@@ -323,4 +323,4 @@ const teachers = fetch.teachers;
   
 
 })
-.catch(error => console.error('Error fetching Firebase config:', error));
+.catch((error) => console.log('Error fetching Firebase config:', error));

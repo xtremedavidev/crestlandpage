@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100%;
     background-color: #f5f5f5;
     position: relative;
 }
@@ -76,8 +77,12 @@ body {
 
 
 
-li {
+nav li {
     list-style: none;
+}
+
+.requirements{
+    list-style: disc;
 }
 
 a {
@@ -93,6 +98,7 @@ a {
 .navbar {
     background: rgba(241, 238, 255, 1);
     width: 100vw;
+    min-width: 98vw;
     height: 100px;
     position: fixed;
     padding-right: 20px;
@@ -282,6 +288,9 @@ header p {
 
 .logo img {
     max-width: 70px;
+    border-radius: 100%;
+    padding: 6px;
+    background: white;
     margin-right: 10px;
 }
 
@@ -611,7 +620,7 @@ header p {
 
 
     50% {
-        transform: scalex(1.4);
+        transform: scalex(1.2);
     }
 
     100% {

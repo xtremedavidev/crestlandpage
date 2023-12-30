@@ -64,8 +64,91 @@
         </nav>
       </nav>
     
- 
-      
+    
+      <style>
+        .sections-container {
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            width: 100%;
+            scrollbar-width: 0;
+        }
+
+        .section2 {
+            flex: 0 0 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            display: flex;
+        }
+
+        .s2left,
+        .s2right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s2left img {
+            max-width: 80%;
+            height: 70vh;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .blured {
+            width: 80vw;
+            height: auto;
+            background-color: whitesmoke;
+            border-radius: 16px;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(133deg, rgba(255, 255, 255, 0.9) 0%, rgba(196, 150, 8, 0.8) 34%, rgba(255, 196, 0, 0.8) 84%, rgba(255, 255, 255, 0.9) 98%);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        .sections-container ::-webkit-scrollbar{
+                display: none;
+            }
+
+        /* Add responsive styles for mobile */
+        @media screen and (max-width: 600px) {
+            .sections-container {
+                flex-direction: column;
+            }
+
+         
+
+            .section2 {
+                flex: 1;
+                height: auto;
+            }
+
+            .blured {
+                display: flex;
+                flex-direction: column;
+                column-gap: 40px;
+                padding: 20px;
+            }
+
+            .blured p{
+            }
+        }
+    </style>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
     
             <nav class="navbar">
                 <div class="container nav__container">
@@ -86,9 +169,9 @@
                                 <li><a href="admission-process.html">Admission process</a></li>
                                 <li><a href="entrance-test.html">Entrance tests</a></li>
                                 <li><a href="holidays.html">Holidays</a></li>
-
+    
                             </ul>
-                        </li>                        <li><a href="about.html">About Us</a></li>
+                                                <li><a href="about.html">About Us</a></li>
                     </ul>
                     <a href="https://student.crestscholars.com/RegistrationPage">
                     <button class="navbtn">Start Registration</button>
@@ -99,80 +182,7 @@
 
 
 
-            <style>
-                .sections-container {
-                    display: flex;
-                    flex-direction: column;
-                    overflow-x: hidden;
-                    scroll-snap-type: y mandatory;
-                    height: 100vh;
-                    width: 100%;
-                    scrollbar-width: 0;
-                }
-        
-                .section2 {
-                    flex: 0 0 100%;
-                    height: 100%;
-                    scroll-snap-align: start;
-                    display: flex;
-                }
-        
-                .s2left,
-                .s2right {
-                    flex: 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-        
-                .s2left img {
-                    max-width: 80%;
-                    height: 70vh;
-                    object-fit: cover;
-                    border-radius: 20px;
-                }
-        
-                .blured {
-                    width: 80vw;
-                    height: auto;
-                    background-color: whitesmoke;
-                    border-radius: 16px;
-                    background: rgb(255, 255, 255);
-                    background: linear-gradient(133deg, rgba(255, 255, 255, 0.9) 0%, rgba(196, 150, 8, 0.8) 34%, rgba(255, 196, 0, 0.8) 84%, rgba(255, 255, 255, 0.9) 98%);
-                    padding: 40px 30px;
-                    display: flex;
-                    flex-direction: row;
-                    gap: 40px;
-                }
-        
-                .sections-container ::-webkit-scrollbar{
-                        display: none;
-                    }
-        
-                /* Add responsive styles for mobile */
-                @media screen and (max-width: 600px) {
-                    .sections-container {
-                        flex-direction: column;
-                    }
-        
-                 
-        
-                    .section2 {
-                        flex: 1;
-                        height: auto;
-                    }
-        
-                    .blured {
-                        display: flex;
-                        flex-direction: column;
-                        column-gap: 40px;
-                        padding: 20px;
-                    }
-        
-                    .blured p{
-                    }
-                }
-            </style>
+
 
 
 
@@ -196,7 +206,13 @@
         <p>At Cresthive School, we believe in fostering creativity and curiosity in every child. Our dedicated
             teachers create a joyful learning environment where imagination knows no bounds.</p>
         <p>Come join us on this magical journey of education!</p>
+
+        <p><a class="text-blue-700 font-lg font-semibold" style="color: blue;"  href="basicschool.html">
+            More details...
+        </a></p>
     </section>
+
+
 
     <section class="section2" style="background-color: #f5fffd; height: 100vh;">
         <div class="s2left">
@@ -207,6 +223,9 @@
             <p id="section1Text">Section 1 Text</p>
         </div>
     </section>
+
+
+
 
     <section class="categories">
         <h2>Explore Different Categories</h2>

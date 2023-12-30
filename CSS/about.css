@@ -16,6 +16,8 @@
 
 body {
     line-height: 1.7;
+    max-width: 100vw;
+    overflow-x: hidden;
     background: #fff;
     text-decoration: none;
     overflow-x: hidden;
@@ -196,14 +198,14 @@ visibility: hidden;
     top: 0;
     right: 0;
     width: 100vw;
-    height: 650px;
+    height: 70vh;
     background-image: url('/assets/Polygon\ 8.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     z-index: -1;
-    margin-top: -70px;
-    margin-right: 0px;
+    margin-top: 0px;
+    padding-right: -130px;
 
 }
 
@@ -220,8 +222,10 @@ visibility: hidden;
 }
 
 .heroright img {
-    width: 568px;
-    height: 345px;
+    height: 50vh;
+    width: auto;
+    max-width: 40vw;
+    object-fit: contain;
 }
 
 .s2left img {
@@ -904,7 +908,7 @@ flex-shrink: 0;
         background-position: center;
         z-index: -1;
         margin-top: -70px;
-        margin-right: -110px;
+        padding-right: -110px;
     
     }
     
@@ -929,8 +933,9 @@ flex-shrink: 0;
     }
     
     .heroright img {
-        width: 95%;
+        width: 100%;
         height: auto;
+        max-width: 100vw;
     }
     
     .s2left img {
