@@ -77,22 +77,18 @@ const ul2Element = document.getElementById("colp_ul")
 
 // Iterate through requrements features and create li elements
 bscs.forEach((feature) => {
-  const liElement = document.createElement("li");
-  const pElement = document.createElement("p");
+  const pElement = document.createElement("li");
   pElement.textContent = feature;
   pElement.classList.add("text-gray-700");
-  liElement.appendChild(pElement);
-  ulElement.appendChild(liElement);
+  ulElement.appendChild(pElement);
 });
 
 
 cols.forEach((feature) => {
-    const liElement = document.createElement("li");
-    const pElement = document.createElement("p");
-    pElement.textContent = feature;
-    pElement.classList.add("text-gray-700");
-    liElement.appendChild(pElement);
-    ul2Element.appendChild(liElement);
+  const pElement = document.createElement("li");
+  pElement.textContent = feature;
+  pElement.classList.add("text-gray-700");
+  ul2Element.appendChild(pElement);
   });
 
 // Append the ul element to the requrements container

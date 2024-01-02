@@ -75,12 +75,10 @@ const ulElement = document.getElementById("admp_ul");
 
 // Iterate through requrements features and create li elements
 requrements.forEach((feature) => {
-  const liElement = document.createElement("li");
-  const pElement = document.createElement("p");
+   const pElement = document.createElement("li");
   pElement.textContent = feature;
   pElement.classList.add("text-gray-700");
-  liElement.appendChild(pElement);
-  ulElement.appendChild(liElement);
+  ulElement.appendChild(pElement);
 });
 
 // Append the ul element to the requrements container
