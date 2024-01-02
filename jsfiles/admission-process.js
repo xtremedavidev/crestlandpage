@@ -57,7 +57,7 @@ console.log("fetch",  fetch)
 const admission = fetch.admission;
 
 
-const requrements = admission.requrements;
+const requrements = admission[0].requrements;
 
 
 
@@ -89,11 +89,11 @@ requrements.forEach((feature) => {
 
 
 // Example: Populate HTML elements
-const admptitleElement = document.getElementById("admTitle");
+const admptitleElement = document.getElementById("admpTitle");
 admptitleElement.innerHTML = `${fetch.admprocessTitle.replace(/\n/g, '<br/>')}`;
 admptitleElement.style.whiteSpace = 'pre-line';
 
-const admptextElement = document.getElementById("admText");
+const admptextElement = document.getElementById("admpText");
 admptextElement.innerHTML = `${fetch.admprocessText.replace(/\n/g, '<br/>')}`;
 admptextElement.style.whiteSpace = 'pre-line';
 
