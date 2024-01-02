@@ -1,15 +1,4 @@
 
-     
-  document.getElementById('nav-toggle').addEventListener('click', function() {
-    var navMenu = document.querySelector('.nav-menu');
-    var navToggle = document.querySelector('.nav-toggle');
-  
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
-  });
-  
-
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
 import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
 
@@ -116,4 +105,12 @@ admptextElement.style.whiteSpace = 'pre-line';
   
 
 
-  
+       
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  var navMenu = document.querySelector('.nav-menu');
+  var navToggle = document.querySelector('.nav-toggle');
+
+  navMenu.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});
+
