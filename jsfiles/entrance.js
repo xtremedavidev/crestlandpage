@@ -106,7 +106,7 @@ admptitleElement.innerHTML = `${fetch.entrancesystemTitle.replace(/\n/g, '<br/>'
 admptitleElement.style.whiteSpace = 'pre-line';
 
 const admptextElement = document.getElementById("entText");
-admptextElement.innerHTML = `${fetch.entrancesystemTitle.replace(/\n/g, '<br/>')}`;
+admptextElement.innerHTML = `${fetch.entrancesystemText.replace(/\n/g, '<br/>')}`;
 admptextElement.style.whiteSpace = 'pre-line';
 
 })
