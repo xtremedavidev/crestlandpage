@@ -192,7 +192,7 @@ dir3TitleElement.innerHTML = `${fetch.directprebasicTitle.replace(/\n/g, '<br/>'
 dir3TitleElement.style.whiteSpace = 'pre-line';
 
 
-const img = document.getElementById("img3");
+const img = document.getElementById("img");
 img.src = fetch.prebasicphoto;
 
 
