@@ -23,7 +23,7 @@ try {
 
   const data = querySnapshot.data();
 
-  pagedata = data;
+  const pagedata = data;
   console.log("page data is now", pagedata);
 
   return data;
