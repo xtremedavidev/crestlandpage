@@ -222,22 +222,22 @@ missionElement.style.whiteSpace = 'pre-line';
 // Assuming testimonials is an array of testimonial objects
 const testimonials = fetch.testimonials;
 // Get the container element to append cards
-const cardContainer = document.querySelector(".card-container");
+const cardContainer = document.querySelector(".blog-card-container");
 
 // Loop through testimonials and create cards
 testimonials.forEach((testimonial) => {
   // Create card element
   const card = document.createElement("div");
-  card.className = "card";
+  card.className = "blog-card";
 
   // Create card-image container
   const cardImageContainer = document.createElement("div");
-  cardImageContainer.className = "card-image";
+  cardImageContainer.className = "blog-card-image";
   cardImageContainer.style.backgroundImage = `url('${testimonial.parentImageURL}')`;
 
   // Create p-paragraph container
   const pParagraphContainer = document.createElement("div");
-  pParagraphContainer.className = "p-paragraph";
+  pParagraphContainer.className = "blog-card-paragraph";
 
   // Create paragraph element
   const paragraph = document.createElement("p");
