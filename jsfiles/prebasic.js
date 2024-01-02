@@ -205,6 +205,8 @@ img.src = fetch.prebasicphoto;
 
 const imageUrls = fetch2.gallery;
 
+const sectionsContainer = document.getElementById("sections_container")
+
 
 function createCategoryElement(category) {
       
