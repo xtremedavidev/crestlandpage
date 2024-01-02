@@ -94,7 +94,7 @@ const fetchData = async () => {
 
     const data = querySnapshot.data();
 
-    pagedata = data;
+    const pagedata = data;
     console.log("page data is now", pagedata);
 
     return data;
@@ -120,7 +120,7 @@ const fetchData2 = async () => {
 
     const data = querySnapshot.data();
 
-    pagedata = data;
+    const pagedata = data;
     console.log("page data is now", pagedata);
 
     return data;
@@ -172,14 +172,14 @@ console.log("fetch",  fetch)
 
 
 
-// Example: Populate HTML elements
-const titleElement = document.getElementById("aboutTitle");
-titleElement.innerHTML = `${fetch.aboutTitle.replace(/\n/g, '<br/>')}`;
-titleElement.style.whiteSpace = 'pre-line';
+// // Example: Populate HTML elements
+// const titleElement = document.getElementById("aboutTitle");
+// titleElement.innerHTML = `${fetch.aboutTitle.replace(/\n/g, '<br/>')}`;
+// titleElement.style.whiteSpace = 'pre-line';
 
-const subtextElement = document.getElementById("aboutSubtitle");
-subtextElement.innerHTML = `${fetch.aboutSubtitle.replace(/\n/g, '<br/>')}`;
-subtextElement.style.whiteSpace = 'pre-line';
+// const subtextElement = document.getElementById("aboutSubtitle");
+// subtextElement.innerHTML = `${fetch.aboutSubtitle.replace(/\n/g, '<br/>')}`;
+// subtextElement.style.whiteSpace = 'pre-line';
 
 
 
