@@ -57,7 +57,8 @@ console.log("fetch",  fetch)
 const admission = fetch.admission;
 
 
-const requrements = admission[1].holidates;
+const bscs = admission[2].entrancebasic;
+const cols = admission[3].entrancecollege;
 
 
 
@@ -71,10 +72,11 @@ console.log("admission", admission);
 // Create the h2 element with requrements title// Assuming you have a feeAmount property
 
 // Create the ul element
-const ulElement = document.getElementById("hld_ul");
+const ulElement = document.getElementById("bscp_ul");
+const ul2Element = document.getElementById("colp_ul")
 
 // Iterate through requrements features and create li elements
-requrements.forEach((feature) => {
+bscs.forEach((feature) => {
   const liElement = document.createElement("li");
   const pElement = document.createElement("p");
   pElement.textContent = feature;
@@ -83,18 +85,28 @@ requrements.forEach((feature) => {
   ulElement.appendChild(liElement);
 });
 
+
+cols.forEach((feature) => {
+    const liElement = document.createElement("li");
+    const pElement = document.createElement("p");
+    pElement.textContent = feature;
+    pElement.classList.add("text-gray-700");
+    liElement.appendChild(pElement);
+    ul2Element.appendChild(liElement);
+  });
+
 // Append the ul element to the requrements container
 
 
 
 
 // Example: Populate HTML elements
-const admptitleElement = document.getElementById("hldTitle");
-admptitleElement.innerHTML = `${fetch.holidaysystemTitle.replace(/\n/g, '<br/>')}`;
+const admptitleElement = document.getElementById("entTitle");
+admptitleElement.innerHTML = `${fetch.entrancesystemTitle.replace(/\n/g, '<br/>')}`;
 admptitleElement.style.whiteSpace = 'pre-line';
 
-const admptextElement = document.getElementById("hldText");
-admptextElement.innerHTML = `${fetch.holidaysystemText.replace(/\n/g, '<br/>')}`;
+const admptextElement = document.getElementById("entText");
+admptextElement.innerHTML = `${fetch.entrancesystemTitle.replace(/\n/g, '<br/>')}`;
 admptextElement.style.whiteSpace = 'pre-line';
 
 })

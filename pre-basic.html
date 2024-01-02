@@ -13,7 +13,20 @@
 </head>
 
 <body>
-<script src="jsfiles/prebasic.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+
+    <!-- Your main script file with type="module" -->
+    <script type="module" src="./jsfiles/prebasic.js"></script>
+
+    <!-- Firebase configuration and initialization -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+
+        // Your Firebase configuration and initialization code can go here
+
+    </script>
 
 
 
@@ -203,14 +216,14 @@
             <img src="/assets/Our Educators\Akinpelu Aliu JSS1 class teacher.jpg"  alt="Image 1">
         </div>
         <div class="s2right" style="display: flex; flex-direction: column;">
-            <h2 id="section1Title">Section 1 Title</h2>
-            <p id="section1Text">Section 1 Text</p>
+            <h2 id="dirTitle">Section 1 Title</h2>
+            <p id="dirText">Section 1 Text</p>
         </div>
     </section>
 
     <section class="categories">
         <h2>Explore Different Categories</h2>
-        <div class="category" id="basicCategory">
+        <div class="category" id="prebasicCategory">
             <h3>Basic Level</h3>
             <div class="image-container">
                 <!-- Add your basic level student images here -->

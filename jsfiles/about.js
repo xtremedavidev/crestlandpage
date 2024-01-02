@@ -159,13 +159,51 @@ subtextElement.innerHTML = `${fetch.aboutSubtitle.replace(/\n/g, '<br/>')}`;
 subtextElement.style.whiteSpace = 'pre-line';
 
 
-const sec1textElement = document.getElementById("section1Text");
-sec1textElement.innerHTML = `${fetch.section1Text.replace(/\n/g, '<br/>')}`;
-sec1textElement.style.whiteSpace = 'pre-line';
+const dir1textElement = document.getElementById("dir1Text");
+dir1textElement.innerHTML = `${fetch.directcollegeText.replace(/\n/g, '<br/>')}`;
+dir1textElement.style.whiteSpace = 'pre-line';
 
-const sec1TitleElement = document.getElementById("section1Title");
-sec1TitleElement.innerHTML = `${fetch.section1Title.replace(/\n/g, '<br/>')}`;
-sec1TitleElement.style.whiteSpace = 'pre-line';
+const dir1TitleElement = document.getElementById("dir1Title");
+dir1TitleElement.innerHTML = `${fetch.directcollegeTitle.replace(/\n/g, '<br/>')}`;
+dir1TitleElement.style.whiteSpace = 'pre-line';
+
+
+const  dir2textElement = document.getElementById("dir2Text");
+dir2textElement.innerHTML = `${fetch.directbasicText.replace(/\n/g, '<br/>')}`;
+dir2textElement.style.whiteSpace = 'pre-line';
+
+const dir2TitleElement = document.getElementById("dir2Title");
+dir2TitleElement.innerHTML = `${fetch.directbasicTitle.replace(/\n/g, '<br/>')}`;
+dir2TitleElement.style.whiteSpace = 'pre-line';
+
+const dir3textElement = document.getElementById("dir3Text");
+dir3textElement.innerHTML = `${fetch.directprebasicText.replace(/\n/g, '<br/>')}`;
+dir3textElement.style.whiteSpace = 'pre-line';
+
+const dir3TitleElement = document.getElementById("dir3Title");
+dir3TitleElement.innerHTML = `${fetch.directprebasicTitle.replace(/\n/g, '<br/>')}`;
+dir3TitleElement.style.whiteSpace = 'pre-line';
+
+const vissiontextElement = document.getElementById("visionText");
+vissiontextElement.innerHTML = `${fetch2.visionText.replace(/\n/g, '<br/>')}`;
+vissiontextElement.style.whiteSpace = 'pre-line';
+
+const missionTextElement = document.getElementById("missionText");
+missionTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+missionTextElement.style.whiteSpace = 'pre-line';
+
+
+const img1 = document.getElementById("img1");
+img1.src = fetch.collegephoto;
+
+
+const img2 = document.getElementById("img2");
+img2.src = fetch.basicphoto;
+
+
+const img3 = document.getElementById("img3");
+img3.src = fetch.prebasicphoto;
+
 
 
 })
