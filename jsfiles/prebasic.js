@@ -242,7 +242,8 @@ function createCategoryElement(category) {
     // Add images to the image container
     images.forEach(imageUrl => {
       const imgElement = document.createElement('img');
-      imgElement.src = imageUrl;
+      console.log("img", imageUrl)
+      imgElement.src = imageUrl[0].link;
       imageContainer.appendChild(imgElement);
     });
   
