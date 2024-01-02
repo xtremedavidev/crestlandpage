@@ -211,10 +211,12 @@ const sectionsContainer = document.getElementById("sections_container")
 function createCategoryElement(category) {
       
         const images = [];
+
       
         imageUrls.forEach((item) => {
           if (item[category]) {
             images.push(item[category]);
+            console.log(images)
           }
         });
     
