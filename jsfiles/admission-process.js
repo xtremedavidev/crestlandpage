@@ -57,7 +57,7 @@ console.log("fetch",  fetch)
 const admission = fetch.admission;
 
 
-const requrements = admission[0].requrements;
+const requrements = admission[0].requirements;
 
 
 
