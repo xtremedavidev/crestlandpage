@@ -769,82 +769,52 @@ text-align: left;}
 .card-container {
     display: flex;
     overflow-x: auto;
-    /* Enable horizontal scrolling */
-    /* Add some padding to space the cards */
     margin-top: 20px;
-    /* Adjust the top margin as needed */
     gap: 20px;
-    /* Add space between cards */
 }
 
 .card {
     min-width: 300px;
-    height: 160px;
-    background-color: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    margin-top: 25px;
+    height: 400px; /* Adjust the height as needed */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-image {
+    height: 200px; /* Adjust the height of the image section */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 59px 48px 48px 48px;
-    align-items: flex-start;
-    gap: 24px;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(226, 226, 226, 0.25);
+    gap: 10px;
 }
 
-.p-details {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.p-details img {
-    width: 70px;
-    height: 70px;
-}
-
-.p-details .details {
-    margin-top: 100px;
-    position: absolute;
-}
-
-.p-details h1 {
+.card-title {
     color: #000;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-top: 10px;
 }
 
-.p-details h3 {
-    color: #09B451;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-
-.p-paragraph {
-    color: #333;
+.card-details {
+    color: #555;
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
-    font-style: normal;
-    line-height: 30px;
+    line-height: 20px;
     margin-bottom: 10px;
 }
 
 .card-container::-webkit-scrollbar {
     display: none;
 }
-
 
 
 .section7 {
