@@ -848,14 +848,14 @@ a {
 .blog-card-title{
     color: #00693d;
     font-family: 'DM Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
 }
 
 .blog-card-paragraph {
