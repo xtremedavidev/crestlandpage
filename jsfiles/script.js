@@ -258,12 +258,26 @@ testimonials.forEach((testimonial) => {
   card.appendChild(titleP);
   card.appendChild(pParagraphContainer);
 
-  // Append card to card container
+
+  card.addEventListener("click", () => openModal(testimonial.parentImageURL, testimonial.parentName, paragraph.innerHTML));
+  
   cardContainer.appendChild(card);
 });
 
+function openModal(imageURL, title, content) {
+  modalImage.style.backgroundImage = `url('./assets/logo.png)`;
+  modalTitle.textContent = title;
+  modalContentText.innerHTML = content;
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
 
 
+
+ 
 
 
 

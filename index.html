@@ -450,51 +450,6 @@
 
               
 
-<script>
-    const testimonials = fetch.testimonials;
-    const cardContainer = document.getElementById("blogCardContainer");
-    const modal = document.getElementById("myModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalContentText = document.getElementById("modalContentText");
-  
-    testimonials.forEach((testimonial, index) => {
-      const card = document.createElement("div");
-      card.className = "blog-card";
-  
-      const cardImageContainer = document.createElement("div");
-      cardImageContainer.className = "blog-card-image";
-      cardImageContainer.style.backgroundImage = `url("./assets/logo.png")`;
-  
-      const pParagraphContainer = document.createElement("div");
-      pParagraphContainer.className = "blog-card-paragraph";
-      const paragraph = document.createElement("p");
-      const paragraphLines = testimonial.testimonialText.split('\n');
-      paragraph.innerHTML = paragraphLines.join('<br>');
-  
-      pParagraphContainer.appendChild(paragraph);
-  
-      card.appendChild(cardImageContainer);
-      card.appendChild(pParagraphContainer);
-  
-      card.addEventListener("click", () => openModal(testimonial.parentImageURL, testimonial.parentName, paragraph.innerHTML));
-  
-      cardContainer.appendChild(card);
-    });
-  
-    function openModal(imageURL, title, content) {
-      modalImage.style.backgroundImage = `url('./assets/logo.png)`;
-      modalTitle.textContent = title;
-      modalContentText.innerHTML = content;
-      modal.style.display = "flex";
-    }
-  
-    function closeModal() {
-      modal.style.display = "none";
-    }
-  </script>
-  
-
 
 
             <section class="section7">
