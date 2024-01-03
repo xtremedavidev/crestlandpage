@@ -247,7 +247,7 @@ testimonials.forEach((testimonial) => {
   // Create paragraph element
   const paragraph = document.createElement("p");
   // Split the paragraph into lines using '<br>' for line breaks
-  const paragraphLines = testimonial.testimonialText.split('\n');
+  const paragraphLines = testimonial.parentName.split('\n');
   paragraph.innerHTML = paragraphLines.join('<br>');
 
   // Append paragraph to p-paragraph container
