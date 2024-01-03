@@ -68,25 +68,6 @@ body {
 
 
 
-@keyframes slody {
-    0% {
-        left: 10%;
-    }
-
-
-    20% {
-        left: 50%;
-    }
-
-
-    80% {
-        left: -100%;
-    }
-
-    100% {
-        left: 10%;
-    }
-}
 
 
 
@@ -113,25 +94,98 @@ div#slider figure {
 
 
 
+@keyframes slody {
+    0% {
+        transform: translateX(0);
+    }
 
-.slidor {
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  .slidor {
     overflow: hidden;
     width: 100vw;
-}
-
-.vm {
-    width: 100%;
-    float: left;
-    text-align: left;
-}
-
-.slidor figure {
     position: relative;
+  }
+
+  .slidor figure {
     display: flex;
-    width: 300%;
+    width: 200%;
     text-align: center;
-    animation: 15s slody infinite;
-}
+    animation: 20s slody infinite;
+  }
+
+  .vm {
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .vm::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.7);
+  }
+
+  h2 {
+    color: #fff;
+    font-family: 'Ingrid Darling', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .tsc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divo,
+  .divo1 {
+    font-size: 3rem;
+    height: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Ingrid Darling', cursive;
+    color: orange;
+  }
+
+  .supporting-text2 {
+    max-width: 600px;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+  }
+
+
+
+
 
 
 
@@ -481,40 +535,6 @@ a {
     scroll-snap-type: y mandatory;
     scroll-snap-align: start;
 }
-
-
-
-.tsc {
-    text-align: left;
-}
-
-.tsc2 p {
-    line-height: 1.8;
-    font-weight: 400;
-    font-family: 'Lexend', sans-serif;
-}
-
-.supporting-text2 {
-    width: 450px;
-    letter-spacing: 0.28px;
-    color: #080808;
-    display: inline-block;
-
-}
-
-.divo,
-.divo1 {
-    font-size: 5rem;
-    height: 60px;
-    text-align: left;
-    text-transform: uppercase;
-    font-family: 'Ingrid Darling', cursive;
-    color: orange;
-}
-
-
-
-
 
 
 
