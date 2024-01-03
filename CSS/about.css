@@ -165,7 +165,7 @@ visibility: hidden;
     margin-top: 200px;
     display: flex;
     width: 100vw;
-    height: auto;
+    min-height: 100vh;
     /* padding: 70px; */
 }
 
@@ -854,7 +854,7 @@ flex-shrink: 0;
 
     .hero {
         margin-top: 0px;
-        height: auto;
+        min-height: 100vh;
         display: flex;
         padding: 20px auto;
         width: 100vw;
@@ -948,7 +948,7 @@ flex-shrink: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         /* padding: 40px; */
         padding-top:0px;
         padding-left: 0px;
