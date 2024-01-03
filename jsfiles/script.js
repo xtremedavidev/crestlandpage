@@ -248,6 +248,7 @@ testimonials.forEach((testimonial) => {
   // Split the paragraph into lines using '<br>' for line breaks
   const title = testimonial.parentName.split('\n');
   titleP.innerHTML = title.join('<br>');
+  titleP.classList.add("blog-card-title");
 
   // Create paragraph element
   const paragraph = document.createElement("p");
