@@ -11,6 +11,82 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap">
         <link rel="stylesheet" href="/CSS/style.css">
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            /* Your existing styles for blog cards go here */
+        
+            /* Modal Styles */
+            .modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              justify-content: center;
+              align-items: center;
+            }
+        
+            .modal-content {
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 10px;
+              max-width: 80%;
+              max-height: 80%;
+              overflow-y: auto;
+            }
+        
+            .modal-image {
+              width: 100%;
+              height: 200px;
+              background-size: cover;
+              background-position: center;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+        
+            .modal-title {
+              font-size: 20px;
+              font-weight: bold;
+              margin-top: 10px;
+            }
+        
+            .modal-content-text {
+              font-size: 16px;
+              line-height: 1.6;
+              margin-top: 10px;
+            }
+        
+            .close-modal {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+          </style>
+
+
+
+
+
+
+
+
+
+
+
+
     </head>
 
     <body>
@@ -361,6 +437,65 @@
                     
                 </div>
             </section>
+
+
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                  <span class="close-modal" onclick="closeModal()">&times;</span>
+                  <div class="modal-image" id="modalImage"></div>
+                  <div class="modal-title" id="modalTitle"></div>
+                  <div class="modal-content-text" id="modalContentText"></div>
+                </div>
+              </div>
+
+              
+
+<script>
+    const testimonials = fetch.testimonials;
+    const cardContainer = document.getElementById("blogCardContainer");
+    const modal = document.getElementById("myModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalContentText = document.getElementById("modalContentText");
+  
+    testimonials.forEach((testimonial, index) => {
+      const card = document.createElement("div");
+      card.className = "blog-card";
+  
+      const cardImageContainer = document.createElement("div");
+      cardImageContainer.className = "blog-card-image";
+      cardImageContainer.style.backgroundImage = `url("./assets/logo.png")`;
+  
+      const pParagraphContainer = document.createElement("div");
+      pParagraphContainer.className = "blog-card-paragraph";
+      const paragraph = document.createElement("p");
+      const paragraphLines = testimonial.testimonialText.split('\n');
+      paragraph.innerHTML = paragraphLines.join('<br>');
+  
+      pParagraphContainer.appendChild(paragraph);
+  
+      card.appendChild(cardImageContainer);
+      card.appendChild(pParagraphContainer);
+  
+      card.addEventListener("click", () => openModal(testimonial.parentImageURL, testimonial.parentName, paragraph.innerHTML));
+  
+      cardContainer.appendChild(card);
+    });
+  
+    function openModal(imageURL, title, content) {
+      modalImage.style.backgroundImage = `url('./assets/logo.png)`;
+      modalTitle.textContent = title;
+      modalContentText.innerHTML = content;
+      modal.style.display = "flex";
+    }
+  
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  </script>
+  
+
+
 
             <section class="section7">
                 <h2>Meet Our Staff</h2>
