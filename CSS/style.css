@@ -845,6 +845,7 @@ a {
     overflow-x: auto;
     margin-top: 20px;
     gap: 20px;
+    padding: 24px;
 }
 
 .blog-card {
