@@ -239,6 +239,11 @@ testimonials.forEach((testimonial) => {
   const pParagraphContainer = document.createElement("div");
   pParagraphContainer.className = "blog-card-paragraph";
 
+  const titleP = document.createElement("p");
+  // Split the paragraph into lines using '<br>' for line breaks
+  const title = testimonial.testimonialTitle.split('\n');
+  titleP.innerHTML = title.join('<br>');
+
   // Create paragraph element
   const paragraph = document.createElement("p");
   // Split the paragraph into lines using '<br>' for line breaks
@@ -250,6 +255,7 @@ testimonials.forEach((testimonial) => {
 
   // Append card-image and p-paragraph containers to card
   card.appendChild(cardImageContainer);
+  card.appendChild(titleP);
   card.appendChild(pParagraphContainer);
 
   // Append card to card container
