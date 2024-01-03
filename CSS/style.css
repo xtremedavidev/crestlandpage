@@ -875,6 +875,7 @@ a {
     margin-bottom: 20px;
     overflow: hidden;
     max-lines: 1;
+    padding: 6px;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 1;
@@ -887,6 +888,7 @@ display: -webkit-box;
     line-height: 20px;
     margin-bottom: 10px;
     overflow: hidden;
+    padding: 6px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
