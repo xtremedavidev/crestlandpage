@@ -233,7 +233,7 @@ testimonials.forEach((testimonial) => {
   // Create card-image container
   const cardImageContainer = document.createElement("div");
   cardImageContainer.className = "blog-card-image";
-  cardImageContainer.style.backgroundImage = `url('${testimonial.parentImageURL}')`;
+  cardImageContainer.style.backgroundImage = `url('./assets/logo.png')`;
 
   // Create p-paragraph container
   const pParagraphContainer = document.createElement("div");
