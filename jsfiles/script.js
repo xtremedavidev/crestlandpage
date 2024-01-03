@@ -270,7 +270,7 @@ testimonials.forEach((testimonial) => {
 });
 
 function openModal(title, content) {
-  modalImage.style.backgroundImage = `url('./assets/logo.png)`;
+  modalImage.style.backgroundImage = `url('./assets/logo.png')`;
   modalTitle.textContent = title;
   modalContentText.innerHTML = content;
   modal.style.display = "flex";
