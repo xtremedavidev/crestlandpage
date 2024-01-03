@@ -223,6 +223,11 @@ missionElement.style.whiteSpace = 'pre-line';
 const testimonials = fetch.testimonials;
 // Get the container element to append cards
 const cardContainer = document.querySelector(".blog-card-container");
+const modal = document.getElementById("myModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalContentText = document.getElementById("modalContentText");
+
 
 // Loop through testimonials and create cards
 testimonials.forEach((testimonial) => {
@@ -259,12 +264,12 @@ testimonials.forEach((testimonial) => {
   card.appendChild(pParagraphContainer);
 
 
-  card.addEventListener("click", () => openModal(testimonial.parentImageURL, testimonial.parentName, paragraph.innerHTML));
+  card.addEventListener("click", () => openModal( testimonial.parentName, paragraph.innerHTML));
   
   cardContainer.appendChild(card);
 });
 
-function openModal(imageURL, title, content) {
+function openModal(title, content) {
   modalImage.style.backgroundImage = `url('./assets/logo.png)`;
   modalTitle.textContent = title;
   modalContentText.innerHTML = content;
