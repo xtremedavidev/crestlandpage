@@ -347,10 +347,7 @@ header p {
     transform: scale(1.1);
   }
   
-  /* Add hover effect using the provided keyframes */
-  .image-container img:hover {
-    animation: zoomsin 2s ease-in-out;
-  }
+  
   
   /* Add expanded class effect */
 
@@ -663,15 +660,8 @@ header p {
   }
   
   /* Add hover effect using the provided keyframes */
-  .image-container img:hover {
-    animation: zoomsin 1s ease-in-out;
-  }
-  
-  /* Add expanded class effect */
-  .image-container img.expand {
-    transform: scaleX(2);
-  }
 
+ 
 .activities {
     text-align: center;
 }
