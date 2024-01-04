@@ -139,20 +139,19 @@
         }
 
         .s2left {
-            flex: 0 0 40%;
-            /* Set the width of the left section */
-            position: relative;
-        }
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
-        .s2left img {
-            width: 40%;
-            height: auto;
-            border-radius: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.s2left img {
+    width: 150px; /* Adjust the width of the image as needed */
+    height: auto;
+    border-radius: 20px;
+    shape-outside: margin-box; /* You can experiment with different shapes */
+    margin: 0 auto; /* Center the image within the column */
+    display: block; 
+}
 
         .s2right {
             flex: 1;
