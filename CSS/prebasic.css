@@ -659,7 +659,7 @@ header p {
     position: absolute;
     top: 50%;
     
-    transform: scale(2);
+    transform: scale(1.15);
   }
   
   /* Add hover effect using the provided keyframes */
