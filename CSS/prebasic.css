@@ -349,13 +349,11 @@ header p {
   
   /* Add hover effect using the provided keyframes */
   .image-container img:hover {
-    animation: zoomsin 1s ease-in-out;
+    animation: zoomsin 2s ease-in-out;
   }
   
   /* Add expanded class effect */
-  .image-container img.expand {
-    transform: scaleX(2);
-  }
+
 
 .activities {
     text-align: center;
@@ -636,6 +634,46 @@ header p {
         transform: scalex(.8);
     }
 
+}
+
+
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 columns in the grid */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    position: absolute;
+    top: 50%;
+    
+    transform: scale(2);
+  }
+  
+  /* Add hover effect using the provided keyframes */
+  .image-container img:hover {
+    animation: zoomsin 1s ease-in-out;
+  }
+  
+  /* Add expanded class effect */
+  .image-container img.expand {
+    transform: scaleX(2);
+  }
+
+.activities {
+    text-align: center;
 }
 
 
