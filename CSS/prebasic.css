@@ -337,12 +337,8 @@ header p {
     background: #000;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
   }
   
-  .image-container img:hover {
-    transform: scale(1);
-  }
   
   
   
@@ -649,12 +645,7 @@ header p {
     transition: transform 0.3s ease-in-out;
   }
   
-  .image-container img:hover {
-    position: absolute;
-    top: 50%;
-    
-    transform: scale(1.15);
-  }
+  
   
   /* Add hover effect using the provided keyframes */
 
