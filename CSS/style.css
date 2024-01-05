@@ -869,12 +869,13 @@ a {
 .blog-card-title{
     color: #00693d;
     font-family: 'DM Sans', sans-serif;
-    font-size: 36px;
+    font-size: 20px;
+    padding-left: 4px;
     font-weight: 700;
     line-height: 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    max-lines: 1;
+    max-lines: 2;
     padding: 6px;
 display: -webkit-box;
 -webkit-box-orient: vertical;
