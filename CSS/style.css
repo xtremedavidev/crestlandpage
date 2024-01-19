@@ -132,6 +132,7 @@ div#slider figure {
   .vm {
     width: 100%;
     flex: 1;
+    padding-bottom: 40px;
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;

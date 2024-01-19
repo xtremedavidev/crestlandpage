@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrestHive About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">    <title>CrestHive About</title>
     <link rel="stylesheet" href="/CSS/input.css">
     <link rel="stylesheet" href="/CSS/about.css">
 </head>
@@ -35,18 +36,40 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-65%)); /* Adjust the number of sections as needed */
+            transform: translateX(calc(-68%)); /* Adjust the number of sections as needed */
         }
     }
 
     .sections-container {
         display: flex;
         overflow-x: hidden;
-        min-height: 80vh;
+        min-height: 90vh;
         width: 300%; /* Adjust based on the number of sections */
-        animation: horizontalScroll 15s linear infinite; /* Adjust the duration as needed */
+        animation: horizontalScroll 20s linear infinite; /* Adjust the duration as needed */
     }
 
+   
+
+    .section2 {
+        flex: 0 0 33.3333%;
+        min-height: 100%;
+        display: flex;
+    }
+
+    .s2left,
+    .s2right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s2left img {
+        max-width: 60%;
+        height: 60vh;
+        object-fit: cover;
+        border-radius: 20px;
+    }
    
   
         .blured {
@@ -77,6 +100,7 @@
             .section2 {
                 flex: 1;
                 height: auto;
+
 
             }
 
@@ -218,39 +242,40 @@
     </section>
 
     <div class="sections-container">
-        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
+        <section id="bgimg1" class="section2 w-screen" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img1" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 1" class="w-screen h-screen object-cover">
+                <img id="img1" src="/assets/logo.png" alt="Image 1" style="max-width: 35vw;" class="h-screen object-cover">
             </div>
             <div class="s2right">
-                <div class="overlay-text">
-                    <h2 id="dir1Title" class="text-white text-3xl font-bold mb-2">Overlay Title 1</h2>
-                    <p id="dir1Text" class="text-white"></p>
+                <div class="overlay-text text-white">
+                    <h2 id="" class="text-white text-3xl font-bold mb-2">Director</h2>
+                    <h2 id="dirName" class="text-white text-xl font-bold mb-2"></h2>
                 </div>
             </div>
         </section>
     
-        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
+        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img2" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 2" class="w-screen h-screen object-cover">
+                <img id="img2" src="/assets/logo.png" alt="Image 2" class="w-screen h-screen object-cover">
             </div>
             <div class="s2right">
-                <div class="overlay-text">
-                    <h2 id="dir2Title" class="text-white text-3xl font-bold mb-2">Overlay Title 2</h2>
-                    <p id="dir2Text" class="text-white"></p>
+                <div class="overlay-text text-white">
+                    <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Crest Nursery And Primary School</h2>
+                    <h2 id="dirName" class="text-white text-xl font-bold mb-2"></h2>
                 </div>
             </div>
         </section>
     
-        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
+        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img3" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 3" class="w-screen h-screen object-cover">
+                <img id="img3" src="/assets/logo.png" alt="Image 3" class="w-screen h-screen object-cover">
             </div>
             <div class="s2right">
                 <div class="overlay-text">
-                    <h2 id="dir3Title" class="text-white text-3xl font-bold mb-2">Overlay Title 3</h2>
-                    <p id="dir3Text" class="text-white"></p>
-                </div>
+                    <div class="overlay-text text-white">
+                        <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Cresthive International School</h2>
+                        <h2 id="dirName" class="text-white text-xl font-bold mb-2"></h2>
+                    </div>
             </div>
         </section>
     </div>
