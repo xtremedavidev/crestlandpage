@@ -183,6 +183,20 @@ missionTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
 missionTextElement.style.whiteSpace = 'pre-line';
 
 
+const emailTextElement = document.getElementById("email");
+emailTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+emailTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
+const phoneTextElement = document.getElementById("phone");
+phoneTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+phoneTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
 const img1 = document.getElementById("img1");
 console.log("picg", fetch.collegephoto)
 img1.src = fetch.collegephoto;

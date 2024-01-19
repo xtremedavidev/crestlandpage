@@ -212,6 +212,20 @@ missionElement.style.whiteSpace = 'pre-line';
 //foot
 
 
+const emailTextElement = document.getElementById("email");
+emailTextElement.innerHTML = `${fetch.missionText.replace(/\n/g, '<br/>')}`;
+emailTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
+const phoneTextElement = document.getElementById("phone");
+phoneTextElement.innerHTML = `${fetch.missionText.replace(/\n/g, '<br/>')}`;
+phoneTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
 const foot4titleElement = document.getElementById("sec3title");
 foot4titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;
 foot4titleElement.style.whiteSpace = 'pre-line';

@@ -95,5 +95,50 @@ const admptextElement = document.getElementById("hldText");
 admptextElement.innerHTML = `${fetch.holidaysystemText.replace(/\n/g, '<br/>')}`;
 admptextElement.style.whiteSpace = 'pre-line';
 
+
+
+
+
+
+
+const fetchData2 = async () => {
+  try {
+    const dataRef = doc(db, 'cms', "admissionsPage");
+    const querySnapshot = await getDoc(dataRef);
+    console.log(querySnapshot, "qs")
+  
+    const data = querySnapshot.data();
+  
+    const pagedata = data;
+    console.log("page data is now", pagedata);
+  
+    return data;
+  
+  
+  
+  
+    
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+  };
+
+  const fetch2 = await fetchData2();
+
+  const emailTextElement = document.getElementById("email");
+emailTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+emailTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
+const phoneTextElement = document.getElementById("phone");
+phoneTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+phoneTextElement.style.whiteSpace = 'pre-line';
+
+
+
+
 })
 .catch(error => console.error('Error fetching Firebase config:', error));

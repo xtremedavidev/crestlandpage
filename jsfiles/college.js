@@ -273,6 +273,46 @@ fetch('./../api/configfile.js')
 
 
 
+        
+const fetchData3 = async () => {
+    try {
+      const dataRef = doc(db, 'cms', "admissionsPage");
+      const querySnapshot = await getDoc(dataRef);
+      console.log(querySnapshot, "qs")
+    
+      const data = querySnapshot.data();
+    
+      const pagedata = data;
+      console.log("page data is now", pagedata);
+    
+      return data;
+    
+    
+    
+    
+      
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      return null;
+    }
+    };
+  
+    const fetch3 = await fetchData3();
+  
+    const emailTextElement = document.getElementById("email");
+  emailTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+  emailTextElement.style.whiteSpace = 'pre-line';
+  
+  
+  
+  
+  const phoneTextElement = document.getElementById("phone");
+  phoneTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+  phoneTextElement.style.whiteSpace = 'pre-line';
+  
+  
+  
+
 
 
 
