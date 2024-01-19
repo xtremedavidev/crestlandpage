@@ -37,6 +37,24 @@ const generateJoseToken = async (payload, secretKey) => {
 
 
 
+document.getElementById('submit').addEventListener('click', function () {
+  showLoadingOverlay(); // Show loading overlay when the button is clicked
+
+  // Your sign-in logic goes here, e.g., Firebase authentication
+
+  // Simulating an asynchronous task (remove this in your actual implementation)
+ });
+
+function showLoadingOverlay() {
+  document.getElementById('loadingOverlay').style.display = 'flex';
+}
+
+function hideLoadingOverlay() {
+  document.getElementById('loadingOverlay').style.display = 'none';
+}
+
+
+
 
 
 
@@ -58,6 +76,7 @@ const db = getFirestore(firebase);
 
 const handleSubmit = async (event) => {
   event.preventDefault();
+  showLoadingOverlay();
 
   const email = document.getElementById("email-address").value;
   const password = document.getElementById("password").value;
@@ -134,13 +153,21 @@ const handleSubmit = async (event) => {
       }
 
       redirect();
-    })
+    }).then(()=>hideLoadingOverlay)
+
     .catch((error) => {
       // Handle login errors
       console.error("Login error:", error.message);
+      alert("Something went wrong, pease try again with correct details and stable network")
       // You can display an error message to the user if needed
     });
-};
+
+
+    hideLoadingOverlay();
+
+
+
+  };
 
 
 // Hashing function on the client side using SHA-256

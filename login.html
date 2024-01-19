@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +71,7 @@
       border-color: #3498db;
     }
 
-    .form-group input:not(:placeholder-shown) + label {
+    .form-group input:not(:placeholder-shown)+label {
       font-size: 0.8rem;
       transform: translateY(-100%) scale(0.8);
     }
@@ -115,7 +116,8 @@
     .submit-button {
       width: 100%;
       padding: 1rem;
-      border: none;text-align: center;
+      border: none;
+      text-align: center;
       border-radius: 20px;
       background-color: rgb(21 128 61);
       color: #ffffff;
@@ -127,30 +129,64 @@
     .submit-button:hover {
       background-color: #35b929;
     }
+
+
+
+    /* Add styles for the loading overlay */
+    .loading-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .loading-spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
+
 <body>
- <!-- Include Firebase SDK (replace 'your-firebase-config' with your actual Firebase config) -->
+  <!-- Include Firebase SDK (replace 'your-firebase-config' with your actual Firebase config) -->
 
 
 
-  
- <script type="module"
- src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
-<script type="module"
- src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
 
-<!-- Your main script file with type="module" -->
-<script type="module" src="./jsfiles/login.mjs"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
 
-<!-- Firebase configuration and initialization -->
-<script type="module">
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
+  <!-- Your main script file with type="module" -->
+  <script type="module" src="./jsfiles/login.mjs"></script>
 
-// Your Firebase configuration and initialization code can go here
+  <!-- Firebase configuration and initialization -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
 
-</script>
+    // Your Firebase configuration and initialization code can go here
+
+  </script>
 
 
 
@@ -161,34 +197,17 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-
     <form id="signin">
       <div class="form-group">
         <label for="email-address">Email address</label>
-        <input
-          id="email-address"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-          placeholder="Email address"
-          value=""
-        />
+        <input id="email-address" name="email" type="email" autoComplete="email" required placeholder="Email address"
+          value="" />
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-          placeholder="Password"
-        />
+        <input id="password" name="password" type="password" autoComplete="current-password" required
+          placeholder="Password" />
       </div>
       <div class="form-group">
         <label for="year">Year</label>
-        <select
-          name="year"
-          id="year"
-          required
-        >
+        <select name="year" id="year" required>
           <option value="">Please Select</option>
           <option value="2023">2023</option>
           <option value="2022">2022</option>
@@ -196,11 +215,7 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-
       </div>
       <div class="form-group">
         <label for="term">Term</label>
-        <select
-          name="term"
-          id="term"
-          required
-        >
+        <select name="term" id="term" required>
           <option value="">Please Select</option>
           <option value="1st">1st</option>
           <option value="2nd">2nd</option>
@@ -211,11 +226,25 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-
         <div class="checkbox">
           <!-- You can add a "Remember me" checkbox here -->
         </div>
-        
+
       </div>
       <button id="submit" class="submit-button">Sign in
       </button>
     </form>
   </div>
+
+
+
+
+
+
+
+
+  <!-- Add the loading overlay markup -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+  </div>
+
 </body>
+
 </html>

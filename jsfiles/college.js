@@ -300,7 +300,7 @@ const fetchData3 = async () => {
     const fetch3 = await fetchData3();
   
     const emailTextElement = document.getElementById("email");
-  emailTextElement.innerHTML = `${fetch3.email.replace(/\n/g, '<br/>')}`;
+  emailTextElement.innerHTML = `${fetch3.emailfooter.replace(/\n/g, '<br/>')}`;
   emailTextElement.style.whiteSpace = 'pre-line';
   
   
