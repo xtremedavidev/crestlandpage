@@ -163,7 +163,7 @@ const dir1textElement = document.getElementById("dir1Text");
 dir1textElement.innerHTML = `${fetch.directcollegeText.replace(/\n/g, '<br/>')}`;
 dir1textElement.style.whiteSpace = 'pre-line';
 
-const dir1TitleElement = document.getElementById("dir1Title");
+const dir1TitleElement = document.getElementById("dirName1");
 dir1TitleElement.innerHTML = `${fetch.directcollegeTitle.replace(/\n/g, '<br/>')}`;
 dir1TitleElement.style.whiteSpace = 'pre-line';
 
@@ -172,7 +172,7 @@ const  dir2textElement = document.getElementById("dir2Text");
 dir2textElement.innerHTML = `${fetch.directbasicText.replace(/\n/g, '<br/>')}`;
 dir2textElement.style.whiteSpace = 'pre-line';
 
-const dir2TitleElement = document.getElementById("dir2Title");
+const dir2TitleElement = document.getElementById("dirName2");
 dir2TitleElement.innerHTML = `${fetch.directbasicTitle.replace(/\n/g, '<br/>')}`;
 dir2TitleElement.style.whiteSpace = 'pre-line';
 
@@ -180,7 +180,7 @@ const dir3textElement = document.getElementById("dir3Text");
 dir3textElement.innerHTML = `${fetch.directprebasicText.replace(/\n/g, '<br/>')}`;
 dir3textElement.style.whiteSpace = 'pre-line';
 
-const dir3TitleElement = document.getElementById("dir3Title");
+const dir3TitleElement = document.getElementById("dirName3");
 dir3TitleElement.innerHTML = `${fetch.directprebasicTitle.replace(/\n/g, '<br/>')}`;
 dir3TitleElement.style.whiteSpace = 'pre-line';
 
