@@ -111,7 +111,7 @@ admptextElement.style.whiteSpace = 'pre-line';
 
 const fetchData2 = async () => {
   try {
-    const dataRef = doc(db, 'cms', "admissionsPage");
+    const dataRef = doc(db, 'cms', "indexPage");
     const querySnapshot = await getDoc(dataRef);
     console.log(querySnapshot, "qs")
   

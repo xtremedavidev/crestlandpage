@@ -128,9 +128,15 @@ fetch('./../api/configfile.js')
           function signOutf() {
             signOut(auth)
               .then(() => {
+                hideLoadingOverlay();
+
+                alert("Details error, Please try again!")
+
                 console.log("User signed out");
               })
               .catch((error) => {
+                hideLoadingOverlay();
+
                 console.error("Sign out error:", error.message);
               });
           }
