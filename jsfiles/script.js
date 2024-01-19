@@ -209,6 +209,33 @@ missionElement.style.whiteSpace = 'pre-line';
 
 
 
+//foot
+
+
+const foot4titleElement = document.getElementById("sec3title");
+foot4titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;
+foot4titleElement.style.whiteSpace = 'pre-line';
+
+
+
+const foot3titleElement = document.getElementById("sec3title");
+foot3titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;
+foot3titleElement.style.whiteSpace = 'pre-line';
+
+
+
+const foot2titleElement = document.getElementById("sec3title");
+foot2titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;
+foot2titleElement.style.whiteSpace = 'pre-line';
+
+
+
+
+const foot1titleElement = document.getElementById("sec3title");
+foot1titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;
+foot1titleElement.style.whiteSpace = 'pre-line';
+
+
 
 
 
