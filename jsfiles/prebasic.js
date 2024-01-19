@@ -183,11 +183,16 @@ console.log("fetch",  fetch)
 
 
 
+const abtpretextElement = document.getElementById("abtpre");
+abtpretextElement.innerHTML = `${fetch.directprebasicAbout.replace(/\n/g, '<br/>')}`;
+abtpretextElement.style.whiteSpace = 'pre-line';
+
+
 const dir3textElement = document.getElementById("dirText");
 dir3textElement.innerHTML = `${fetch.directprebasicText.replace(/\n/g, '<br/>')}`;
 dir3textElement.style.whiteSpace = 'pre-line';
 
-const dir3TitleElement = document.getElementById("dirTitle");
+const dir3TitleElement = document.getElementById("dirName");
 dir3TitleElement.innerHTML = `${fetch.directprebasicTitle.replace(/\n/g, '<br/>')}`;
 dir3TitleElement.style.whiteSpace = 'pre-line';
 

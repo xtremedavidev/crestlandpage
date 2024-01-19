@@ -182,7 +182,12 @@ fetch('./../api/configfile.js')
 
 
 
-        const dir3textElement = document.getElementById("dirText");
+        const abtcoltextElement = document.getElementById("abtcol");
+        abtcoltextElement.innerHTML = `${fetch.directcollegeAbout.replace(/\n/g, '<br/>')}`;
+        abtcoltextElement.style.whiteSpace = 'pre-line';
+       
+       
+        const dir3textElement = document.getElementById("dirName");
         dir3textElement.innerHTML = `${fetch.directcollegeText.replace(/\n/g, '<br/>')}`;
         dir3textElement.style.whiteSpace = 'pre-line';
 
