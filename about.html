@@ -28,42 +28,27 @@
 
 
     <style>
-        .sections-container {
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-            scroll-snap-type: y mandatory;
-            min-height: 100vh;
-            width: 100%;
-            scrollbar-width: 0;
-        }
+       
 
-        .sections-container ::-webkit-scrollbar{
-            display: none;
+       @keyframes horizontalScroll {
+        0% {
+            transform: translateX(0);
         }
-
-        .section2 {
-            flex: 0 0 100%;
-            min-height: 100%;
-            scroll-snap-align: start;
-            display: flex;
+        100% {
+            transform: translateX(calc(-65%)); /* Adjust the number of sections as needed */
         }
+    }
 
-        .s2left,
-        .s2right {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .sections-container {
+        display: flex;
+        overflow-x: hidden;
+        min-height: 80vh;
+        width: 300%; /* Adjust based on the number of sections */
+        animation: horizontalScroll 15s linear infinite; /* Adjust the duration as needed */
+    }
 
-        .s2left img {
-            max-width: 80%;
-            height: 70vh;
-            object-fit: cover;
-            border-radius: 20px;
-        }
-
+   
+  
         .blured {
             width: 80vw;
             height: auto;
@@ -233,37 +218,43 @@
     </section>
 
     <div class="sections-container">
-        <section class="section2"  style="background-color: #fafde9;">
+        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img1" src="/assets/Our Educators\Akinpelu Aliu JSS1 class teacher.jpg"  alt="Image 1">
+                <img id="img1" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 1" class="w-screen h-screen object-cover">
             </div>
-            <div class="s2right" style="display: flex; flex-direction: column;">
-                <h2 id="dir1Title"></h2>
-                <p id="dir1Text" ></p>
+            <div class="s2right">
+                <div class="overlay-text">
+                    <h2 id="dir1Title" class="text-white text-3xl font-bold mb-2">Overlay Title 1</h2>
+                    <p id="dir1Text" class="text-white"></p>
+                </div>
             </div>
         </section>
-
-        <section class="section2" style="background-color: #f0f9ff;">
+    
+        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img2" src="/assets/Our Educators\Akinpelu Aliu JSS1 class teacher.jpg"  alt="Image 2">
+                <img id="img2" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 2" class="w-screen h-screen object-cover">
             </div>
-            <div class="s2right" style="display: flex; flex-direction: column;">
-                <h2 id="dir2Title"></h2>
-                <p  id="dir2Text"></p>
+            <div class="s2right">
+                <div class="overlay-text">
+                    <h2 id="dir2Title" class="text-white text-3xl font-bold mb-2">Overlay Title 2</h2>
+                    <p id="dir2Text" class="text-white"></p>
+                </div>
             </div>
         </section>
-
-        <section class="section2" style="background-color: #fff4f2;">
+    
+        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img3" src="/assets/Our Educators\Akinpelu Aliu JSS1 class teacher.jpg"  alt="Image 3">
+                <img id="img3" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 3" class="w-screen h-screen object-cover">
             </div>
-            <div class="s2right" style="display: flex; flex-direction: column;">
-                <h2 id="dir3Title"></h2>
-                <p  id="dir3Text"></p>
+            <div class="s2right">
+                <div class="overlay-text">
+                    <h2 id="dir3Title" class="text-white text-3xl font-bold mb-2">Overlay Title 3</h2>
+                    <p id="dir3Text" class="text-white"></p>
+                </div>
             </div>
         </section>
     </div>
-
+    
 
 
 
