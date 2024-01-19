@@ -194,6 +194,7 @@ missionTextElement.style.whiteSpace = 'pre-line';
 
 
 const img1 = document.getElementById("img1");
+console.log("picg", fetch.collegephoto)
 img1.src = fetch.collegephoto;
 
 

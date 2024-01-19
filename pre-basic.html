@@ -3,12 +3,15 @@
 
 
 <head>
+   
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cresthive Pre-basic</title>
-    <link rel="stylesheet" href="CSS/prebasic.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="CSS/input.css">
-
+    <link rel="stylesheet" href="CSS/prebasic.css">
+    <title>Cresthive Pre-basic</title>
+  
     <script src="https://cdn.jsdelivr.net/npm/bodymovin@5.7.5/dist/bodymovin.min.js"></script>
 </head>
 
@@ -209,43 +212,57 @@
 
 
 
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen w-screen flex items-center bg-cover bg-center relative"
+  style="background-image: url('./assets/Activities/06.jpg');">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="container mx-auto text-center relative z-10 text-white">
+      <h1 class="text-4xl lg:text-6xl font-bold mb-4">Welcome to Crest Nursery And Primary School</h1>
+      <p class="text-lg lg:text-xl mb-8">Where learning is an adventure!</p>
+      
+  </div>
+</section>
 
-    <header class="gradient-background">
-        <div class="logo">
-            <img src="assets/logo.png" class="p-4 rounded-full bg-white" alt="Cresthive School Logo">
-            <h1>Welcome to Cresthive Nursery And Primary School</h1>
-        </div>
-        <div id="lottie-container">
-            <iframe style=" border-color: #04683600; border-radius: 40%; border-style: double; height: auto;"
-                src="https://lottie.host/embed/77fd42e4-d633-4c19-8937-3f9b9370cb4c/LZ8iPaFvMB.json"></iframe>
-        </div>
-        <p>Where learning is an adventure!</p>
-    </header>
-    </header>
+<!-- About Section -->
+<section id="about" class="py-16">
+  <div class="container mx-auto text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">AboutCrest Nursery And Primary School</h2>
+      <p class="text-lg mb-4">At Cresthive School, we believe in fostering creativity and curiosity in every
+          child. Our dedicated teachers create a joyful learning environment where imagination knows no bounds.
+      </p>
+      <p class="text-lg mb-4">Come join us on this magical journey of education!</p>
+      <a href="college.html" class="text-blue-700 font-lg font-semibold">More details...</a>
+  </div>
+</section>
 
-    <section class="about">
-        <h2>About Cresthive Prebasic School</h2>
-        <p>At Cresthive School, we believe in fostering creativity and curiosity in every child. Our dedicated
-            teachers create a joyful learning environment where imagination knows no bounds.</p>
-        <p>Come join us on this magical journey of education!</p>
-    </section>
+<!-- Section 2 -->
+<section id="section2" class="bg-gray-200 relative min-h-fit py-16">
+  <div class="mx-auto relative">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-4 md:block flex flex-col text-center pb-4" id="dirTitle"></h2>
 
-    <section class="section2" style="background-color: #f5fffd; min-height: 100vh;">
-        <div class="s2left">
-            <img id="img" src="/assets/Our Educators/Akinpelu Aliu JSS1 class teacher.jpg" alt="Image 1">
-        </div>
-        <div class="s2right" style="display: flex; flex-direction: column; padding-right: 40px;">
-            <h2 id="dirTitle"></h2>
-            <p id="dirText"></p>
-        </div>
-    </section>
-
-    <section class="categories" id="sections_container">
-        <h2>Explore Different Categories</h2>
+      <div class="mb-6 flex relative justify-center md:block lg:mb-0">
+          <img id="img"  alt="Image 1" class="md:w-96 max-h-72 object-cover rounded-lg shadow-lg md:float-left mb-4 md:mr-6">
+      </div>
+      <div class="text-left">
+          <p id="dirText" class="px-4 text-gray-700">
+              
+          </p>
+      </div>
 
 
-        <!-- Add more categories as needed -->
-    </section>
+      <h2 class="text-xl font-bold mb-4 md:block flex flex-col text-right pb-4" id="dirName"></h2>
+
+  </div>
+</section>
+
+
+<!-- Categories Section -->
+<section id="categories" class="py-16 bg-gray-100">
+  <div class="container mx-auto text-center" id="sections_container">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">Explore Different Categories</h2>
+      <!-- Add your categories here -->
+  </div>
+</section>
 
 
 
