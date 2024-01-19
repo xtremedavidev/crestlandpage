@@ -132,14 +132,14 @@ const fetchData2 = async () => {
   const fetch2 = await fetchData2();
 
   const emailTextElement = document.getElementById("email");
-emailTextElement.innerHTML = `${fetch2.email.replace(/\n/g, '<br/>')}`;
+emailTextElement.innerHTML = `${fetch2.emailfooter.replace(/\n/g, '<br/>')}`;
 emailTextElement.style.whiteSpace = 'pre-line';
 
 
 
 
 const phoneTextElement = document.getElementById("phone");
-phoneTextElement.innerHTML = `${fetch2.phone.replace(/\n/g, '<br/>')}`;
+phoneTextElement.innerHTML = `${fetch2.phonefooter.replace(/\n/g, '<br/>')}`;
 phoneTextElement.style.whiteSpace = 'pre-line';
 
 

@@ -213,14 +213,14 @@ missionElement.style.whiteSpace = 'pre-line';
 
 
 const emailTextElement = document.getElementById("email");
-emailTextElement.innerHTML = `${fetch.missionText.replace(/\n/g, '<br/>')}`;
+emailTextElement.innerHTML = `${fetch.emailfooter.replace(/\n/g, '<br/>')}`;
 emailTextElement.style.whiteSpace = 'pre-line';
 
 
 
 
 const phoneTextElement = document.getElementById("phone");
-phoneTextElement.innerHTML = `${fetch.missionText.replace(/\n/g, '<br/>')}`;
+phoneTextElement.innerHTML = `${fetch.phonefooter.replace(/\n/g, '<br/>')}`;
 phoneTextElement.style.whiteSpace = 'pre-line';
 
 

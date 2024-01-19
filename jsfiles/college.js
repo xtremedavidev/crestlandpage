@@ -307,7 +307,7 @@ const fetchData3 = async () => {
   
   
   const phoneTextElement = document.getElementById("phone");
-  phoneTextElement.innerHTML = `${fetch3.phone.replace(/\n/g, '<br/>')}`;
+  phoneTextElement.innerHTML = `${fetch3.phonefooter.replace(/\n/g, '<br/>')}`;
   phoneTextElement.style.whiteSpace = 'pre-line';
   
   
