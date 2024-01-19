@@ -190,6 +190,11 @@ fetch('./../api/configfile.js')
         dir3TitleElement.innerHTML = `${fetch.directcollegeTitle.replace(/\n/g, '<br/>')}`;
         dir3TitleElement.style.whiteSpace = 'pre-line';
 
+        const dir3NameElement = document.getElementById("dirName");
+        dir3TitleElement.innerHTML = `${fetch.directcollegeTitle.replace(/\n/g, '<br/>')}`;
+        dir3TitleElement.style.whiteSpace = 'pre-line';
+
+
 
         const img = document.getElementById("img");
         img.src = fetch.collegephoto;
