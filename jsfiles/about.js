@@ -184,14 +184,14 @@ missionTextElement.style.whiteSpace = 'pre-line';
 
 
 const emailTextElement = document.getElementById("email");
-emailTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+emailTextElement.innerHTML = `${fetch2.email.replace(/\n/g, '<br/>')}`;
 emailTextElement.style.whiteSpace = 'pre-line';
 
 
 
 
 const phoneTextElement = document.getElementById("phone");
-phoneTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+phoneTextElement.innerHTML = `${fetch2.phone.replace(/\n/g, '<br/>')}`;
 phoneTextElement.style.whiteSpace = 'pre-line';
 
 

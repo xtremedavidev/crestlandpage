@@ -298,14 +298,14 @@ function createCategoryElement(category) {
     const fetch3 = await fetchData3();
   
     const emailTextElement = document.getElementById("email");
-  emailTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+  emailTextElement.innerHTML = `${fetch3.email.replace(/\n/g, '<br/>')}`;
   emailTextElement.style.whiteSpace = 'pre-line';
   
   
   
   
   const phoneTextElement = document.getElementById("phone");
-  phoneTextElement.innerHTML = `${fetch2.missionText.replace(/\n/g, '<br/>')}`;
+  phoneTextElement.innerHTML = `${fetch3.phone.replace(/\n/g, '<br/>')}`;
   phoneTextElement.style.whiteSpace = 'pre-line';
   
   
