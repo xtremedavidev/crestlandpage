@@ -860,6 +860,10 @@ video {
   height: 100vh;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
