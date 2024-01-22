@@ -112,7 +112,7 @@ fetch('./../api/configfile.js')
                 window.location.href = `https://teacher.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
               } else if (adminDocSnapshot.exists()) {
                 console.log("admin redirected in successfully", user.uid);
-                window.location.href = `admin.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
+                window.location.href = `https://admin.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
               } else {
                 // The user's UID doesn't exist in the students collection, sign-out and display an error
                 signOutf();
