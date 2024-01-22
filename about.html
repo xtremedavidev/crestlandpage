@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">    <title>CrestHive About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>CrestHive About</title>
     <link rel="stylesheet" href="/CSS/input.css">
     <link rel="stylesheet" href="/CSS/about.css">
 </head>
@@ -29,49 +30,52 @@
 
 
     <style>
-       
+        @keyframes horizontalScroll {
+            0% {
+                transform: translateX(0);
+            }
 
-       @keyframes horizontalScroll {
-        0% {
-            transform: translateX(0);
+            100% {
+                transform: translateX(calc(-68%));
+                /* Adjust the number of sections as needed */
+            }
         }
-        100% {
-            transform: translateX(calc(-68%)); /* Adjust the number of sections as needed */
+
+        .sections-container {
+            display: flex;
+            overflow-x: hidden;
+            min-height: 90vh;
+            width: 300%;
+            color: white;
+            /* Adjust based on the number of sections */
+            animation: horizontalScroll 20s linear infinite;
+            /* Adjust the duration as needed */
         }
-    }
 
-    .sections-container {
-        display: flex;
-        overflow-x: hidden;
-        min-height: 90vh;
-        width: 300%; /* Adjust based on the number of sections */
-        animation: horizontalScroll 20s linear infinite; /* Adjust the duration as needed */
-    }
 
-   
 
-    .section2 {
-        flex: 0 0 33.3333%;
-        min-height: 100%;
-        display: flex;
-    }
+        .section2 {
+            flex: 0 0 33.3333%;
+            min-height: 100%;
+            display: flex;
+        }
 
-    .s2left,
-    .s2right {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .s2left,
+        .s2right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .s2left img {
-        max-width: 60%;
-        height: 60vh;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-   
-  
+        .s2left img {
+            max-width: 60%;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+
         .blured {
             width: 80vw;
             height: auto;
@@ -85,23 +89,30 @@
             gap: 40px;
         }
 
-        .sections-container ::-webkit-scrollbar{
-                display: none;
-            }
+        .sections-container ::-webkit-scrollbar {
+            display: none;
+        }
 
         /* Add responsive styles for mobile */
         @media screen and (max-width: 600px) {
+
             .sections-container {
-                flex-direction: column;
+                width: 100%;
+                animation: none;
+                scroll-snap-type: x mandatory;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                color: white;
             }
 
-         
-
             .section2 {
-                flex: 1;
+                flex: 0 0 100%;
+                scroll-snap-align: start;
+            }
+
+            .s2left img {
+                max-width: 100%;
                 height: auto;
-
-
             }
 
             .blured {
@@ -111,8 +122,7 @@
                 padding: 20px;
             }
 
-            .blured p{
-            }
+            .blured p {}
         }
     </style>
 
@@ -141,25 +151,26 @@
 
 
 
-    <button class="nav-toggle" id="nav-toggle">
+    <div class="nav-toggle" id="nav-toggle">
         <span></span>
         <span></span>
         <span></span>
-    </button>
+    </div>
 
     <!-- Your navigation menu goes here -->
-      <nav class="nav-menu">
+    <nav class="nav-menu">
         <nav class="navi">
             <div class="container nav__container">
                 <a href="index.html" class="school-name">
-                    <img src="assets/logo.png" style="width: 36px; height: 36px; border-radius: 999px; margin-right: 6px;" />
+                    <img src="assets/logo.png"
+                        style="width: 36px; height: 36px; border-radius: 999px; margin-right: 6px;" />
                     <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
                 </a>
                 <ul class="nav__menu">
                     <li class="school-dropdown">
                         <a href="#school">School <i class="fas fa-caret-down"></i></a>
                         <ul class="school-submenu">
-    <li><a href="pre-basic.html"> Crest nursery and primary school</a></li>
+                            <li><a href="pre-basic.html"> Crest nursery and primary school</a></li>
                         </ul>
                     </li>
                     <li class="school-dropdown">
@@ -170,7 +181,8 @@
                             <li><a href="holidays.html">Holidays</a></li>
 
                         </ul>
-                    </li>                    <li><a href="about.html">About Us</a></li>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
 
                 <a href="/login.html">
@@ -195,18 +207,19 @@
 
 
 
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="container nav__container">
             <a href="index.html" class="school-name" style="display: flex; align-items: center;">
-                <img src="assets/logo.png" style="width: 36px; height: 36px; border-radius: 999px; margin-right: 6px;" />
+                <img src="assets/logo.png"
+                    style="width: 36px; height: 36px; border-radius: 999px; margin-right: 6px;" />
                 <h4>Crest<span style="color: rgba(255, 187, 0, 1);">Hive</span></h4>
             </a>
             <ul class="nav__menu">
                 <li class="school-dropdown">
                     <a href="#school">School <i class="fas fa-caret-down"></i></a>
                     <ul class="school-submenu">
-<li><a href="pre-basic.html"> Crest nursery and primary school</a></li>
-                                                <li><a href="college-extra.html">Cresthive international school</a></li>
+                        <li><a href="pre-basic.html"> Crest nursery and primary school</a></li>
+                        <li><a href="college-extra.html">Cresthive international school</a></li>
                     </ul>
                 </li>
                 <li class="school-dropdown">
@@ -217,7 +230,8 @@
                         <li><a href="holidays.html">Holidays</a></li>
 
                     </ul>
-                </li>                <li><a href="about.html">About Us</a></li>
+                </li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
             <a href="https://student.crestscholars.com/RegistrationPage">
                 <button class="navbtn">Start Registration</button>
@@ -243,7 +257,8 @@
 
     <div class="sections-container">
 
-        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
+        <section class="section2"
+            style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
                 <img id="img2" src="/assets/logo.png" alt="Image 2" class="w-screen h-screen object-cover">
             </div>
@@ -254,36 +269,41 @@
                 </div>
             </div>
         </section>
-    
 
 
-        <section id="bgimg1" class="section2 w-screen" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
+
+        <section id="bgimg1" class="section2 w-screen"
+            style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
-                <img id="img1" src="/assets/logo.png" alt="Image 1" style="max-width: 35vw;" class="h-screen object-cover">
+                <img id="img1" src="/assets/logo.png" alt="Image 1" style="max-width: 35vw;"
+                    class="h-screen object-cover">
             </div>
             <div class="s2right">
                 <div class="overlay-text text-white">
-                    <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Crest Nursery And Primary School</h2>
+                    <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Crest Nursery And Primary School
+                    </h2>
                     <h2 id="dirName1" class="text-white text-xl font-bold mb-2"></h2>
                 </div>
             </div>
         </section>
-    
-     
-        <section class="section2" style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
+
+
+        <section class="section2"
+            style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('/assets/Rectangle 5.jpg'); background-size: cover; background-position: center;">
             <div class="s2left">
                 <img id="img3" src="/assets/logo.png" alt="Image 3" class="w-screen h-screen object-cover">
             </div>
             <div class="s2right">
                 <div class="overlay-text">
                     <div class="overlay-text text-white">
-                        <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Cresthive International School</h2>
+                        <h2 id="" class="text-white text-3xl font-bold mb-2">Director of Cresthive International School
+                        </h2>
                         <h2 id="dirName3" class="text-white text-xl font-bold mb-2"></h2>
                     </div>
-            </div>
+                </div>
         </section>
     </div>
-    
+
 
 
 
@@ -308,12 +328,12 @@
                     height: auto;
                     word-wrap: break-word;" id="missionText" class="text-xl">
 
-                    
-                </p>
+
+                    </p>
 
                 </div>
 
-                <div 
+                <div
                     style="background-color: white; border-radius: 16px; font-size: large; height: auto; padding: 10px 60px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 600; flex: 1 1 0%; height: auto;">
 
                     <p
@@ -326,10 +346,10 @@
                     <p style=" max-width: 100%;
                     height: auto;
                     word-wrap: break-word; padding-bottom: 20px;" id="visionText" class="text-xl">
-                       
+
                     </p>
 
-                   
+
 
                 </div>
             </div>
@@ -368,12 +388,12 @@
                     <h2>Contact Us</h2>
                     <hr>
                     <p><i class="fas fa-envelope"></i> Email:
-                       <span id="email">
+                        <span id="email">
 
-                       </span>
+                        </span>
                     </p>
                     <hr>
-                   <p><i class="fas fa-phone"></i> Phone number:
+                    <p><i class="fas fa-phone"></i> Phone number:
                         <span id="phone">
 
                         </span>
