@@ -106,13 +106,13 @@ fetch('./../api/configfile.js')
               if (studentDocSnapshot.exists()) {
                 // The user's UID exists in the students collection, proceed to redirect
                 console.log("student redirected in successfully", accessToken);
-                window.location.href = `https://cresthive-student.vercel.app/SignIn?token=${encodeURIComponent(accessToken)}`;
+                window.location.href = `https://student.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
               } else if (teacherDocDocSnapshot.exists()) {
                 console.log("teacher redirected in successfully", user.uid);
-                window.location.href = `https://cresthive-frontend.vercel.app/SignIn?token=${encodeURIComponent(accessToken)}`;
+                window.location.href = `https://teacher.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
               } else if (adminDocSnapshot.exists()) {
                 console.log("admin redirected in successfully", user.uid);
-                window.location.href = `https://cresthive-admin-ccx9.vercel.app/SignIn?token=${encodeURIComponent(accessToken)}`;
+                window.location.href = `admin.crestscholar.com/SignIn?token=${encodeURIComponent(accessToken)}`;
               } else {
                 // The user's UID doesn't exist in the students collection, sign-out and display an error
                 signOutf();
