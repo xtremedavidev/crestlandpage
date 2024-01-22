@@ -30,32 +30,22 @@
 
 
     <style>
-        @keyframes horizontalScroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-68%));
-                /* Adjust the number of sections as needed */
-            }
-        }
-
+      
         .sections-container {
             display: flex;
+            width: 300%;
             overflow-x: hidden;
             min-height: 90vh;
-            width: 300%;
             color: white;
             /* Adjust based on the number of sections */
-            animation: horizontalScroll 20s linear infinite;
             /* Adjust the duration as needed */
         }
 
 
 
         .section2 {
-            flex: 0 0 33.3333%;
+        
+            width: 100vw;
             min-height: 100%;
             display: flex;
         }
@@ -129,26 +119,9 @@
     </style>
 
 
-    <script>
-        // JavaScript for smooth scrolling and snapping
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.sections-container');
 
-            container.addEventListener('wheel', function (event) {
-                if (event.deltaY > 0) {
-                    container.scrollBy({
-                        top: window.innerHeight,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    container.scrollBy({
-                        top: -window.innerHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+
+        </script>
 
 
 
@@ -421,6 +394,8 @@
             const scrollAmount = 1;
             const scrollSpeed = 2;
 
+
+            
             function autoScroll() {
                 container.scrollLeft += scrollAmount * scrollSpeed;
                 if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
