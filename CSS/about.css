@@ -879,6 +879,7 @@ flex-shrink: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: #FFF;
         flex-direction: column;
         /* padding: 40px; */
         padding-top:0px;
@@ -890,6 +891,7 @@ flex-shrink: 0;
     .s2right {
         width: 90%;
         margin-bottom: 80px;
+        color: white;
     }
     
     .s2left {
@@ -901,7 +903,7 @@ flex-shrink: 0;
         font-weight: bold;
         margin-bottom: 10px;
         font-family: 'Lexend', sans-serif;
-        color: #000;
+        color: #fff;
         font-feature-settings: 'clig' off, 'liga' off;
         font-size: 28.914px;
         font-style: normal;
