@@ -605,10 +605,10 @@ a {
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' on;
     font-family: cursive;
-    font-size: 50px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 48px;
     /* 175.667% */
     text-transform: capitalize;
 }
