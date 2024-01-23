@@ -225,6 +225,18 @@ phoneTextElement.style.whiteSpace = 'pre-line';
 
 
 
+// Get the anchor element by its ID
+const myLink1 = document.getElementById("facebookfooter");
+const myLink2 = document.getElementById("linkedinfooter");
+const myLink3 = document.getElementById("instagramfooter");
+
+// Set the href attribute to the dynamic URL
+myLink1.href = fetch.facebookfooter;
+myLink2.href = fetch.linkedinfooter;
+myLink3.href = fetch.instagramfooter;
+
+
+
 
 const foot4titleElement = document.getElementById("sec3title");
 foot4titleElement.innerHTML = `${fetch.section3Title.replace(/\n/g, '<br/>')}`;

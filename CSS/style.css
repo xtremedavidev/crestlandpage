@@ -1300,34 +1300,19 @@ a {
     margin-bottom: 5px;
 }
 
+.social-icons {
+    margin-right: 20px;
+
+}
 .social-icons a {
     color: #fff;
     /* Icon color */
     text-decoration: none;
-    margin-left: 10px;
+    margin-right: 14px;
     /* Adjust spacing between icons */
     font-size: 20px;
 }
 
-/* Style for the email icon */
-.contact-info p:nth-child(odd) i {
-    font-size: 20px;
-    /* Adjust the icon size as needed */
-    margin-right: 10px;
-    /* Add spacing between the icon and text */
-    color: #fff;
-    /* Change the icon color */
-}
-
-/* Style for the phone icon */
-.contact-info p:nth-child(even) i {
-    font-size: 20px;
-    /* Adjust the icon size as needed */
-    margin-right: 10px;
-    /* Add spacing between the icon and text */
-    color: #fff;
-    /* Change the icon color */
-}
 
 .your-button-class {
     width: 300px;
