@@ -140,6 +140,62 @@
             scroll-snap-align: start;
             display: flex;
         }
+        #section2 {
+  padding-bottom: 4rem;
+  background-color: #f4f4f4;
+}
+
+#section2 h2 {
+  font-family: 'Roboto', sans-serif; /* Choose your preferred font */
+  color: #333; /* Adjust the text color as needed */
+  transition: color 0.3s ease-in-out;
+}
+
+#section2 img {
+  max-height: 300px; /* Adjust the maximum height of the image as needed */
+  border: 8px solid #fff; /* Add a border to the image */
+  transition: border 0.3s ease-in-out;
+}
+
+#section2 p {
+  color: #555; /* Adjust the text color as needed */
+  font-family: 'Open Sans', sans-serif; /* Choose your preferred font */
+}
+
+#section2 h2:hover,
+#section2 img:hover {
+  color: #e44d26; /* Change the text color on hover */
+  border-color: #e44d26; /* Change the border color on hover */
+}
+
+@media screen and (max-width: 1024px) {
+  #section2 {
+    text-align: center;
+  }
+
+  #section2 img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* CSS Animation for text */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#section2 h2,
+#section2 p,
+#section2 img {
+  animation: fadeInUp 1s ease-out; /* Apply the fadeInUp animation */
+}
 
         .s2left {
     float: left;
