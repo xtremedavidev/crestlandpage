@@ -876,7 +876,6 @@ a {
     line-height: 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    max-lines: 2;
     padding: 6px;
 display: -webkit-box;
 -webkit-box-orient: vertical;
