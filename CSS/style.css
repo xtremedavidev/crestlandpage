@@ -879,7 +879,10 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    max-height: 2.4em; /* Adjust based on your font size and desired number of lines */
+    line-height: 1.2em; /* Adjust based on your font size */
 }
+
 
 .blog-card-paragraph {
     color: #333;
