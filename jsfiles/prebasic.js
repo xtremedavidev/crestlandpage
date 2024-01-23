@@ -198,7 +198,7 @@ dir3TitleElement.style.whiteSpace = 'pre-line';
 
 
 const img = document.getElementById("img");
-img.src = fetch.prebasicphoto;
+img.src = fetch.basicphoto;
 
 
 
