@@ -873,6 +873,7 @@ a {
     font-size: 20px;
     padding-left: 4px;
     font-weight: 700;
+    padding-bottom: 0;
     margin-bottom: 20px;
     overflow: hidden;
     padding: 6px;
@@ -880,7 +881,7 @@ a {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     max-height: 2.4em; /* Adjust based on your font size and desired number of lines */
-    line-height: 1.4em; /* Adjust based on your font size */
+    line-height: 1.2em; /* Adjust based on your font size */
 }
 
 
