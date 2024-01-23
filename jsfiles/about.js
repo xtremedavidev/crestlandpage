@@ -12,6 +12,27 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
 });
 
 
+const container = document.getElementById('sections-container');
+const scrollSpeed = 2;
+
+// Clone the content and append it to the container
+const clonedContent = container.innerHTML;
+container.innerHTML += clonedContent;
+
+function autoScroll() {
+  container.scrollLeft += scrollSpeed;
+
+  if (container.scrollLeft >= container.scrollWidth / 2) {
+    container.scrollLeft -= container.scrollWidth / 2;
+  }
+
+  requestAnimationFrame(autoScroll);
+}
+
+autoScroll();
+
+
+
 
 
 
