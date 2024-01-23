@@ -229,11 +229,13 @@ phoneTextElement.style.whiteSpace = 'pre-line';
 const myLink1 = document.getElementById("facebookfooter");
 const myLink2 = document.getElementById("linkedinfooter");
 const myLink3 = document.getElementById("instagramfooter");
+const myLink4 = document.getElementById("twitterfooter");
 
 // Set the href attribute to the dynamic URL
 myLink1.href = fetch.facebookfooter;
 myLink2.href = fetch.linkedinfooter;
 myLink3.href = fetch.instagramfooter;
+myLink4.href = fetch.twitterfooter;
 
 
 
