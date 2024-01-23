@@ -114,22 +114,22 @@ div#slider figure {
     100% {
         transform: translateX(0);
     }
-  }
+}
 
-  .slidor {
+.slidor {
     overflow: hidden;
     width: 100vw;
     position: relative;
-  }
+}
 
-  .slidor figure {
+.slidor figure {
     display: flex;
     width: 200%;
     text-align: center;
     animation: 20s slody infinite;
-  }
+}
 
-  .vm {
+.vm {
     width: 100%;
     flex: 1;
     padding-bottom: 40px;
@@ -137,9 +137,9 @@ div#slider figure {
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-  }
+}
 
-  .vm::before {
+.vm::before {
     content: "";
     display: block;
     position: absolute;
@@ -151,38 +151,38 @@ div#slider figure {
     background-position: center;
     z-index: -1;
     filter: brightness(0.7);
-  }
+}
 
-  h2 {
+h2 {
     color: #fff;
     font-family: 'Ingrid Darling', cursive;
     font-size: 3rem;
     margin-bottom: 20px;
-  }
+}
 
-  .tsc {
+.tsc {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .divo,
-  .divo1 {
+.divo,
+.divo1 {
     font-size: 3rem;
     height: 30px;
     margin-bottom: 10px;
     text-transform: uppercase;
     font-family: 'Ingrid Darling', cursive;
     color: orange;
-  }
+}
 
-  .supporting-text2 {
+.supporting-text2 {
     max-width: 600px;
     color: #fff;
     font-family: 'Lexend', sans-serif;
     line-height: 1.8;
     font-size: 1.2rem;
-  }
+}
 
 
 
@@ -867,19 +867,18 @@ a {
     background-position: center;
 }
 
-.blog-card-title{
+.blog-card-title {
     color: #00693d;
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
     padding-left: 4px;
     font-weight: 700;
-    line-height: 20px;
     margin-bottom: 20px;
     overflow: hidden;
     padding: 6px;
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .blog-card-paragraph {
