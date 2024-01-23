@@ -603,12 +603,12 @@ a {
 .s5-cta p {
     color: #FFF;
     text-align: center;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Lexend;
-    font-size: 14px;
+    font-feature-settings: 'clig' off, 'liga' on;
+    font-family: cursive;
+    font-size: 50px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26.35px;
+    line-height: 30px;
     /* 175.667% */
     text-transform: capitalize;
 }
