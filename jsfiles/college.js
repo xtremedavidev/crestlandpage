@@ -225,7 +225,7 @@ fetch('./../api/configfile.js')
             imageUrls.forEach((item) => {
                 if (item[category]) {
                     images.push(item[category]);
-                    console.log(images)
+                    console.log("imagesss", item, images)
                 }
             });
 
