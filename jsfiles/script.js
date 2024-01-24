@@ -48,7 +48,7 @@ document.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.getElementById("nextButton");
     const prevButton = document.getElementById("prevButton");
-    const cardContainer = document.querySelector(".card-container");
+    const cardContainer = document.querySelector(".blog-card-container");
 
     // Define the scroll width to move cards
     const scrollWidth = 450;
