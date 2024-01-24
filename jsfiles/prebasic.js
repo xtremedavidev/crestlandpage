@@ -245,10 +245,10 @@ function createCategoryElement(category) {
     imageContainer.className = 'image-container';
   
     // Add images to the image container
-    images.forEach(imageUrl => {
+    images[0].forEach(imageUrl => {
       const imgElement = document.createElement('img');
       console.log("img", imageUrl)
-      imgElement.src = imageUrl[0].link;
+      imgElement.src = imageUrl.link;
       imageContainer.appendChild(imgElement);
     });
   
