@@ -249,10 +249,10 @@ fetch('./../api/configfile.js')
             imageContainer.className = 'image-container';
 
             // Add images to the image container
-            images.forEach((imageUrl, i) => {
+            images[0].forEach((imageUrl, i) => {
                 const imgElement = document.createElement('img');
-                console.log("img", imageUrl)
-                imgElement.src = imageUrl[i].link;
+                console.log("img1", imageUrl)
+                imgElement.src = imageUrl.link;
                 imageContainer.appendChild(imgElement);
             });
 
