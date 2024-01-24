@@ -193,7 +193,7 @@ dir3textElement.innerHTML = `${fetch.directprebasicText.replace(/\n/g, '<br/>')}
 dir3textElement.style.whiteSpace = 'pre-line';
 
 const dir3TitleElement = document.getElementById("dirName");
-dir3TitleElement.innerHTML = `${fetch.directprebasicTitle.replace(/\n/g, '<br/>')}`;
+dir3TitleElement.innerHTML = `${fetch.directbasicTitle.replace(/\n/g, '<br/>')}`;
 dir3TitleElement.style.whiteSpace = 'pre-line';
 
 
