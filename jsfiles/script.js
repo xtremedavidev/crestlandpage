@@ -46,8 +46,8 @@ document.addEventListener("scroll", function () {
 
     // JavaScript to handle card scrolling
 document.addEventListener("DOMContentLoaded", function () {
-    const nextButton = document.getElementById("nextButton");
-    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("prevButton");
+    const prevButton = document.getElementById("nextButton");
     const cardContainer = document.querySelector(".blog-card-container");
 
     // Define the scroll width to move cards
