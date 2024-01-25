@@ -45,6 +45,8 @@ document.addEventListener("scroll", function () {
 
 
     // JavaScript to handle card scrolling
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.getElementById("prevButton");
     const prevButton = document.getElementById("nextButton");
