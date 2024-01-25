@@ -307,6 +307,10 @@ testimonials.forEach((testimonial) => {
   titleP.innerHTML = title.join('<br>');
   titleP.classList.add("blog-card-title");
 
+  const titlea = document.createElement("p");
+  titlea.innerHTML = "Read More...";
+
+
   // Create paragraph element
   const paragraph = document.createElement("p");
   // Split the paragraph into lines using '<br>' for line breaks
@@ -320,6 +324,7 @@ testimonials.forEach((testimonial) => {
   card.appendChild(cardImageContainer);
   card.appendChild(titleP);
   card.appendChild(pParagraphContainer);
+  card.appendChild(titlea)
 
 
   card.addEventListener("click", () => openModal( testimonial.parentName, paragraph.innerHTML, testimonial.testimonialimg));
