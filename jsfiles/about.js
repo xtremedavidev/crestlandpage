@@ -213,36 +213,21 @@ fetch('./../api/configfile.js')
 
 
 
-   // Function to preload images
-function preloadImages() {
-  const images = document.querySelectorAll('.section2 img');
-  images.forEach(image => {
-    const src = image.getAttribute('src');
-    const img = new Image();
-    img.src = src;
-  });
+    // Function to preload images
+  
 
-  // Preload next set of images
-  const nextImages = document.querySelectorAll('.next-section img');
-  nextImages.forEach(image => {
-    const src = image.getAttribute('src');
-    const img = new Image();
-    img.src = src;
-  });
-}
+    // Clone the content and append it to the container
+    const container = document.getElementById('sections-container');
+    const clonedContent = container.innerHTML;
+    container.innerHTML += clonedContent;
 
-// Clone the content and append it to the container
-const container = document.getElementById('sections-container');
-const clonedContent = container.innerHTML;
-container.innerHTML += clonedContent;
+    // Clone the content for the next set of images
+    const nextContainer = container.cloneNode(true);
+    nextContainer.classList.add('next-section');
+    container.after(nextContainer);
 
-// Clone the content for the next set of images
-const nextContainer = container.cloneNode(true);
-nextContainer.classList.add('next-section');
-container.after(nextContainer);
-
-// Preload images before starting the scrolling animation
-preloadImages();
+    // Preload images before starting the scrolling animation
+    preloadImages();
 
     const scrollSpeed = 2;
 
@@ -255,7 +240,6 @@ preloadImages();
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft -= container.scrollWidth / 2;
         // Update images for each cycle
-        setImages();
       }
 
       requestAnimationFrame(autoScroll);
@@ -270,17 +254,25 @@ preloadImages();
 
 
       const img1 = document.getElementById("img1");
-      console.log("picg", fetch.collegephoto)
-      img1.src = fetch.collegephoto;
-
-
       const img2 = document.getElementById("img2");
-      img2.src = fetch.basicphoto;
-
-
       const img3 = document.getElementById("img3");
-      img3.src = fetch.prebasicphoto;
 
+      // Function to download and set image
+      const downloadAndSetImage = async (imageUrl, elementId) => {
+        try {
+          const response = await fetch(imageUrl);
+          const blob = await response.blob();
+          const objectURL = URL.createObjectURL(blob);
+          document.getElementById(elementId).src = objectURL;
+        } catch (error) {
+          console.error(`Error downloading image for ${elementId}:`, error);
+        }
+      };
+
+      // Download and set images dynamically
+      downloadAndSetImage(fetch.collegephoto, 'img1');
+      downloadAndSetImage(fetch.basicphoto, 'img2');
+      downloadAndSetImage(fetch.prebasicphoto, 'img3');
     }
 
 
