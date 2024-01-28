@@ -202,6 +202,17 @@ fetch('./../api/configfile.js')
     const image3 = fetch.prebasicphoto;
     const image1 = fetch.collegephoto;
     const image2 = fetch.basicphoto;
+
+
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+    const img3 = document.getElementById("img3");
+  
+    // Function to set image
+    img3.src = image3;
+    img1.src = image1;
+    img2.src = image2;
+
     
   
 
@@ -239,7 +250,13 @@ fetch('./../api/configfile.js')
 
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft -= container.scrollWidth / 2;
+
+
         // Update images for each cycle
+
+        img3.src = image3;
+        img1.src = image1;
+        img2.src = image2;
       }
 
       requestAnimationFrame(autoScroll);
@@ -249,31 +266,7 @@ fetch('./../api/configfile.js')
 
 
 
-    // Function to set images based on Firebase data
-    function setImages() {
-      const img1 = document.getElementById("img1");
-      const img2 = document.getElementById("img2");
-      const img3 = document.getElementById("img3");
-    
-      // Function to set image
-      img3.src = image3;
-      img1.src = image1;
-      img2.src = image2;
-
-      // Set images dynamically
-     
-    }
-    
-    // Call setImages function
-    setImages();
-    
-
-
-
-
-    // Set images initially
-    setImages();
-
+   
     // Call autoScroll function to start the animation
     autoScroll();
 
