@@ -199,6 +199,13 @@ fetch('./../api/configfile.js')
     phoneTextElement.style.whiteSpace = 'pre-line';
 
 
+    
+    const image1 = fetch.collegephoto;
+    const image2 = fetch.basicphoto;
+    const image3 = fetch.prebasicphoto;
+    
+  
+
 
 
 
@@ -250,23 +257,12 @@ fetch('./../api/configfile.js')
       const img3 = document.getElementById("img3");
     
       // Function to set image
-      const setImage = (imageUrl, elementId) => {
-        const imgElement = new Image();
-        imgElement.src = imageUrl;
-    
-        imgElement.onload = () => {
-          document.getElementById(elementId).src = imageUrl;
-        };
-    
-        imgElement.onerror = (error) => {
-          console.error(`Error loading image for ${elementId}:`, error);
-        };
-      };
-    
+      img1.src = image1;
+      img2.src = image2;
+      img3.src = image3;
+
       // Set images dynamically
-      setImage(fetch.collegephoto, 'img1');
-      setImage(fetch.basicphoto, 'img2');
-      setImage(fetch.prebasicphoto, 'img3');
+     
     }
     
     // Call setImages function
