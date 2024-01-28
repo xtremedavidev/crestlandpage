@@ -245,40 +245,33 @@ fetch('./../api/configfile.js')
 
     // Function to set images based on Firebase data
     function setImages() {
-
-
       const img1 = document.getElementById("img1");
       const img2 = document.getElementById("img2");
       const img3 = document.getElementById("img3");
-
-      // Function to download and set image
-      const downloadAndSetImage = async (imageUrl, elementId) => {
-        try {
-          // Construct the URL for the getImage.js function with the image path as a query parameter
-          const getImageFunctionUrl = `/api/getImage?imagePath=${encodeURIComponent(imageUrl)}`;
-      
-          // Fetch the image using the getImage.js function
-          const response = await window.fetch(imageUrl);
-          const blob = await response.blob();
-      
-          // Create an object URL for the blob
-          const objectURL = URL.createObjectURL(blob);
-      
-          // Set the image source using the object URL
-          document.getElementById(elementId).src = objectURL;
-        } catch (error) {
-          console.error(`Error downloading image for ${elementId}:`, error);
-        }
+    
+      // Function to set image
+      const setImage = (imageUrl, elementId) => {
+        const imgElement = new Image();
+        imgElement.src = imageUrl;
+    
+        imgElement.onload = () => {
+          document.getElementById(elementId).src = imageUrl;
+        };
+    
+        imgElement.onerror = (error) => {
+          console.error(`Error loading image for ${elementId}:`, error);
+        };
       };
-      
-      
-
-      // Download and set images dynamically
-      console.log("link", fetch.collegephoto)
-      downloadAndSetImage(fetch.collegephoto, 'img1');
-      downloadAndSetImage(fetch.basicphoto, 'img2');
-      downloadAndSetImage(fetch.prebasicphoto, 'img3');
+    
+      // Set images dynamically
+      setImage(fetch.collegephoto, 'img1');
+      setImage(fetch.basicphoto, 'img2');
+      setImage(fetch.prebasicphoto, 'img3');
     }
+    
+    // Call setImages function
+    setImages();
+    
 
 
 
