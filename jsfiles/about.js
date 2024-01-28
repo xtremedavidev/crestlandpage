@@ -221,13 +221,7 @@ fetch('./../api/configfile.js')
     const clonedContent = container.innerHTML;
     container.innerHTML += clonedContent;
 
-    // Clone the content for the next set of images
-    const nextContainer = container.cloneNode(true);
-    nextContainer.classList.add('next-section');
-    container.after(nextContainer);
-
-    // Preload images before starting the scrolling animation
-    preloadImages();
+ 
 
     const scrollSpeed = 2;
 
