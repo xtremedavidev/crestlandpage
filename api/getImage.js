@@ -10,7 +10,7 @@ export default async (req, res) => {
     }
 
     const imageUrl = `${encodeURIComponent(imagePath)}`;
-    const response = await fetch(imageUrl);
+    const response = await window.fetch(imageUrl);
     const blob = await response.blob();
 
     res.setHeader('Access-Control-Allow-Origin', 'https://crestscholars.com');
