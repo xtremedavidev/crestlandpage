@@ -251,19 +251,10 @@ fetch('./../api/configfile.js')
       if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft -= container.scrollWidth / 2;
 
-
-        // Update images for each cycle
-
-        img3.src = image3;
-        img1.src = image1;
-        img2.src = image2;
       }
 
       requestAnimationFrame(autoScroll);
     }
-
-
-
 
 
    
