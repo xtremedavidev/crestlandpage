@@ -21,6 +21,8 @@ document.getElementById('nav-toggle').addEventListener('click', function () {
 
 
 
+
+
 fetch('./../api/configfile.js')
   .then(response => response.json())
   .then(async data => {
@@ -216,16 +218,18 @@ fetch('./../api/configfile.js')
     const clonedContent = container.innerHTML;
     container.innerHTML += clonedContent;
 
+    const scrollSpeed = 2;
 
-        // Function to preload images
-        function preloadImages() {
-          const images = document.querySelectorAll('.section2 img');
-          images.forEach(image => {
-            const src = image.getAttribute('src');
-            const img = new Image();
-            img.src = src;
-          });
-        }
+
+    // Function to preload images
+    function preloadImages() {
+      const images = document.querySelectorAll('.section2 img');
+      images.forEach(image => {
+        const src = image.getAttribute('src');
+        const img = new Image();
+        img.src = src;
+      });
+    }
 
     // Preload images before starting the scrolling animation
     preloadImages();
@@ -243,6 +247,8 @@ fetch('./../api/configfile.js')
 
       requestAnimationFrame(autoScroll);
     }
+
+
 
 
 
