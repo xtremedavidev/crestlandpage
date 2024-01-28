@@ -211,7 +211,9 @@ fetch('./../api/configfile.js')
 
 
 
-// Function to preload images
+
+
+   // Function to preload images
 function preloadImages() {
   const images = document.querySelectorAll('.section2 img');
   images.forEach(image => {
@@ -241,6 +243,9 @@ container.after(nextContainer);
 
 // Preload images before starting the scrolling animation
 preloadImages();
+
+    const scrollSpeed = 2;
+
 
 
     // Set up the auto-scrolling and image updating
