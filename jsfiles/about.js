@@ -254,14 +254,24 @@ fetch('./../api/configfile.js')
       // Function to download and set image
       const downloadAndSetImage = async (imageUrl, elementId) => {
         try {
-          const response = await window.fetch(imageUrl);
+          // Construct the URL for the getImage.js function with the image path as a query parameter
+          const getImageFunctionUrl = `/api/getImage?imagePath=${encodeURIComponent(imageUrl)}`;
+      
+          // Fetch the image using the getImage.js function
+          const response = await window.fetch(getImageFunctionUrl);
           const blob = await response.blob();
+      
+          // Create an object URL for the blob
           const objectURL = URL.createObjectURL(blob);
+      
+          // Set the image source using the object URL
           document.getElementById(elementId).src = objectURL;
         } catch (error) {
           console.error(`Error downloading image for ${elementId}:`, error);
         }
       };
+      
+      
 
       // Download and set images dynamically
       downloadAndSetImage(fetch.collegephoto, 'img1');
