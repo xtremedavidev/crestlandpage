@@ -199,10 +199,9 @@ fetch('./../api/configfile.js')
     phoneTextElement.style.whiteSpace = 'pre-line';
 
 
-    
+    const image3 = fetch.prebasicphoto;
     const image1 = fetch.collegephoto;
     const image2 = fetch.basicphoto;
-    const image3 = fetch.prebasicphoto;
     
   
 
@@ -257,9 +256,9 @@ fetch('./../api/configfile.js')
       const img3 = document.getElementById("img3");
     
       // Function to set image
+      img3.src = image3;
       img1.src = image1;
       img2.src = image2;
-      img3.src = image3;
 
       // Set images dynamically
      
