@@ -254,7 +254,7 @@ fetch('./../api/configfile.js')
       // Function to download and set image
       const downloadAndSetImage = async (imageUrl, elementId) => {
         try {
-          const response = await fetch(imageUrl);
+          const response = await window.fetch(imageUrl);
           const blob = await response.blob();
           const objectURL = URL.createObjectURL(blob);
           document.getElementById(elementId).src = objectURL;
