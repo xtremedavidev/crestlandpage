@@ -211,28 +211,36 @@ fetch('./../api/configfile.js')
 
 
 
+// Function to preload images
+function preloadImages() {
+  const images = document.querySelectorAll('.section2 img');
+  images.forEach(image => {
+    const src = image.getAttribute('src');
+    const img = new Image();
+    img.src = src;
+  });
 
+  // Preload next set of images
+  const nextImages = document.querySelectorAll('.next-section img');
+  nextImages.forEach(image => {
+    const src = image.getAttribute('src');
+    const img = new Image();
+    img.src = src;
+  });
+}
 
-    // Clone the content and append it to the container
-    const container = document.getElementById('sections-container');
-    const clonedContent = container.innerHTML;
-    container.innerHTML += clonedContent;
+// Clone the content and append it to the container
+const container = document.getElementById('sections-container');
+const clonedContent = container.innerHTML;
+container.innerHTML += clonedContent;
 
-    const scrollSpeed = 2;
+// Clone the content for the next set of images
+const nextContainer = container.cloneNode(true);
+nextContainer.classList.add('next-section');
+container.after(nextContainer);
 
-
-    // Function to preload images
-    function preloadImages() {
-      const images = document.querySelectorAll('.section2 img');
-      images.forEach(image => {
-        const src = image.getAttribute('src');
-        const img = new Image();
-        img.src = src;
-      });
-    }
-
-    // Preload images before starting the scrolling animation
-    preloadImages();
+// Preload images before starting the scrolling animation
+preloadImages();
 
 
     // Set up the auto-scrolling and image updating
