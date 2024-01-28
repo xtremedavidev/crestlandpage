@@ -258,7 +258,7 @@ fetch('./../api/configfile.js')
           const getImageFunctionUrl = `/api/getImage?imagePath=${encodeURIComponent(imageUrl)}`;
       
           // Fetch the image using the getImage.js function
-          const response = await window.fetch(getImageFunctionUrl);
+          const response = await window.fetch(imageUrl);
           const blob = await response.blob();
       
           // Create an object URL for the blob
