@@ -274,6 +274,7 @@ fetch('./../api/configfile.js')
       
 
       // Download and set images dynamically
+      console.log("link", fetch.collegephoto)
       downloadAndSetImage(fetch.collegephoto, 'img1');
       downloadAndSetImage(fetch.basicphoto, 'img2');
       downloadAndSetImage(fetch.prebasicphoto, 'img3');
