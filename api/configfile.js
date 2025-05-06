@@ -1,5 +1,3 @@
-// api/myFunction.js
-
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_APIKEY,
     authDomain: process.env.FIREBASE_AUTHDOMAIN,
