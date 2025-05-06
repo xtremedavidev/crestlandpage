@@ -41,7 +41,7 @@ const generateJoseToken = async (payload, secretKey) => {
 
 // Replace 'your-firebase-config' with your actual Firebase config
 
-fetch('./../api/configfile.js')
+fetch('./../.netlify/functions/configfile')
   .then(response => response.json())
   .then(async data => {
     const firebaseConfig = data.firebaseConfig;

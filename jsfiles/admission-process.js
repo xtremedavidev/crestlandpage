@@ -5,7 +5,7 @@ import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gsta
   
   
 
-fetch('./../api/configfile.js')
+fetch('./../.netlify/functions/configfile')
 .then(response => response.json())
 .then (async data => {
   const firebaseConfig = data.firebaseConfig;

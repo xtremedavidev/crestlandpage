@@ -14,7 +14,7 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
 var pagedata = null;
 
 
-fetch('./../api/configfile.js')
+fetch('./../.netlify/functions/configfile')
   .then(response => response.json())
   .then (async data => {
     const firebaseConfig = data.firebaseConfig;
